@@ -33,10 +33,10 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-secondary-foreground mb-6 animate-slide-up">
-            Risparmia{" "}
-            <span className="text-gradient">15 ore alla settimana</span>
+            Smetti di{" "}
+            <span className="text-gradient">sprecare tempo</span>
             <br />
-            con soluzioni AI su misura
+            Automatizza con l'AI
           </h1>
 
           {/* Subheadline */}
@@ -74,8 +74,8 @@ const Hero = () => {
             </div>
             <div className="w-px h-10 bg-border hidden sm:block" />
             <div className="flex items-center gap-2">
-              <span className="text-3xl font-bold text-gradient">15+</span>
-              <span className="text-sm text-left">Ore Risparmiate<br />a Settimana</span>
+              <span className="text-3xl font-bold text-gradient">∞</span>
+              <span className="text-sm text-left">Tempo Liberato<br />Per Te</span>
             </div>
             <div className="w-px h-10 bg-border hidden sm:block" />
             <div className="flex items-center gap-2">
