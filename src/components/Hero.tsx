@@ -34,7 +34,7 @@ const Hero = () => {
           {/* Main Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-secondary-foreground mb-6 animate-slide-up">
             Smetti di{" "}
-            <span className="text-gradient">sprecare tempo</span>
+            <span className="text-gradient">sprecare tempo e soldi</span>
             <br />
             Automatizza con l'AI
           </h1>
