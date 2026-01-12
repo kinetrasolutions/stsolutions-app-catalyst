@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -84,8 +84,8 @@ const Hero = () => {
             </div>
             <div className="w-px h-10 bg-white/30 hidden sm:block" />
             <div className="flex items-center gap-2">
-              <span className="text-3xl font-bold text-primary">🚀</span>
-              <span className="text-sm text-white font-medium text-left">Setup Rapido<br />e Senza Stress</span>
+              <TrendingUp className="w-8 h-8 text-primary" strokeWidth={2.5} />
+              <span className="text-sm text-white font-medium text-left">Incremento<br />Fatturato</span>
             </div>
           </div>
         </div>
