@@ -36,9 +36,9 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
             <img
-              src={logoDark}
+              src={isScrolled ? logoDark : logoLight}
               alt="ST Solutions"
-              className="h-8 md:h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-8 md:h-10 w-auto transition-all duration-300 group-hover:scale-105"
             />
           </a>
 
