@@ -82,6 +82,11 @@ const Hero = () => {
               <span className="text-3xl font-bold text-primary">H24</span>
               <span className="text-sm text-white font-medium text-left">Assistente AI<br />Sempre Attivo</span>
             </div>
+            <div className="w-px h-10 bg-white/30 hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <span className="text-3xl font-bold text-primary">🚀</span>
+              <span className="text-sm text-white font-medium text-left">Setup Rapido<br />e Senza Stress</span>
+            </div>
           </div>
         </div>
       </div>
