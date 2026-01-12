@@ -96,6 +96,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
             <p>© {currentYear} Tutti i diritti riservati.</p>
             <span className="hidden md:inline">|</span>
+            <p>Ragione sociale: Stefano Taino</p>
+            <span className="hidden md:inline">|</span>
             <p>P.IVA: 01744080191</p>
           </div>
           <div className="flex gap-6">
