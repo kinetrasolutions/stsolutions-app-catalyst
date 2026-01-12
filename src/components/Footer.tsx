@@ -94,7 +94,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-secondary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/50">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-            <p>© {currentYear} ST Solutions. Tutti i diritti riservati.</p>
+            <p>© {currentYear} Tutti i diritti riservati.</p>
             <span className="hidden md:inline">|</span>
             <p>P.IVA: 01744080191</p>
           </div>
