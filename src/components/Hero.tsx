@@ -27,7 +27,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-primary/20 mb-8 animate-fade-in">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-sm font-medium text-secondary-foreground">
-              Automazione AI per Attività Locali
+              Automazioni AI per Attività Locali e Professionisti
             </span>
           </div>
 
