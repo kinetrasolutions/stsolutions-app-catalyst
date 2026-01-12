@@ -48,7 +48,11 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors animated-underline"
+                className={`text-sm font-medium transition-colors animated-underline ${
+                  isScrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-white/90 hover:text-white"
+                }`}
               >
                 {link.label}
               </a>
