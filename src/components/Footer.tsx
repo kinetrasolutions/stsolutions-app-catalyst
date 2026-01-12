@@ -93,7 +93,11 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-secondary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/50">
-          <p>© {currentYear} ST Solutions. Tutti i diritti riservati.</p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p>© {currentYear} ST Solutions. Tutti i diritti riservati.</p>
+            <span className="hidden md:inline">|</span>
+            <p>P.IVA: 01744080191</p>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-secondary-foreground transition-colors">
               Privacy Policy
