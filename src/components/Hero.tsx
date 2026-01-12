@@ -44,7 +44,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Automazioni intelligenti per medici, professionisti della bellezza e ristoratori. 
+            Automazioni intelligenti per aziende, attività locali e professionisti. 
             Riduci i costi operativi, elimina le attività ripetitive e concentrati sui tuoi clienti.
           </p>
 
@@ -57,7 +57,7 @@ const Hero = () => {
               Prenota una Call Gratuita
               <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="hero-outline" size="xl" className="group">
+            <Button variant="hero-outline" size="xl" className="group border-2 border-white/60 text-white hover:bg-white/10 hover:border-white">
               <Play size={18} className="mr-2" />
               Scopri Come Funziona
             </Button>
@@ -65,22 +65,20 @@ const Hero = () => {
 
           {/* Trust Badges */}
           <div 
-            className="mt-16 flex flex-wrap justify-center items-center gap-8 text-muted-foreground animate-fade-in"
+            className="mt-16 flex flex-wrap justify-center items-center gap-8 animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            <div className="flex items-center gap-2">
-              <span className="text-3xl font-bold text-gradient">60%</span>
-              <span className="text-sm text-left">Riduzione<br />No-Show</span>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl border border-white/20">
+              <span className="text-2xl font-bold text-primary">−30%</span>
+              <span className="text-sm text-white font-medium text-left">Riduzione<br />Costi Operativi</span>
             </div>
-            <div className="w-px h-10 bg-border hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <span className="text-3xl font-bold text-gradient">∞</span>
-              <span className="text-sm text-left">Tempo Liberato<br />Per Te</span>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl border border-white/20">
+              <span className="text-2xl font-bold text-primary">+50%</span>
+              <span className="text-sm text-white font-medium text-left">Produttività<br />del Team</span>
             </div>
-            <div className="w-px h-10 bg-border hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <span className="text-3xl font-bold text-gradient">H24</span>
-              <span className="text-sm text-left">Assistente AI<br />Sempre Attivo</span>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl border border-white/20">
+              <span className="text-2xl font-bold text-primary">H24</span>
+              <span className="text-sm text-white font-medium text-left">Assistente AI<br />Sempre Attivo</span>
             </div>
           </div>
         </div>
