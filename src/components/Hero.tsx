@@ -85,7 +85,7 @@ const Hero = () => {
             <div className="w-px h-10 bg-white/30 hidden sm:block" />
             <div className="flex items-center gap-2">
               <TrendingUp className="w-8 h-8 text-primary" strokeWidth={2.5} />
-              <span className="text-sm text-white font-medium text-left">Incremento<br />Fatturato</span>
+              <span className="text-sm text-white font-medium text-left">Incremento Fatturato<br />Senza Sforzi</span>
             </div>
           </div>
         </div>
