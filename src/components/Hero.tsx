@@ -65,27 +65,26 @@ const Hero = () => {
 
           {/* Trust Badges */}
           <div 
-            className="mt-16 flex flex-wrap justify-center items-center gap-8 animate-fade-in"
+            className="mt-16 pb-8 flex flex-wrap justify-center items-center gap-8 animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl border border-white/20">
-              <span className="text-2xl font-bold text-primary">−30%</span>
+            <div className="flex items-center gap-2">
+              <span className="text-3xl font-bold text-primary">✓</span>
               <span className="text-sm text-white font-medium text-left">Riduzione<br />Costi Operativi</span>
             </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl border border-white/20">
-              <span className="text-2xl font-bold text-primary">+50%</span>
-              <span className="text-sm text-white font-medium text-left">Produttività<br />del Team</span>
+            <div className="w-px h-10 bg-white/30 hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <span className="text-3xl font-bold text-primary">∞</span>
+              <span className="text-sm text-white font-medium text-left">Tempo Liberato<br />Per Te</span>
             </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl border border-white/20">
-              <span className="text-2xl font-bold text-primary">H24</span>
+            <div className="w-px h-10 bg-white/30 hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <span className="text-3xl font-bold text-primary">H24</span>
               <span className="text-sm text-white font-medium text-left">Assistente AI<br />Sempre Attivo</span>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
