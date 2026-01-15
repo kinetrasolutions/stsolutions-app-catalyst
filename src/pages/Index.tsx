@@ -7,6 +7,7 @@ import HowItWorks from "@/components/HowItWorks";
 import About from "@/components/About";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import CookieBar from "@/components/CookieBar";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <CTA />
       </main>
       <Footer />
+      <CookieBar />
     </div>
   );
 };
