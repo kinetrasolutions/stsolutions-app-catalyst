@@ -1,24 +1,21 @@
 import { ArrowRight, Play, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Gradient Orbs */}
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" style={{
+        animationDelay: "2s"
+      }} />
         
         {/* Grid Pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+        backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
                             linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: "100px 100px"
-          }}
-        />
+        backgroundSize: "100px 100px"
+      }} />
       </div>
 
       <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10 pt-24">
@@ -40,19 +37,17 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p 
-            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 animate-slide-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Automazioni intelligenti per aziende, attività locali e professionisti. 
-            Riduci i costi operativi, elimina le attività ripetitive e concentrati sui tuoi clienti.
-          </p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 animate-slide-up" style={{
+          animationDelay: "0.1s"
+        }}>Automazioni intelligenti per aziende, attività locali e professionisti. 
+Riduci i costi operativi, elimina le attività ripetitive e concentrati sui tuoi clienti.
+
+        </p>
 
           {/* CTA Buttons */}
-          <div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{
+          animationDelay: "0.2s"
+        }}>
             <Button variant="hero" size="xl" className="group">
               Prenota una Call Gratuita
               <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
@@ -64,10 +59,9 @@ const Hero = () => {
           </div>
 
           {/* Trust Badges */}
-          <div 
-            className="mt-16 pb-8 flex flex-wrap justify-center items-center gap-8 animate-fade-in"
-            style={{ animationDelay: "0.4s" }}
-          >
+          <div className="mt-16 pb-8 flex flex-wrap justify-center items-center gap-8 animate-fade-in" style={{
+          animationDelay: "0.4s"
+        }}>
             <div className="flex items-center gap-2">
               <span className="text-3xl font-bold text-primary">✓</span>
               <span className="text-sm text-white font-medium text-left">Riduzione<br />Costi Operativi</span>
@@ -90,8 +84,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
