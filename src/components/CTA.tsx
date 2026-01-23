@@ -16,7 +16,7 @@ const CTA = () => {
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Stanco di{" "}
-            <span className="text-gradient">buttare via tempo e soldi</span>?
+            <span className="text-gradient">gestire tutto manualmente</span>?
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
