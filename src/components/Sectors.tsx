@@ -125,6 +125,13 @@ const Sectors = () => {
                       <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
                   </Button>
+                ) : index === 2 ? (
+                  <Button variant="outline" className="w-full group/btn" asChild>
+                    <Link to="/ristorazione">
+                      Scopri di più
+                      <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                    </Link>
+                  </Button>
                 ) : (
                   <Button variant="outline" className="w-full group/btn">
                     Scopri di più
