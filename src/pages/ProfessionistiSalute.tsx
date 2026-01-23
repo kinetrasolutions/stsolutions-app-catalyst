@@ -409,6 +409,60 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
           </div>
         </section>
 
+        {/* Mid-Page CTA Section */}
+        <section className="section-padding bg-gradient-to-br from-primary/10 via-background to-cyan-500/5 relative overflow-hidden">
+          {/* Background decorative elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl" />
+          </div>
+          
+          <div className="container-custom px-6 sm:px-8 relative z-10">
+            <ScrollAnimation variant="fadeUp">
+              <div className="max-w-3xl mx-auto text-center">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6">
+                  Inizia Ora
+                </span>
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Pronto a trasformare il tuo studio?
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+                  Prenota una chiamata gratuita di 10 minuti. Analizzeremo insieme i tuoi flussi operativi e ti mostreremo come possiamo aiutarti.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button variant="hero" size="lg" className="group">
+                    Prenota una Chiamata Gratuita
+                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                  <Button size="lg" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
+                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                      <MessageSquare className="w-5 h-5 mr-2" />
+                      Scrivici su WhatsApp
+                    </a>
+                  </Button>
+                </div>
+                
+                {/* Trust indicators */}
+                <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-primary" />
+                    Zero impegno
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-primary" />
+                    Analisi gratuita
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-primary" />
+                    Risposta in 24h
+                  </span>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </section>
+
         {/* Process Section */}
         <section id="come-funziona" className="section-padding bg-background">
           <div className="container-custom px-6 sm:px-8">
@@ -524,6 +578,60 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                 </div>
               </ScrollAnimation>
             </div>
+          </div>
+        </section>
+
+        {/* A Chi Si Rivolge Section */}
+        <section className="section-padding bg-background">
+          <div className="container-custom px-6 sm:px-8">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                Il Nostro Target
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                A chi si rivolge ST Solutions?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Le nostre soluzioni sono pensate per professionisti che vogliono crescere senza rinunciare al controllo.
+              </p>
+            </ScrollAnimation>
+
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  title: "Perdi tempo in coordinamento",
+                  description: "Rispondi a chiamate, confermi appuntamenti, gestisci disdette. Il tempo che potrebbe essere dedicato ai pazienti se ne va in attività amministrative."
+                },
+                {
+                  title: "Non riesci a rispondere subito",
+                  description: "Ogni chiamata persa è un paziente che potrebbe andare altrove. Non puoi permetterti di essere sempre reperibile, ma neanche di perdere opportunità."
+                },
+                {
+                  title: "Vuoi indipendenza dalle piattaforme",
+                  description: "Sei stanco di pagare commissioni o canoni mensili che erodono i tuoi margini. Vuoi possedere i tuoi strumenti, non affittarli."
+                },
+                {
+                  title: "Hai bisogno di soluzioni su misura",
+                  description: "I software standard non si adattano al tuo modo di lavorare. Cerchi qualcosa costruito sulle tue esigenze specifiche."
+                }
+              ].map((item, index) => (
+                <StaggerItem key={index}>
+                  <div className="group p-6 rounded-2xl border border-border bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-display font-semibold text-foreground mb-2">
+                          {item.title}
+                        </h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
         </section>
 
