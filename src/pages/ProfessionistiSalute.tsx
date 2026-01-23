@@ -131,24 +131,18 @@ const ProfessionistiSalute = () => {
               {/* Text Content */}
               <div className="text-center lg:text-left">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6 animate-fade-in">
-                  Professionisti della Salute
+                  L'Intelligenza Artificiale al servizio del tuo studio
                 </span>
                 
                 <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-                  Il Tuo Ecosistema Digitale per la{" "}
-                  <span className="text-gradient">Sanità Privata</span>
+                  Il Tuo Ecosistema Digitale{" "}
+                  <span className="text-gradient">potenziato dall'AI</span>
                 </h1>
                 
-                <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-4 animate-slide-up" style={{
+                <p className="text-base sm:text-lg text-white/70 mb-8 sm:mb-10 animate-slide-up leading-relaxed" style={{
                 animationDelay: "0.1s"
               }}>
-                  Zero commissioni. Pieno controllo. Gestione automatizzata dei pazienti h24.
-                </p>
-                
-                <p className="text-base sm:text-lg text-white/60 mb-8 sm:mb-10 animate-slide-up" style={{
-                animationDelay: "0.2s"
-              }}>
-                  Costruiamo l'infrastruttura digitale del tuo studio medico: un sistema proprietario che gestisce prenotazioni, dati clinici e comunicazioni senza dipendere da piattaforme esterne.
+                  Basta interruzioni. Basta chiamate perse. Basta lavoro manuale. Gestione automatizzata degli appuntamenti, segreteria intelligente h24 e organizzazione dei dati dei pazienti in un unico posto. Costruiamo un sistema di proprietà che lavora per te, liberando il tuo tempo e rendendo lo studio più efficiente, senza costi di commissione.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{
