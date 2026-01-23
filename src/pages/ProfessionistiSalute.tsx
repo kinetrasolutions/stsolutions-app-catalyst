@@ -76,8 +76,8 @@ const results = [{
   after: "< 5%"
 }, {
   metric: "Tempo gestione agenda",
-  before: "10-15 ore/settimana",
-  after: "< 1 ora/settimana"
+  before: "10-15 ore/sett.",
+  after: "< 1 ora/sett."
 }, {
   metric: "Tasso risposta chiamate",
   before: "40-60%",
