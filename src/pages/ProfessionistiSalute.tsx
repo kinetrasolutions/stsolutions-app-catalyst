@@ -350,7 +350,7 @@ const ProfessionistiSalute = () => {
                                 <img 
                                   src={solutionImages[index]} 
                                   alt={imageAlts[index]}
-                                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                  className="w-full h-auto object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
                                 />
                               </div>
                               
@@ -399,6 +399,16 @@ const ProfessionistiSalute = () => {
                 );
               })}
             </div>
+
+            {/* Custom Solutions CTA */}
+            <ScrollAnimation variant="fadeUp" className="mt-12 sm:mt-16">
+              <div className="text-center p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-primary/10 via-cyan-500/5 to-transparent border border-primary/20">
+                <p className="text-xl sm:text-2xl md:text-3xl font-display font-semibold text-foreground">
+                  Hai esigenze diverse?{" "}
+                  <span className="text-gradient">Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
+                </p>
+              </div>
+            </ScrollAnimation>
           </div>
         </section>
 
