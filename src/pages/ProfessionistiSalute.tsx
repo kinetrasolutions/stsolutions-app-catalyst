@@ -22,7 +22,7 @@ import {
 // Images
 import healthHeroImage from "@/assets/health-hero-custom.webp";
 import healthWhatsappAgent from "@/assets/health-whatsapp-custom.webp";
-import healthManagementApp from "@/assets/health-management-app.jpg";
+import healthManagementApp from "@/assets/health-management-custom.webp";
 import healthInvoicing from "@/assets/health-invoicing.jpg";
 
 const challenges = [
@@ -180,24 +180,24 @@ const ProfessionistiSalute = () => {
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
           </div>
 
-          <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-16">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="container-custom px-6 sm:px-8 lg:px-8 relative z-10 pt-24 pb-16">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Text Content */}
               <div className="text-center lg:text-left">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6 animate-fade-in">
                   Professionisti della Salute
                 </span>
                 
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
+                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
                   Il Tuo Ecosistema Digitale per la{" "}
                   <span className="text-gradient">Sanità Privata</span>
                 </h1>
                 
-                <p className="text-xl md:text-2xl text-white/80 mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+                <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
                   Zero commissioni. Pieno controllo. Gestione automatizzata dei pazienti h24.
                 </p>
                 
-                <p className="text-lg text-white/60 mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+                <p className="text-base sm:text-lg text-white/60 mb-8 sm:mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
                   Costruiamo l'infrastruttura digitale del tuo studio medico: un sistema proprietario che gestisce prenotazioni, dati clinici e comunicazioni senza dipendere da piattaforme esterne.
                 </p>
 
@@ -223,10 +223,10 @@ const ProfessionistiSalute = () => {
               {/* Hero Image - Floating with gradient mask effect */}
               <div className="relative animate-fade-in hidden lg:block" style={{ animationDelay: "0.4s" }}>
                 {/* Glow effects behind image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-cyan-500/30 to-transparent blur-3xl scale-110 animate-pulse-slow" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-cyan-500/30 to-transparent blur-3xl scale-105 animate-pulse-slow" />
                 
-                {/* Main image with mask fade */}
-                <div className="relative">
+                {/* Main image with mask fade - reduced size */}
+                <div className="relative max-w-md mx-auto">
                   <div 
                     className="relative"
                     style={{
@@ -239,7 +239,7 @@ const ProfessionistiSalute = () => {
                     <img 
                       src={healthHeroImage} 
                       alt="Studio dentistico moderno Dr. Mozzicato" 
-                      className="w-full h-auto object-cover scale-110 hover:scale-105 transition-transform duration-700"
+                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                   
@@ -247,10 +247,9 @@ const ProfessionistiSalute = () => {
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-cyan-500/10 pointer-events-none" />
                 </div>
                 
-                {/* Floating decorative orbs */}
-                <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/40 rounded-full blur-2xl animate-float" />
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse-slow" />
-                <div className="absolute top-1/2 -right-6 w-16 h-16 bg-primary/20 rounded-full blur-lg" />
+                {/* Floating decorative orbs - smaller */}
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/40 rounded-full blur-2xl animate-float" />
+                <div className="absolute -top-2 -right-2 w-16 h-16 bg-cyan-500/30 rounded-full blur-xl animate-pulse-slow" />
               </div>
             </div>
           </div>
@@ -258,8 +257,8 @@ const ProfessionistiSalute = () => {
 
         {/* Challenges Section */}
         <section className="section-padding bg-background">
-          <div className="container-custom">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-16">
+          <div className="container-custom px-6 sm:px-8">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-4">
                 Le Sfide Quotidiane
               </span>
@@ -271,7 +270,7 @@ const ProfessionistiSalute = () => {
               </p>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-8">
+            <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
               {challenges.map((challenge, index) => (
                 <StaggerItem key={index}>
                   <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300">
@@ -304,8 +303,8 @@ const ProfessionistiSalute = () => {
 
         {/* Solutions Section */}
         <section className="section-padding bg-muted/50">
-          <div className="container-custom">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-16">
+          <div className="container-custom px-6 sm:px-8">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                 Le Nostre Soluzioni
               </span>
@@ -317,7 +316,7 @@ const ProfessionistiSalute = () => {
               </p>
             </ScrollAnimation>
 
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               {solutions.map((solution, index) => {
                 const solutionImages = [healthWhatsappAgent, healthManagementApp, healthInvoicing];
                 const imageAlts = [
@@ -330,13 +329,13 @@ const ProfessionistiSalute = () => {
                   <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
                     <div className="rounded-3xl border border-border bg-card overflow-hidden">
                       <div className={`h-2 bg-gradient-to-r ${solution.color}`} />
-                      <div className="p-8 lg:p-12">
-                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
-                          {/* Image with gradient mask fade */}
-                          <div className="lg:w-2/5">
-                            <div className="relative group">
+                      <div className="p-6 sm:p-8 lg:p-12">
+                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 sm:gap-8 items-center`}>
+                          {/* Image with gradient mask fade - reduced size */}
+                          <div className="w-full max-w-xs sm:max-w-sm lg:w-1/3">
+                            <div className="relative group mx-auto">
                               {/* Glow effect behind image */}
-                              <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-30 blur-2xl scale-110`} />
+                              <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-20 blur-xl scale-105`} />
                               
                               {/* Image with mask fade */}
                               <div 
@@ -361,8 +360,8 @@ const ProfessionistiSalute = () => {
                           </div>
                           
                           {/* Content */}
-                          <div className="lg:w-3/5">
-                            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-4`}>
+                          <div className="w-full lg:w-2/3 text-center lg:text-left">
+                            <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-4 mx-auto lg:mx-0`}>
                               <solution.icon className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="font-display text-2xl font-bold text-foreground mb-1">
@@ -370,7 +369,7 @@ const ProfessionistiSalute = () => {
                             </h3>
                             <p className="text-primary font-medium mb-4">{solution.subtitle}</p>
                             <p className="text-muted-foreground mb-6">{solution.description}</p>
-                            <ul className="space-y-3 mb-6">
+                            <ul className="space-y-3 mb-6 text-left">
                               {solution.features.map((feature, idx) => {
                                 // Split feature at first " – " to bold the title
                                 const dashIndex = feature.indexOf(' – ');
@@ -381,7 +380,7 @@ const ProfessionistiSalute = () => {
                                 return (
                                   <li key={idx} className="flex items-start gap-3">
                                     <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                    <span className="text-foreground">
+                                    <span className="text-foreground text-sm sm:text-base">
                                       {title && <strong>{title}</strong>}
                                       {rest}
                                     </span>
@@ -389,7 +388,7 @@ const ProfessionistiSalute = () => {
                                 );
                               })}
                             </ul>
-                            <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${solution.color} text-white text-sm font-medium`}>
+                            <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${solution.color} text-white text-xs sm:text-sm font-medium`}>
                               💡 {solution.highlight}
                             </div>
                           </div>
@@ -405,8 +404,8 @@ const ProfessionistiSalute = () => {
 
         {/* Benefits Section */}
         <section className="section-padding bg-background">
-          <div className="container-custom">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-16">
+          <div className="container-custom px-6 sm:px-8">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                 Perché Sceglierci
               </span>
@@ -415,7 +414,7 @@ const ProfessionistiSalute = () => {
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-8">
+            <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
               {benefits.map((benefit, index) => (
                 <StaggerItem key={index}>
                   <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300">
@@ -444,8 +443,8 @@ const ProfessionistiSalute = () => {
 
         {/* Results Section */}
         <section className="section-padding bg-secondary text-secondary-foreground">
-          <div className="container-custom">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-16">
+          <div className="container-custom px-6 sm:px-8">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
                 Risultati Misurabili
               </span>
@@ -454,7 +453,7 @@ const ProfessionistiSalute = () => {
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {results.map((result, index) => (
                 <StaggerItem key={index}>
                   <div className="rounded-2xl bg-white/5 border border-white/10 p-6 text-center">
@@ -479,8 +478,8 @@ const ProfessionistiSalute = () => {
 
         {/* Process Section */}
         <section className="section-padding bg-background">
-          <div className="container-custom">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-16">
+          <div className="container-custom px-6 sm:px-8">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                 Il Nostro Processo
               </span>
@@ -489,7 +488,7 @@ const ProfessionistiSalute = () => {
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {processSteps.map((step) => (
                 <StaggerItem key={step.step}>
                   <div className="relative rounded-2xl border border-border bg-card p-6 hover:shadow-lg transition-all duration-300">
@@ -511,7 +510,7 @@ const ProfessionistiSalute = () => {
 
         {/* CTA Section */}
         <section className="section-padding bg-gradient-hero">
-          <div className="container-custom">
+          <div className="container-custom px-6 sm:px-8">
             <ScrollAnimation variant="fadeUp" className="max-w-3xl mx-auto text-center">
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Pronto a trasformare il tuo studio?
