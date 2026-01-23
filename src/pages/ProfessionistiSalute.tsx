@@ -40,7 +40,7 @@ const solutions = [{
   subtitle: "Database clinico e CRM integrato",
   description: "Un'applicazione su misura per il tuo studio: gestione pazienti, storico clinico, agenda sincronizzata, sistema anti-noshow. Tutto sotto il tuo controllo, nessuna dipendenza da terzi.",
   features: ["Database pazienti GDPR-compliant – Storico visite, anamnesi, referti, documenti allegati", "Agenda intelligente – Visualizzazione real-time, gestione slot, integrazione con l'Agente AI", "Sistema anti-noshow automatico – Lista d'attesa attiva, recupero slot cancellati in tempo reale", "Dashboard performance – Tasso occupazione, ricavi mensili, pazienti attivi/dormienti", "Follow-up automatizzati – Controlli periodici, richiami, soddisfazione post-visita"],
-  highlight: "Non è un software in abbonamento. È un asset proprietario che costruiamo per te.",
+  highlight: "Investi in un'infrastruttura digitale di tua proprietà, progettata su misura per il tuo business.",
   color: "from-purple-500 to-pink-500"
 }, {
   icon: FileText,
