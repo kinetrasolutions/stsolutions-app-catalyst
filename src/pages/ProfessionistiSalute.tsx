@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 // Images
-import healthHeroImage from "@/assets/health-hero.jpg";
+import healthHeroImage from "@/assets/health-hero-custom.webp";
 import healthWhatsappAgent from "@/assets/health-whatsapp-agent.jpg";
 import healthManagementApp from "@/assets/health-management-app.jpg";
 import healthInvoicing from "@/assets/health-invoicing.jpg";
@@ -220,19 +220,37 @@ const ProfessionistiSalute = () => {
                 </div>
               </div>
 
-              {/* Hero Image */}
-              <div className="relative animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={healthHeroImage} 
-                    alt="Studio medico moderno con professionisti della salute" 
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              {/* Hero Image - Floating with gradient mask effect */}
+              <div className="relative animate-fade-in hidden lg:block" style={{ animationDelay: "0.4s" }}>
+                {/* Glow effects behind image */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-cyan-500/30 to-transparent blur-3xl scale-110 animate-pulse-slow" />
+                
+                {/* Main image with mask fade */}
+                <div className="relative">
+                  <div 
+                    className="relative"
+                    style={{
+                      maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)',
+                      maskComposite: 'intersect',
+                      WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+                      WebkitMaskComposite: 'source-in',
+                    }}
+                  >
+                    <img 
+                      src={healthHeroImage} 
+                      alt="Studio dentistico moderno Dr. Mozzicato" 
+                      className="w-full h-auto object-cover scale-110 hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  
+                  {/* Subtle overlay gradient for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-cyan-500/10 pointer-events-none" />
                 </div>
-                {/* Decorative elements */}
-                <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/30 rounded-2xl blur-xl" />
-                <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl" />
+                
+                {/* Floating decorative orbs */}
+                <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/40 rounded-full blur-2xl animate-float" />
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse-slow" />
+                <div className="absolute top-1/2 -right-6 w-16 h-16 bg-primary/20 rounded-full blur-lg" />
               </div>
             </div>
           </div>
