@@ -1,4 +1,5 @@
 import { Stethoscope, Scissors, UtensilsCrossed, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const sectors = [
@@ -117,10 +118,19 @@ const Sectors = () => {
 
               {/* CTA */}
               <div className="px-8 pb-8">
-                <Button variant="outline" className="w-full group/btn">
-                  Scopri di più
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
-                </Button>
+                {index === 0 ? (
+                  <Button variant="outline" className="w-full group/btn" asChild>
+                    <Link to="/professionisti-salute">
+                      Scopri di più
+                      <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                    </Link>
+                  </Button>
+                ) : (
+                  <Button variant="outline" className="w-full group/btn">
+                    Scopri di più
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                  </Button>
+                )}
               </div>
             </div>
           ))}
