@@ -3,7 +3,7 @@ const solutions = [{
   icon: MessageSquare,
   title: "Assistenti AI per Clienti e Prenotazioni",
   description: "Assistenti intelligenti che gestiscono WhatsApp e telefono, rispondono ai clienti, fissano appuntamenti e riducono le interruzioni durante il lavoro.",
-  features: ["Per medici: Triage pazienti, conferma appuntamenti, riduzione no-show", "Per parrucchieri: Gestione prenotazioni automatizzata, promemoria trattamenti", "Per ristoratori: Prenotazioni tavoli, ordini asporto, info menu", "Per palestre: Prenotazione corsi, promemoria abbonamenti, info orari", "Per officine: Appuntamenti tagliandi, notifiche auto pronta, preventivi", "Per ecommerce: Tracking ordini, assistenza clienti, recupero carrelli abbandonati"]
+  features: ["Per medici: Triage pazienti, conferma appuntamenti, riduzione no-show", "Per parrucchieri: Gestione prenotazioni automatizzata, promemoria trattamenti", "Per ristoratori: Gestione prenotazioni automatizzata, ordini asporto, info menu", "Per palestre: Gestione prenotazioni automatizzata, promemoria abbonamenti, info orari", "Per officine: Gestione appuntamenti automatizzata, notifiche auto pronta, preventivi", "Per ecommerce: Tracking ordini, assistenza clienti, recupero carrelli abbandonati"]
 }, {
   icon: Smartphone,
   title: "Automazioni Operative AI su Misura",
