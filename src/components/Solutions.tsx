@@ -58,7 +58,8 @@ const Solutions = () => {
 
         {/* Custom solution note */}
         <div className="mt-10 text-center">
-          <p className="text-muted-foreground bg-muted/50 inline-block px-6 py-3 rounded-xl text-center text-2xl">Ogni soluzione viene progettata da zero sul tuo metodo di lavoro.<span className="font-semibold text-foreground">Ogni soluzione viene progettata da zero sul tuo metodo di lavoro</span>, non adattata a un software standard.
+          <p className="text-muted-foreground bg-muted/50 inline-block px-6 py-3 rounded-xl text-center">
+            <span className="font-semibold text-foreground">Ogni soluzione viene progettata sul tuo metodo di lavoro</span>, non adattata a un software standard.
           </p>
         </div>
 
