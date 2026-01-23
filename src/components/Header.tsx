@@ -11,6 +11,8 @@ const Header = () => {
   const location = useLocation();
   
   const isProfessionistiSalute = location.pathname === "/professionisti-salute";
+  const isRistorazione = location.pathname === "/ristorazione";
+  const isVerticalPage = isProfessionistiSalute || isRistorazione;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +23,7 @@ const Header = () => {
   }, []);
 
   // Navigation links based on current page
-  const navLinks = isProfessionistiSalute
+  const navLinks = isVerticalPage
     ? [
         { href: "#soluzioni", label: "Soluzioni" },
         { href: "#come-funziona", label: "Come Funziona" },
