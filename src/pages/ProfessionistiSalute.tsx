@@ -389,18 +389,18 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
             </ScrollAnimation>
 
             <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {results.map((result, index) => <StaggerItem key={index}>
-                  <div className="rounded-2xl bg-white/5 border border-white/10 p-6 text-center">
-                    <p className="text-sm text-white/60 mb-2">{result.metric}</p>
-                    <div className="flex items-center justify-center gap-4">
-                      <div>
+              {results.map((result, index) => <StaggerItem key={index} className="h-full">
+                  <div className="h-full rounded-2xl bg-white/5 border border-white/10 p-6 text-center flex flex-col">
+                    <p className="text-sm text-white/60 mb-4">{result.metric}</p>
+                    <div className="flex items-center justify-center gap-3 sm:gap-4 flex-1">
+                      <div className="flex-1 min-w-0">
                         <p className="text-xs text-white/40 mb-1">Prima</p>
-                        <p className="text-lg font-bold text-destructive">{result.before}</p>
+                        <p className="text-base sm:text-lg font-bold text-destructive break-words">{result.before}</p>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-primary" />
-                      <div>
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0" />
+                      <div className="flex-1 min-w-0">
                         <p className="text-xs text-white/40 mb-1">Dopo</p>
-                        <p className="text-lg font-bold text-primary">{result.after}</p>
+                        <p className="text-base sm:text-lg font-bold text-primary break-words">{result.after}</p>
                       </div>
                     </div>
                   </div>
