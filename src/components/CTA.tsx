@@ -50,7 +50,7 @@ const CTA = () => {
             <StaggerItem>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full" />
-                Risposta entro 24h
+                Risposta rapida
               </div>
             </StaggerItem>
             <StaggerItem>

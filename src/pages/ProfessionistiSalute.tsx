@@ -455,7 +455,7 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                   </span>
                   <span className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-primary" />
-                    Risposta in 24h
+                    Risposta rapida
                   </span>
                 </div>
               </div>
@@ -592,11 +592,30 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                 A chi si rivolge ST Solutions?
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Le nostre soluzioni sono pensate per professionisti che vogliono crescere senza rinunciare al controllo.
+                Le nostre soluzioni sono pensate per professionisti della salute che vogliono crescere senza rinunciare al controllo.
               </p>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Professions List */}
+            <ScrollAnimation variant="fadeUp" className="mb-12">
+              <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                {[
+                  "Medici di base", "Specialisti", "Chirurghi", "Dentisti", "Ortodontisti",
+                  "Fisioterapisti", "Osteopati", "Dietologi", "Nutrizionisti", "Psicologi",
+                  "Psicoterapeuti", "Logopedisti", "Oculisti", "Dermatologi", "Cardiologi",
+                  "Ginecologi", "Pediatri", "Veterinari"
+                ].map((profession, index) => (
+                  <span 
+                    key={index}
+                    className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors"
+                  >
+                    {profession}
+                  </span>
+                ))}
+              </div>
+            </ScrollAnimation>
+
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {[
                 {
                   title: "Perdi tempo in coordinamento",
@@ -605,6 +624,10 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                 {
                   title: "Non riesci a rispondere subito",
                   description: "Ogni chiamata persa è un paziente che potrebbe andare altrove. Non puoi permetterti di essere sempre reperibile, ma neanche di perdere opportunità."
+                },
+                {
+                  title: "Vuoi ridurre i costi",
+                  description: "Hai già una segretaria ma il costo mensile è alto. Con l'AI riduci i costi operativi mantenendo un servizio h24 senza interruzioni."
                 },
                 {
                   title: "Vuoi indipendenza dalle piattaforme",
