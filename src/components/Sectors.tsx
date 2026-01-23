@@ -4,15 +4,16 @@ import { Button } from "@/components/ui/button";
 const sectors = [
   {
     icon: Stethoscope,
-    title: "Medici e Fisioterapisti",
-    headline: "Segreteria AI che gestisce i tuoi pazienti h24",
-    problem: "Sei in visita con un paziente e il telefono squilla. Devi interrompere, rispondere, segnare l'appuntamento a mano.",
-    solution: "L'AI risponde alle chiamate h24, gestisce prenotazioni, fa triage delle richieste. Tu ricevi solo una notifica.",
+    title: "Professionisti della Salute",
+    headline: "Segreteria AI che gestisce i vostri pazienti h24",
+    problem: "Siete in visita con un paziente e il telefono squilla. Dovete interrompere, rispondere, segnare l'appuntamento a mano.",
+    solution: "L'AI risponde alle chiamate h24, gestisce prenotazioni, fa triage delle richieste. Voi ricevete solo una notifica.",
     benefits: [
       "Segreteria AI h24",
       "Follow-up automatico pazienti",
       "Notifiche e recupero no-show",
       "Gestione dati e report automatizzati",
+      "Creazione e invio fatture automatico",
     ],
     color: "from-blue-500 to-cyan-500",
   },
@@ -20,8 +21,8 @@ const sectors = [
     icon: Scissors,
     title: "Estetica e Parrucchieri",
     headline: "Agenda sempre piena con prenotazioni automatiche",
-    problem: "Hai le mani impegnate nel trattamento e il telefono squilla. La cliente che stai servendo aspetta, quella che chiama si spazientisce.",
-    solution: "L'AI gestisce prenotazioni e modifiche su WhatsApp. Risponde in 30 secondi, anche quando sei occupata.",
+    problem: "Avete le mani impegnate nel trattamento e il telefono squilla. La cliente che state servendo aspetta, quella che chiama si spazientisce.",
+    solution: "L'AI gestisce prenotazioni e modifiche su WhatsApp. Risponde in 30 secondi, anche quando siete occupati.",
     benefits: [
       "Prenotazioni automatiche h24",
       "Promemoria e follow-up clienti",
@@ -33,8 +34,8 @@ const sectors = [
   {
     icon: UtensilsCrossed,
     title: "Ristorazione",
-    headline: "Gestisci prenotazioni e asporto senza commissioni",
-    problem: "Durante il servizio è il caos. Telefono che squilla, ordini asporto da gestire. Le piattaforme ti rubano il 25-30%.",
+    headline: "Gestite prenotazioni e asporto senza commissioni",
+    problem: "Durante il servizio è il caos. Telefono che squilla, ordini asporto da gestire. Le piattaforme vi rubano il 25-30%.",
     solution: "L'AI gestisce prenotazioni tavoli e ordini asporto. Zero commissioni, pieno controllo.",
     benefits: [
       "Prenotazioni e ordini automatizzati",
@@ -127,11 +128,15 @@ const Sectors = () => {
 
         {/* Other sectors mention */}
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground">
-            <span className="font-semibold text-foreground">Altre attività?</span>{" "}
-            Palestre, officine, nutrizionisti: soluzioni custom per ogni esigenza.{" "}
-            <a href="#contatti" className="text-primary hover:underline">Contattaci →</a>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
+            Anche se sei titolare di officina, palestra o qualsiasi altra attività le nostre soluzioni possono fare al caso tuo in quanto sono costruite sul tuo modello di lavoro.
           </p>
+          <Button variant="hero" asChild>
+            <a href="https://wa.me/393452838679" target="_blank" rel="noopener noreferrer">
+              Contattaci
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>

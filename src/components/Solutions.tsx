@@ -1,4 +1,5 @@
 import { MessageSquare, Smartphone, CheckCircle2 } from "lucide-react";
+
 const solutions = [{
   icon: MessageSquare,
   title: "Assistenti AI per Clienti e Prenotazioni",
@@ -10,6 +11,7 @@ const solutions = [{
   description: "Sistemi e agenti AI che eseguono azioni reali: invio comunicazioni, aggiornamento dati, gestione documenti, follow-up automatici e processi interni.",
   features: ["Database clienti intelligenti con storico e preferenze", "Sistemi di notifiche automatiche e follow-up", "Dashboard di controllo per monitorare performance"]
 }];
+
 const Solutions = () => {
   return <section id="soluzioni" className="section-padding bg-muted/50">
       <div className="container-custom">
@@ -22,8 +24,8 @@ const Solutions = () => {
             Come ST Solutions risolve questi problemi
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Non vendo software standard che devi adattare alla tua attività. 
-            Creo soluzioni su misura che si integrano perfettamente nei tuoi flussi di lavoro.
+            Non vendiamo software standard che dovete adattare alla vostra attività. 
+            Creiamo soluzioni su misura che si integrano perfettamente nei vostri flussi di lavoro.
           </p>
         </div>
 
@@ -59,7 +61,7 @@ const Solutions = () => {
         {/* Custom solution note */}
         <div className="mt-10 text-center">
           <p className="text-muted-foreground bg-muted/50 inline-block px-6 py-3 rounded-xl text-center">
-            <span className="font-semibold text-foreground">Ogni soluzione viene progettata sul tuo metodo di lavoro</span>, non adattata a un software standard.
+            <span className="font-semibold text-foreground">Ogni soluzione viene progettata sul vostro metodo di lavoro</span>, non adattata a un software standard.
           </p>
         </div>
 
@@ -72,19 +74,19 @@ const Solutions = () => {
             {[{
             step: "01",
             title: "Analisi del flusso operativo reale",
-            desc: "Studio come lavori oggi e dove stai perdendo tempo e soldi"
+            desc: "Studiamo come lavorate oggi e dove state perdendo tempo e soldi"
           }, {
             step: "02",
             title: "Progettazione della soluzione su misura",
-            desc: "Sviluppo assistenti AI e automazioni che risolvono i tuoi problemi specifici"
+            desc: "Sviluppiamo assistenti AI, automazioni o app che risolvono i vostri problemi specifici"
           }, {
             step: "03",
             title: "Implementazione guidata",
-            desc: "Ti affianco nell'attivazione e ti formo sull'uso"
+            desc: "Vi affianchiamo nell'attivazione e vi formiamo sull'uso"
           }, {
             step: "04",
             title: "Risultati misurabili e controllo totale",
-            desc: "Ore risparmiate, costi ridotti, sistema tuo. Numeri concreti."
+            desc: "Ore risparmiate, costi ridotti, sistema vostro. Numeri concreti."
           }].map((item, index) => <div key={index} className="text-center p-6">
                 <span className="inline-block text-5xl font-display font-bold text-gradient mb-4">
                   {item.step}

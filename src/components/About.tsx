@@ -2,20 +2,16 @@ import { CheckCircle2, Quote } from "lucide-react";
 
 const differentiators = [
   {
-    title: "Nessun abbonamento che ti lega a vita",
-    description: "Progetti one-time. Paghi una volta, il sistema è tuo per sempre. Niente canoni mensili nascosti, niente dipendenza da terzi.",
-  },
-  {
     title: "Costruito su misura, non adattato",
-    description: "Non ti vendo un software standard. Studio come lavori oggi, individuo i colli di bottiglia, costruisco la soluzione che si integra perfettamente.",
+    description: "Non vi vendiamo un software standard. Studiamo come lavorate oggi, individuiamo i colli di bottiglia, costruiamo la soluzione che si integra perfettamente.",
   },
   {
-    title: "Persona reale, non call center",
-    description: "Quando mi contatti, parli direttamente con me. Io analizzo il problema, io progetto la soluzione, io ti seguo nell'implementazione.",
+    title: "Persone reali, non call center",
+    description: "Quando ci contattate, parlate direttamente con noi. Noi analizziamo il problema, noi progettiamo la soluzione, noi vi seguiamo nell'implementazione.",
   },
   {
     title: "Focus sui risultati misurabili",
-    description: "Non ti vendo 'innovazione'. Ti vendo ore risparmiate, costi ridotti, clienti non persi. Numeri concreti che si vedono sul conto corrente.",
+    description: "Non vi vendiamo 'innovazione'. Vi vendiamo ore risparmiate, costi ridotti, clienti non persi. Numeri concreti che si vedono sul conto corrente.",
   },
 ];
 
@@ -50,12 +46,12 @@ const About = () => {
                 Mi chiamo Stefano Taino e con ST Solutions aiuto le attività locali a uscire dal caos operativo.
               </p>
               <p>
-                Non credo nei software 'copia e incolla' o negli abbonamenti infiniti che ti tengono prigioniero. 
-                Il mio obiettivo è costruire l'infrastruttura digitale della tua azienda: sistemi intelligenti che 
-                rispondono ai clienti, gestionali che ordinano i tuoi dati e automazioni che ti restituiscono il tempo che meriti.
+                Non credo nei software 'copia e incolla' che vi tengono prigionieri. 
+                Il mio obiettivo è costruire l'infrastruttura digitale della vostra azienda: sistemi intelligenti che 
+                rispondono ai clienti, gestionali che ordinano i vostri dati e automazioni che vi restituiscono il tempo che meritate.
               </p>
               <p className="font-semibold text-foreground">
-                Con ST Solutions, il software è tuo, i dati sono tuoi e il risultato è garantito.
+                Con ST Solutions, il software è vostro, i dati sono vostri e il risultato è garantito.
               </p>
             </div>
           </div>
@@ -66,7 +62,7 @@ const About = () => {
               Perché ST Solutions è diverso
             </h3>
             <p className="text-lg font-semibold text-primary mb-6">
-              Non vendiamo software. Costruiamo sistemi che lavorano al posto tuo.
+              Non vendiamo software. Costruiamo sistemi che lavorano al posto vostro.
             </p>
             
             {differentiators.map((item, index) => (
@@ -92,29 +88,51 @@ const About = () => {
 
         {/* Target Audience */}
         <div className="mt-20 p-8 lg:p-12 rounded-3xl bg-gradient-dark text-secondary-foreground">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <h3 className="font-display text-2xl md:text-3xl font-bold mb-6">
               A chi si rivolge ST Solutions?
             </h3>
             <p className="text-secondary-foreground/80 mb-6">
-              Lavoro con attività locali che vogliono crescere senza impazzire. Se:
+              Lavoriamo a fianco di titolari d'azienda, professionisti e attività locali che vogliono scalare i propri risultati eliminando il caos operativo. Siete nel posto giusto se:
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {[
-                "Passi ore al telefono per gestire appuntamenti invece di lavorare con i clienti",
-                "Perdi clienti perché non riesci a rispondere a tutti in tempo reale",
-                "Paghi commissioni del 20-30% a piattaforme che ti tengono ostaggio",
-                "Gestisci tutto manualmente e vorresti automatizzare ma non sai da dove iniziare",
-                "Hai provato software 'pronti' ma non si adattavano ai tuoi processi",
+                {
+                  title: "Il lavoro gestionale vi assorbe troppo tempo",
+                  desc: "Passate ore al telefono o al PC per coordinare appuntamenti invece di produrre valore per la vostra attività."
+                },
+                {
+                  title: "La tempestività è il vostro punto debole",
+                  desc: "Perdete potenziali clienti perché non riuscite a rispondere a ogni richiesta in tempo reale o fuori orario d'ufficio."
+                },
+                {
+                  title: "Volete un canale diretto con i vostri clienti",
+                  desc: "Desiderate un'app o un portale che gestisca ordini, prenotazioni e comunicazioni in totale autonomia, senza che dobbiate mai intervenire manualmente."
+                },
+                {
+                  title: "Volete eliminare commissioni inutili",
+                  desc: "Siete stanchi di regalare il 20-30% del vostro fatturato a piattaforme esterne che tengono in ostaggio i vostri dati e i vostri margini."
+                },
+                {
+                  title: "Gestite tutto manualmente e cercate ordine",
+                  desc: "I vostri flussi di lavoro sono frammentati e desiderate un sistema digitale unico, proprietario e automatico."
+                },
+                {
+                  title: "Il software \"standard\" non si adatta a voi",
+                  desc: "Avete provato soluzioni pronte all'uso, ma nessuna è in grado di ricalcare il vostro modello di business specifico."
+                },
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>{item}</span>
+                  <div>
+                    <span className="font-semibold">{item.title}:</span>{" "}
+                    <span className="text-secondary-foreground/80">{item.desc}</span>
+                  </div>
                 </li>
               ))}
             </ul>
             <p className="mt-6 text-lg font-semibold text-primary">
-              ...allora posso aiutarti concretamente.
+              ...se vi riconoscete in queste sfide, possiamo aiutarvi concretamente.
             </p>
           </div>
         </div>

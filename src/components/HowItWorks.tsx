@@ -5,31 +5,31 @@ const steps = [
     icon: Phone,
     number: "01",
     title: "Primo Contatto",
-    description: "Prenoti un appuntamento conoscitivo di 10 minuti tramite Calendly oppure ci scrivi su WhatsApp. Nessun impegno, nessuna pressione.",
+    description: "Prenotate un appuntamento conoscitivo di 10 minuti tramite Calendly oppure scriveteci su WhatsApp. Nessun impegno, nessuna pressione.",
   },
   {
     icon: Headphones,
     number: "02",
     title: "Chiamata Conoscitiva",
-    description: "Ti ascolto. Raccontami della tua attività, dei problemi che affronti ogni giorno. Se posso aiutarti concretamente, passiamo allo step successivo.",
+    description: "Vi ascoltiamo. Raccontateci della vostra attività, dei problemi che affrontate ogni giorno. Se possiamo aiutarvi concretamente, passiamo allo step successivo.",
   },
   {
     icon: FileSearch,
     number: "03",
     title: "Analisi Flussi (Gratuita)",
-    description: "Dedico 1-2 ore a studiare i tuoi processi. Ti presento un'analisi dettagliata: cosa automatizzare, come funzionerebbe, quanto risparmieresti.",
+    description: "Dedichiamo 1-2 ore a studiare i vostri processi. Vi presentiamo un'analisi dettagliata: cosa automatizzare, come funzionerebbe, quanto risparmiereste.",
   },
   {
     icon: Code,
     number: "04",
     title: "Sviluppo Soluzione",
-    description: "Costruisco la tua soluzione su misura. Ti tengo aggiornato costantemente, raccolgo feedback, perfeziono ogni dettaglio. Tempi: 2-8 settimane.",
+    description: "Costruiamo la vostra soluzione su misura. Vi teniamo aggiornati costantemente, raccogliamo feedback, perfezioniamo ogni dettaglio.",
   },
   {
     icon: Rocket,
     number: "05",
-    title: "Attivazione e Formazione",
-    description: "Ti affianco nell'implementazione. Configuro tutto, ti formo sull'uso, mi assicuro che funzioni perfettamente. Resto disponibile per supporto.",
+    title: "Testing e Attivazione",
+    description: "Testiamo insieme l'applicazione o l'automazione creata. Configuriamo tutto, vi formiamo sull'uso, ci assicuriamo che funzioni perfettamente. Restiamo disponibili per supporto.",
   },
 ];
 
@@ -46,7 +46,7 @@ const HowItWorks = () => {
             Un processo semplice, trasparente
           </h2>
           <p className="text-lg text-secondary-foreground/70 max-w-2xl mx-auto">
-            Senza sorprese. Saprai sempre a che punto siamo e cosa stiamo facendo.
+            Senza sorprese. Saprete sempre a che punto siamo e cosa stiamo facendo.
           </p>
         </div>
 
@@ -87,9 +87,9 @@ const HowItWorks = () => {
         <div className="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { title: "Trasparenza totale", desc: "Costi chiari, tempi realistici" },
-            { title: "Comunicazione costante", desc: "Sai sempre a che punto siamo" },
+            { title: "Comunicazione costante", desc: "Sapete sempre a che punto siamo" },
             { title: "Focus sui risultati", desc: "Se non migliora, non ha senso farlo" },
-            { title: "Supporto continuativo", desc: "Non ti lasciamo solo dopo la consegna" },
+            { title: "Supporto continuativo", desc: "Non vi lasciamo soli dopo la consegna" },
           ].map((item, index) => (
             <div key={index} className="text-center p-4">
               <h4 className="font-display font-semibold text-primary mb-1">
