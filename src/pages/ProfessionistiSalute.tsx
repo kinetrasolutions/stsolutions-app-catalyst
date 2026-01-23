@@ -23,7 +23,7 @@ import {
 import healthHeroImage from "@/assets/health-hero-custom.webp";
 import healthWhatsappAgent from "@/assets/health-whatsapp-custom.webp";
 import healthManagementApp from "@/assets/health-management-custom.webp";
-import healthInvoicing from "@/assets/health-invoicing.jpg";
+import healthInvoicing from "@/assets/health-invoicing-custom.webp";
 
 const challenges = [
   {
