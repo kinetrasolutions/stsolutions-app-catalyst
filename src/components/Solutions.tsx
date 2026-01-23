@@ -3,8 +3,8 @@ import { MessageSquare, Smartphone, CheckCircle2 } from "lucide-react";
 const solutions = [
   {
     icon: MessageSquare,
-    title: "Assistenti AI WhatsApp e Voce",
-    description: "Gestiscono prenotazioni, rispondono alle domande frequenti, inviano promemoria automatici. Disponibili h24, rispondono in pochi secondi, non perdono mai un cliente.",
+    title: "Assistenti AI per Clienti e Prenotazioni",
+    description: "Assistenti intelligenti che gestiscono WhatsApp e telefono, rispondono ai clienti, fissano appuntamenti e riducono le interruzioni durante il lavoro.",
     features: [
       "Per medici: Triage pazienti, conferma appuntamenti, riduzione no-show",
       "Per parrucchieri: Prenotazioni automatiche, promemoria trattamenti",
@@ -16,8 +16,8 @@ const solutions = [
   },
   {
     icon: Smartphone,
-    title: "App e Strumenti su Misura",
-    description: "Sistemi personalizzati per gestire clienti, appuntamenti, inventario, follow-up. Tutto integrato, tutto automatizzato, tutto sotto il tuo controllo.",
+    title: "Automazioni Operative AI su Misura",
+    description: "Sistemi e agenti AI che eseguono azioni reali: invio comunicazioni, aggiornamento dati, gestione documenti, follow-up automatici e processi interni.",
     features: [
       "Database clienti intelligenti con storico e preferenze",
       "Sistemi di notifiche automatiche e follow-up",
@@ -80,6 +80,13 @@ const Solutions = () => {
           ))}
         </div>
 
+        {/* Custom solution note */}
+        <div className="mt-10 text-center">
+          <p className="text-lg text-muted-foreground bg-muted/50 inline-block px-6 py-3 rounded-xl">
+            <span className="font-semibold text-foreground">Ogni soluzione viene progettata sul tuo metodo di lavoro</span>, non adattata a un software standard.
+          </p>
+        </div>
+
         {/* Process Steps */}
         <div className="mt-20">
           <h3 className="font-display text-2xl font-bold text-center text-foreground mb-12">
@@ -87,10 +94,10 @@ const Solutions = () => {
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { step: "01", title: "Analisi personalizzata", desc: "Studio come lavori oggi e dove stai perdendo tempo e soldi" },
-              { step: "02", title: "Soluzione su misura", desc: "Sviluppo assistenti AI e strumenti che risolvono i tuoi problemi specifici" },
+              { step: "01", title: "Analisi del flusso operativo reale", desc: "Studio come lavori oggi e dove stai perdendo tempo e soldi" },
+              { step: "02", title: "Progettazione della soluzione su misura", desc: "Sviluppo assistenti AI e automazioni che risolvono i tuoi problemi specifici" },
               { step: "03", title: "Implementazione guidata", desc: "Ti affianco nell'attivazione e ti formo sull'uso" },
-              { step: "04", title: "Risultati misurabili", desc: "Ore risparmiate, appuntamenti in più, costi ridotti. Numeri concreti." },
+              { step: "04", title: "Risultati misurabili e controllo totale", desc: "Ore risparmiate, costi ridotti, sistema tuo. Numeri concreti." },
             ].map((item, index) => (
               <div key={index} className="text-center p-6">
                 <span className="inline-block text-5xl font-display font-bold text-gradient mb-4">

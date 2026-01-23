@@ -62,9 +62,12 @@ const About = () => {
 
           {/* Right Column - Differentiators */}
           <div className="space-y-4">
-            <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-4">
               Perché ST Solutions è diverso
             </h3>
+            <p className="text-lg font-semibold text-primary mb-6">
+              Non vendiamo software. Costruiamo sistemi che lavorano al posto tuo.
+            </p>
             
             {differentiators.map((item, index) => (
               <div

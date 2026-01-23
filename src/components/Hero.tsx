@@ -30,28 +30,36 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-secondary-foreground mb-6 animate-slide-up">
-            Smetti di{" "}
-            <span className="text-gradient">sprecare tempo e soldi</span>
+            <span className="text-gradient">Automatizziamo</span> i processi
             <br />
-            Automatizza con l'AI
+            della tua attività con l'AI
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 animate-slide-up" style={{
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 animate-slide-up" style={{
           animationDelay: "0.1s"
-        }}>Automazioni intelligenti per aziende, attività locali e professionisti. 
-Riduci i costi operativi, elimina le attività ripetitive e concentrati sui tuoi clienti.
+        }}>
+            Clienti, appuntamenti, comunicazioni e operazioni quotidiane automatizzate con soluzioni AI su misura, senza software standard.
+          </p>
 
-        </p>
+          {/* Micro-copy */}
+          <p className="text-base md:text-lg text-primary font-medium mb-10 animate-slide-up" style={{
+          animationDelay: "0.15s"
+        }}>
+            L'AI lavora per te anche quando non sei operativo.
+          </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{
           animationDelay: "0.2s"
         }}>
-            <Button variant="hero" size="xl" className="group">
-              Prenota una Call Gratuita
-              <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <div className="flex flex-col items-center">
+              <Button variant="hero" size="xl" className="group">
+                Prenota una Call Gratuita
+                <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <span className="text-sm text-white/70 mt-2">Chiamata gratuita di 10 minuti – senza impegno</span>
+            </div>
             <Button variant="hero-outline" size="xl" className="group border-2 border-white/60 text-white hover:bg-white/10 hover:border-white">
               <Play size={18} className="mr-2" />
               Scopri Come Funziona

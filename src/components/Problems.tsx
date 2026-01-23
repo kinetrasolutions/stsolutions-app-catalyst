@@ -3,23 +3,23 @@ import { Phone, Clock, Wallet, CalendarX } from "lucide-react";
 const problems = [
   {
     icon: Phone,
-    title: "Il telefono squilla mentre sei con un cliente",
-    description: "Appuntamenti persi, richieste non gestite, stress continuo. Ogni chiamata non risposta è un'opportunità che sfuma.",
+    title: "Il telefono squilla mentre lavori",
+    description: "Ogni chiamata persa è un cliente che non torna. E intanto perdi tempo e concentrazione sul lavoro che stai facendo.",
   },
   {
     icon: Clock,
-    title: "Perdi ore in attività ripetitive",
-    description: "Conferme appuntamenti, risposte alle stesse domande, gestione manuale dell'agenda. Tempo che potresti dedicare al tuo lavoro.",
+    title: "Perdi clienti se non rispondi subito",
+    description: "I clienti non aspettano. Se non rispondi in pochi minuti, vanno dalla concorrenza. Tempo perso, soldi persi.",
   },
   {
     icon: Wallet,
-    title: "Le piattaforme ti rubano margini",
-    description: "Commissioni del 20-30% su ogni ordine. Dipendi da terzi per gestire i tuoi clienti e non hai controllo dei tuoi dati.",
+    title: "Le piattaforme ti mangiano i margini",
+    description: "Commissioni del 20-30% su ogni ordine. Dipendi da terzi, perdi controllo dei tuoi dati e dei tuoi clienti.",
   },
   {
     icon: CalendarX,
-    title: "I no-show ti costano caro",
-    description: "Slot vuoti che avresti potuto riempire. Mancati guadagni che si accumulano mese dopo mese.",
+    title: "I no-show ti fanno perdere soldi",
+    description: "Slot vuoti che avresti potuto riempire. Mancati guadagni che si accumulano settimana dopo settimana.",
   },
 ];
 
