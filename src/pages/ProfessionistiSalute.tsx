@@ -19,6 +19,12 @@ import {
   MessageSquare
 } from "lucide-react";
 
+// Images
+import healthHeroImage from "@/assets/health-hero.jpg";
+import healthWhatsappAgent from "@/assets/health-whatsapp-agent.jpg";
+import healthManagementApp from "@/assets/health-management-app.jpg";
+import healthInvoicing from "@/assets/health-invoicing.jpg";
+
 const challenges = [
   {
     icon: Phone,
@@ -175,40 +181,58 @@ const ProfessionistiSalute = () => {
           </div>
 
           <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-16">
-            <div className="max-w-4xl mx-auto text-center">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6 animate-fade-in">
-                Professionisti della Salute
-              </span>
-              
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-                Il Tuo Ecosistema Digitale per la{" "}
-                <span className="text-gradient">Sanità Privata</span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-white/80 mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-                Zero commissioni. Pieno controllo. Gestione automatizzata dei pazienti h24.
-              </p>
-              
-              <p className="text-lg text-white/60 mb-10 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                Costruiamo l'infrastruttura digitale del tuo studio medico: un sistema proprietario che gestisce prenotazioni, dati clinici e comunicazioni senza dipendere da piattaforme esterne.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Text Content */}
+              <div className="text-center lg:text-left">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6 animate-fade-in">
+                  Professionisti della Salute
+                </span>
+                
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
+                  Il Tuo Ecosistema Digitale per la{" "}
+                  <span className="text-gradient">Sanità Privata</span>
+                </h1>
+                
+                <p className="text-xl md:text-2xl text-white/80 mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+                  Zero commissioni. Pieno controllo. Gestione automatizzata dei pazienti h24.
+                </p>
+                
+                <p className="text-lg text-white/60 mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+                  Costruiamo l'infrastruttura digitale del tuo studio medico: un sistema proprietario che gestisce prenotazioni, dati clinici e comunicazioni senza dipendere da piattaforme esterne.
+                </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.3s" }}>
-                <Button variant="hero" size="xl" className="group">
-                  Prenota una Chiamata Gratuita
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button 
-                  size="xl" 
-                  className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  asChild
-                >
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    Scrivici su WhatsApp
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.3s" }}>
+                  <Button variant="hero" size="xl" className="group">
+                    Prenota una Chiamata Gratuita
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
+                  </Button>
+                  <Button 
+                    size="xl" 
+                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    asChild
+                  >
+                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                      <MessageSquare className="w-5 h-5 mr-2" />
+                      Scrivici su WhatsApp
+                      <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Hero Image */}
+              <div className="relative animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={healthHeroImage} 
+                    alt="Studio medico moderno con professionisti della salute" 
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/30 rounded-2xl blur-xl" />
+                <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl" />
               </div>
             </div>
           </div>
@@ -276,40 +300,60 @@ const ProfessionistiSalute = () => {
             </ScrollAnimation>
 
             <div className="space-y-12">
-              {solutions.map((solution, index) => (
-                <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
-                  <div className="rounded-3xl border border-border bg-card overflow-hidden">
-                    <div className={`h-2 bg-gradient-to-r ${solution.color}`} />
-                    <div className="p-8 lg:p-12">
-                      <div className="flex flex-col lg:flex-row gap-8">
-                        <div className="lg:w-1/3">
-                          <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-4`}>
-                            <solution.icon className="w-8 h-8 text-white" />
+              {solutions.map((solution, index) => {
+                const solutionImages = [healthWhatsappAgent, healthManagementApp, healthInvoicing];
+                const imageAlts = [
+                  "Agente AI WhatsApp per prenotazioni mediche",
+                  "App gestionale per studi medici",
+                  "Sistema di fatturazione automatica"
+                ];
+                
+                return (
+                  <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
+                    <div className="rounded-3xl border border-border bg-card overflow-hidden">
+                      <div className={`h-2 bg-gradient-to-r ${solution.color}`} />
+                      <div className="p-8 lg:p-12">
+                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
+                          {/* Image */}
+                          <div className="lg:w-2/5">
+                            <div className="relative rounded-2xl overflow-hidden shadow-xl group">
+                              <img 
+                                src={solutionImages[index]} 
+                                alt={imageAlts[index]}
+                                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                              />
+                              <div className={`absolute inset-0 bg-gradient-to-t ${solution.color} opacity-10`} />
+                            </div>
                           </div>
-                          <h3 className="font-display text-2xl font-bold text-foreground mb-1">
-                            {solution.title}
-                          </h3>
-                          <p className="text-primary font-medium mb-4">{solution.subtitle}</p>
-                          <p className="text-muted-foreground">{solution.description}</p>
-                        </div>
-                        <div className="lg:w-2/3">
-                          <ul className="space-y-3 mb-6">
-                            {solution.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-start gap-3">
-                                <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                <span className="text-foreground">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                          <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${solution.color} text-white text-sm font-medium`}>
-                            💡 {solution.highlight}
+                          
+                          {/* Content */}
+                          <div className="lg:w-3/5">
+                            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-4`}>
+                              <solution.icon className="w-8 h-8 text-white" />
+                            </div>
+                            <h3 className="font-display text-2xl font-bold text-foreground mb-1">
+                              {solution.title}
+                            </h3>
+                            <p className="text-primary font-medium mb-4">{solution.subtitle}</p>
+                            <p className="text-muted-foreground mb-6">{solution.description}</p>
+                            <ul className="space-y-3 mb-6">
+                              {solution.features.map((feature, idx) => (
+                                <li key={idx} className="flex items-start gap-3">
+                                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                  <span className="text-foreground">{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${solution.color} text-white text-sm font-medium`}>
+                              💡 {solution.highlight}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </ScrollAnimation>
-              ))}
+                  </ScrollAnimation>
+                );
+              })}
             </div>
           </div>
         </section>
