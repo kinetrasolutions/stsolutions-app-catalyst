@@ -1,4 +1,4 @@
-import { Phone, Clock, Wallet, CalendarX } from "lucide-react";
+import { Phone, Clock, Settings, RefreshCw } from "lucide-react";
 
 const problems = [
   {
@@ -12,14 +12,14 @@ const problems = [
     description: "I clienti non aspettano. Se non rispondi in pochi minuti, vanno dalla concorrenza. Tempo perso, soldi persi.",
   },
   {
-    icon: Wallet,
-    title: "Le piattaforme ti mangiano i margini",
-    description: "Commissioni del 20-30% su ogni ordine. Dipendi da terzi, perdi controllo dei tuoi dati e dei tuoi clienti.",
+    icon: Settings,
+    title: "Senza di te tutto si blocca",
+    description: "Ogni richiesta, decisione o problema passa da te. Non puoi delegare, non puoi staccare, non puoi crescere.",
   },
   {
-    icon: CalendarX,
-    title: "I no-show ti fanno perdere soldi",
-    description: "Slot vuoti che avresti potuto riempire. Mancati guadagni che si accumulano settimana dopo settimana.",
+    icon: RefreshCw,
+    title: "Troppo lavoro manuale ripetitivo",
+    description: "Copi, incolli, rispondi, aggiorni e controlli tutto a mano. Attività che un sistema automatico potrebbe gestire al posto tuo.",
   },
 ];
 
