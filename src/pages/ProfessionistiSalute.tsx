@@ -626,8 +626,8 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                   description: "Ogni chiamata persa è un paziente che potrebbe andare altrove. Non puoi permetterti di essere sempre reperibile, ma neanche di perdere opportunità."
                 },
                 {
-                  title: "Vuoi ridurre i costi",
-                  description: "Hai già una segretaria ma il costo mensile è alto. Con l'AI riduci i costi operativi mantenendo un servizio h24 senza interruzioni."
+                  title: "Vuoi ottimizzare i costi operativi",
+                  description: "Il tuo staff è impegnato in attività ripetitive a basso valore. Con l'AI automatizzi la gestione ordinaria e liberi le persone per ciò che conta davvero."
                 },
                 {
                   title: "Vuoi indipendenza dalle piattaforme",
