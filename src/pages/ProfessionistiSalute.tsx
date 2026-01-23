@@ -135,20 +135,26 @@ const ProfessionistiSalute = () => {
                 </span>
                 
                 <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-                  Il Tuo Ecosistema Digitale per la{" "}
-                  <span className="text-gradient">Sanità Privata</span>
+                  L'Intelligenza Artificiale al Servizio del{" "}
+                  <span className="text-gradient">Tuo Studio</span>
                 </h1>
                 
                 <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-4 animate-slide-up" style={{
                 animationDelay: "0.1s"
               }}>
-                  Zero commissioni. Pieno controllo. Gestione automatizzata dei pazienti h24.
+                  Il Tuo Ecosistema Digitale potenziato dall'AI
                 </p>
                 
-                <p className="text-base sm:text-lg text-white/60 mb-8 sm:mb-10 animate-slide-up" style={{
+                <p className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up" style={{
                 animationDelay: "0.2s"
               }}>
-                  Costruiamo l'infrastruttura digitale del tuo studio medico: un sistema proprietario che gestisce prenotazioni, dati clinici e comunicazioni senza dipendere da piattaforme esterne.
+                  Basta lavoro manuale: un sistema AI proprietario gestisce appuntamenti e pazienti h24. Più efficienza per lo studio, più tempo libero per te.
+                </p>
+                
+                <p className="text-sm text-white/50 mb-8 sm:mb-10 animate-slide-up" style={{
+                animationDelay: "0.25s"
+              }}>
+                  E se hai esigenze particolari, sviluppiamo la soluzione su misura per risolverle.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{
