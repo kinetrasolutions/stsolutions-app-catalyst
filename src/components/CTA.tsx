@@ -31,10 +31,11 @@ const CTA = () => {
               Prenota una Chiamata Gratuita
               <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="dark" size="xl" className="w-full sm:w-auto" asChild>
-              <a href="https://wa.me/393452838679" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="xl" className="group w-full sm:w-auto bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700" asChild>
+              <a href="https://wa.me/393452838679?text=Buongiorno%20%2C%20sarei%20interessato%20alle%20vostre%20soluzioni%20per%20la%20mia%20attività" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Scrivici su WhatsApp
+                <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
           </div>

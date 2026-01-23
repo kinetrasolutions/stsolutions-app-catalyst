@@ -131,10 +131,10 @@ const Sectors = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
             Anche se sei titolare di officina, palestra o qualsiasi altra attività le nostre soluzioni possono fare al caso tuo in quanto sono costruite sul tuo modello di lavoro.
           </p>
-          <Button variant="hero" asChild>
-            <a href="https://wa.me/393452838679" target="_blank" rel="noopener noreferrer">
+          <Button variant="hero" className="group" asChild>
+            <a href="https://wa.me/393452838679?text=Buongiorno%20%2C%20sarei%20interessato%20alle%20vostre%20soluzioni%20per%20la%20mia%20attività" target="_blank" rel="noopener noreferrer">
               Contattaci
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
         </div>

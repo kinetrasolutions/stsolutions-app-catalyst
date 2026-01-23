@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://wa.me/393452838679"
+                  href="https://wa.me/393452838679?text=Buongiorno%20%2C%20sarei%20interessato%20alle%20vostre%20soluzioni%20per%20la%20mia%20attività"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-secondary-foreground/70 hover:text-primary transition-colors"
