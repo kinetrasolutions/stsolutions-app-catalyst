@@ -60,9 +60,9 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center justify-center">
             <Button variant="hero" size="default">
-              Prenota una Call
+              Prenota una Chiamata Gratuita
             </Button>
           </div>
 
@@ -91,7 +91,7 @@ const Header = () => {
                 </a>
               ))}
               <Button variant="hero" size="lg" className="mt-4">
-                Prenota una Call
+                Prenota una Chiamata Gratuita
               </Button>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
 import logoLight from "@/assets/logo-light.png";
 
 const Footer = () => {
@@ -65,27 +65,23 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:info@stsolutions.it"
+                  href="mailto:studio.stsolutions@protonmail.com"
                   className="flex items-center gap-2 text-secondary-foreground/70 hover:text-primary transition-colors"
                 >
                   <Mail size={16} />
-                  info@stsolutions.it
+                  studio.stsolutions@protonmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+390000000000"
+                  href="https://wa.me/393452838679"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-secondary-foreground/70 hover:text-primary transition-colors"
                 >
                   <Phone size={16} />
-                  +39 000 000 0000
+                  +39 345 283 8679
                 </a>
-              </li>
-              <li>
-                <span className="flex items-center gap-2 text-secondary-foreground/70">
-                  <MapPin size={16} />
-                  Italia
-                </span>
               </li>
             </ul>
           </div>

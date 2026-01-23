@@ -15,25 +15,27 @@ const CTA = () => {
           </span>
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Stanco di{" "}
+            Stanchi di{" "}
             <span className="text-gradient">gestire tutto manualmente</span>?
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            Prenota un appuntamento conoscitivo di 10 minuti, senza impegno. 
-            Scopriamo insieme come automatizzare la tua attività.
+            Prenotate un appuntamento conoscitivo di 10 minuti, senza impegno. 
+            Scopriamo insieme come automatizzare la vostra attività.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button variant="hero" size="xl" className="group w-full sm:w-auto">
               <Calendar className="w-5 h-5 mr-2" />
-              Prenota una Call Gratuita
+              Prenota una Chiamata Gratuita
               <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="dark" size="xl" className="w-full sm:w-auto">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Scrivici su WhatsApp
+            <Button variant="dark" size="xl" className="w-full sm:w-auto" asChild>
+              <a href="https://wa.me/393452838679" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Scrivici su WhatsApp
+              </a>
             </Button>
           </div>
 

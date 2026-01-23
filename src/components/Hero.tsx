@@ -49,21 +49,17 @@ const Hero = () => {
             L'AI lavora per te anche quando non sei operativo.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{
+          {/* CTA Button */}
+          <div className="flex flex-col justify-center items-center animate-slide-up" style={{
           animationDelay: "0.2s"
         }}>
             <div className="flex flex-col items-center">
               <Button variant="hero" size="xl" className="group">
-                Prenota una Call Gratuita
+                Prenota una Chiamata Gratuita
                 <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
               <span className="text-sm text-white/70 mt-2">Chiamata gratuita di 10 minuti – senza impegno</span>
             </div>
-            <Button variant="hero-outline" size="xl" className="group border-2 border-white/60 text-white hover:bg-white/10 hover:border-white">
-              <Play size={18} className="mr-2" />
-              Scopri Come Funziona
-            </Button>
           </div>
 
           {/* Trust Badges */}
