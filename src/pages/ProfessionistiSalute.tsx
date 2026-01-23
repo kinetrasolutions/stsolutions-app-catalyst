@@ -21,7 +21,7 @@ import {
 
 // Images
 import healthHeroImage from "@/assets/health-hero-custom.webp";
-import healthWhatsappAgent from "@/assets/health-whatsapp-agent.jpg";
+import healthWhatsappAgent from "@/assets/health-whatsapp-custom.webp";
 import healthManagementApp from "@/assets/health-management-app.jpg";
 import healthInvoicing from "@/assets/health-invoicing.jpg";
 
@@ -332,15 +332,31 @@ const ProfessionistiSalute = () => {
                       <div className={`h-2 bg-gradient-to-r ${solution.color}`} />
                       <div className="p-8 lg:p-12">
                         <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
-                          {/* Image */}
+                          {/* Image with gradient mask fade */}
                           <div className="lg:w-2/5">
-                            <div className="relative rounded-2xl overflow-hidden shadow-xl group">
-                              <img 
-                                src={solutionImages[index]} 
-                                alt={imageAlts[index]}
-                                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                              />
-                              <div className={`absolute inset-0 bg-gradient-to-t ${solution.color} opacity-10`} />
+                            <div className="relative group">
+                              {/* Glow effect behind image */}
+                              <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-30 blur-2xl scale-110`} />
+                              
+                              {/* Image with mask fade */}
+                              <div 
+                                className="relative"
+                                style={{
+                                  maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%)',
+                                  maskComposite: 'intersect',
+                                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+                                  WebkitMaskComposite: 'source-in',
+                                }}
+                              >
+                                <img 
+                                  src={solutionImages[index]} 
+                                  alt={imageAlts[index]}
+                                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                              </div>
+                              
+                              {/* Subtle overlay gradient */}
+                              <div className={`absolute inset-0 bg-gradient-to-t ${solution.color} opacity-5 pointer-events-none`} />
                             </div>
                           </div>
                           
@@ -355,12 +371,23 @@ const ProfessionistiSalute = () => {
                             <p className="text-primary font-medium mb-4">{solution.subtitle}</p>
                             <p className="text-muted-foreground mb-6">{solution.description}</p>
                             <ul className="space-y-3 mb-6">
-                              {solution.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-start gap-3">
-                                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                  <span className="text-foreground">{feature}</span>
-                                </li>
-                              ))}
+                              {solution.features.map((feature, idx) => {
+                                // Split feature at first " – " to bold the title
+                                const dashIndex = feature.indexOf(' – ');
+                                const hasTitle = dashIndex > -1;
+                                const title = hasTitle ? feature.slice(0, dashIndex) : null;
+                                const rest = hasTitle ? feature.slice(dashIndex) : feature;
+                                
+                                return (
+                                  <li key={idx} className="flex items-start gap-3">
+                                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                    <span className="text-foreground">
+                                      {title && <strong>{title}</strong>}
+                                      {rest}
+                                    </span>
+                                  </li>
+                                );
+                              })}
                             </ul>
                             <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${solution.color} text-white text-sm font-medium`}>
                               💡 {solution.highlight}
