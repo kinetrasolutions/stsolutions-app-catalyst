@@ -1,4 +1,5 @@
 import { Phone, Clock, Settings, RefreshCw } from "lucide-react";
+import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
 
 const problems = [
   {
@@ -28,7 +29,7 @@ const Problems = () => {
     <section className="section-padding bg-background">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <ScrollAnimation variant="fadeUp" className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-4">
             I Problemi che Risolviamo
           </span>
@@ -38,31 +39,32 @@ const Problems = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Sono i problemi più comuni delle attività locali. E sono tutti risolvibili.
           </p>
-        </div>
+        </ScrollAnimation>
 
         {/* Problems Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <StaggerContainer className="grid md:grid-cols-2 gap-6 lg:gap-8" staggerDelay={0.15}>
           {problems.map((problem, index) => (
-            <div
-              key={index}
-              className="group p-6 lg:p-8 rounded-2xl border border-border bg-card hover:border-destructive/30 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex items-start gap-5">
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center group-hover:bg-destructive/20 transition-colors">
-                  <problem.icon className="w-7 h-7 text-destructive" />
-                </div>
-                <div>
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                    {problem.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {problem.description}
-                  </p>
+            <StaggerItem key={index}>
+              <div
+                className="group p-6 lg:p-8 rounded-2xl border border-border bg-card hover:border-destructive/30 hover:shadow-lg transition-all duration-300 h-full"
+              >
+                <div className="flex items-start gap-5">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center group-hover:bg-destructive/20 transition-colors">
+                    <problem.icon className="w-7 h-7 text-destructive" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                      {problem.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {problem.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
