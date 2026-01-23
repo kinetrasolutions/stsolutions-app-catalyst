@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoDark from "@/assets/logo-dark.png";
@@ -7,6 +8,9 @@ import logoLight from "@/assets/logo-light.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  const isProfessionistiSalute = location.pathname === "/professionisti-salute";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +20,19 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#soluzioni", label: "Soluzioni" },
-    { href: "#settori", label: "Settori" },
-    { href: "#come-funziona", label: "Come Funziona" },
-    { href: "#chi-siamo", label: "Chi Siamo" },
-  ];
+  // Navigation links based on current page
+  const navLinks = isProfessionistiSalute
+    ? [
+        { href: "#soluzioni", label: "Soluzioni" },
+        { href: "#come-funziona", label: "Come Funziona" },
+        { href: "#chi-siamo", label: "Chi Siamo" },
+      ]
+    : [
+        { href: "#soluzioni", label: "Soluzioni" },
+        { href: "#settori", label: "Settori" },
+        { href: "#come-funziona", label: "Come Funziona" },
+        { href: "#chi-siamo", label: "Chi Siamo" },
+      ];
 
   return (
     <header
@@ -33,8 +44,8 @@ const Header = () => {
     >
       <div className="container-custom px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          {/* Logo - Always links to homepage */}
+          <a href="/" className="flex items-center gap-2 group">
             <img
               src={isScrolled ? logoDark : logoLight}
               alt="ST Solutions"

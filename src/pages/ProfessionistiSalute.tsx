@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
-import { Phone, Clock, CalendarX, Bot, Smartphone, FileText, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare } from "lucide-react";
+import { Phone, Clock, CalendarX, Bot, Smartphone, FileText, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Quote } from "lucide-react";
 
 // Images
 import healthHeroImage from "@/assets/health-hero-custom.webp";
@@ -247,7 +247,7 @@ const ProfessionistiSalute = () => {
         </section>
 
         {/* Solutions Section */}
-        <section className="section-padding bg-muted/50">
+        <section id="soluzioni" className="section-padding bg-muted/50">
           <div className="container-custom px-6 sm:px-8">
             <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
@@ -410,7 +410,7 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         </section>
 
         {/* Process Section */}
-        <section className="section-padding bg-background">
+        <section id="come-funziona" className="section-padding bg-background">
           <div className="container-custom px-6 sm:px-8">
             <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
@@ -436,6 +436,94 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                   </div>
                 </StaggerItem>)}
             </StaggerContainer>
+          </div>
+        </section>
+
+        {/* Chi Siamo Section */}
+        <section id="chi-siamo" className="section-padding bg-muted/30">
+          <div className="container-custom px-6 sm:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Left Column - Content */}
+              <ScrollAnimation variant="slideLeft">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                  Chi Siamo
+                </span>
+
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                  Stefano Taino
+                  <span className="block text-xl md:text-2xl font-normal text-muted-foreground mt-2">
+                    Founder & System Architect
+                  </span>
+                </h2>
+
+                {/* Quote */}
+                <div className="relative pl-6 border-l-4 border-primary mb-8">
+                  <Quote className="absolute -left-3 -top-2 w-6 h-6 text-primary bg-muted/30" />
+                  <p className="text-xl italic text-foreground">
+                    "Dietro ogni automazione c'è una visione umana."
+                  </p>
+                </div>
+
+                <div className="space-y-4 text-muted-foreground mb-8">
+                  <p>
+                    Mi chiamo Stefano Taino e con ST Solutions aiuto i professionisti della salute a uscire dal caos operativo.
+                  </p>
+                  <p>
+                    Non credo nei software 'copia e incolla' che vi tengono prigionieri. 
+                    Il mio obiettivo è costruire l'infrastruttura digitale del tuo studio: sistemi intelligenti che 
+                    rispondono ai pazienti, gestionali che ordinano i tuoi dati e automazioni che ti restituiscono il tempo che meriti.
+                  </p>
+                  <p className="font-semibold text-foreground">
+                    Con ST Solutions, il software è tuo, i dati sono tuoi e il risultato è garantito.
+                  </p>
+                </div>
+              </ScrollAnimation>
+
+              {/* Right Column - Differentiators */}
+              <ScrollAnimation variant="slideRight">
+                <div className="space-y-4">
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                    Perché ST Solutions è diverso
+                  </h3>
+                  <p className="text-lg font-semibold text-primary mb-6">
+                    Non vendiamo software. Costruiamo sistemi che lavorano al posto tuo.
+                  </p>
+                  
+                  <StaggerContainer staggerDelay={0.15}>
+                    {[
+                      {
+                        title: "Costruito su misura, non adattato",
+                        description: "Non ti vendiamo un software standard. Studiamo come lavori oggi, individuiamo i colli di bottiglia, costruiamo la soluzione che si integra perfettamente.",
+                      },
+                      {
+                        title: "Persone reali, non call center",
+                        description: "Quando ci contatti, parli direttamente con noi. Noi analizziamo il problema, noi progettiamo la soluzione, noi ti seguiamo nell'implementazione.",
+                      },
+                      {
+                        title: "Focus sui risultati misurabili",
+                        description: "Non ti vendiamo 'innovazione'. Ti vendiamo ore risparmiate, costi ridotti, pazienti non persi. Numeri concreti che si vedono sul conto corrente.",
+                      },
+                    ].map((item, index) => (
+                      <StaggerItem key={index}>
+                        <div className="group p-5 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 mb-4">
+                          <div className="flex gap-4">
+                            <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                            <div>
+                              <h4 className="font-display font-semibold text-foreground mb-1">
+                                {item.title}
+                              </h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed">
+                                {item.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </StaggerItem>
+                    ))}
+                  </StaggerContainer>
+                </div>
+              </ScrollAnimation>
+            </div>
           </div>
         </section>
 
