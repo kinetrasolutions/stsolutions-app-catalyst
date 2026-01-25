@@ -222,10 +222,25 @@ const Ristorazione = () => {
                   <span className="text-white">nel tuo locale</span>
                 </h1>
                 
-                <div className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up space-y-1" style={{ animationDelay: "0.1s" }}>
-                  <p>✅ Basta telefoni occupati tra asporto e prenotazioni.</p>
-                  <p>✅ Basta no-show.</p>
-                  <p>✅ Elimina gli sprechi di tempo e il disordine degli ordini manuali.</p>
+                <div className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up space-y-3 text-left" style={{ animationDelay: "0.1s" }}>
+                  <p className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5">
+                      <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                    </span>
+                    Basta telefoni occupati tra asporto e prenotazioni.
+                  </p>
+                  <p className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5">
+                      <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                    </span>
+                    Basta no-show.
+                  </p>
+                  <p className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5">
+                      <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                    </span>
+                    Elimina gli sprechi di tempo e il disordine degli ordini manuali.
+                  </p>
                   <p className="mt-4">
                     Un sistema di proprietà che gestisce tavoli e asporto h24, riducendo i tuoi costi operativi e garantendoti una sala sempre piena e un servizio impeccabile.
                   </p>
