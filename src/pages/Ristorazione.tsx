@@ -6,7 +6,7 @@ import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/
 import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Quote } from "lucide-react";
 
 // Custom images for Ristorazione page
-import ristorazioneHeroImage from "@/assets/ristorazione-hero.jpg";
+import ristorazioneHeroImage from "@/assets/ristorazione-hero-custom.webp";
 import ristorazioneWhatsappAgent from "@/assets/ristorazione-whatsapp-agent.jpg";
 import ristorazioneAntiNoshow from "@/assets/ristorazione-anti-noshow.jpg";
 import ristorazioneMenuDigitale from "@/assets/ristorazione-menu-digitale.jpg";
@@ -215,16 +215,24 @@ const Ristorazione = () => {
                 </span>
                 
                 <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-                  L'AI che rivoluziona prenotazioni{" "}
-                  <span className="text-gradient">e servizio nel tuo locale</span>
+                  L'AI che rivoluziona{" "}
+                  <span className="text-cyan-400">prenotazioni</span> e{" "}
+                  <span className="text-cyan-400">servizio</span>
+                  <br />
+                  <span className="text-white">nel tuo locale</span>
                 </h1>
                 
-                <p className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-                  Basta telefoni occupati tra asporto e prenotazioni. Basta no-show. Basta commissioni. Elimina gli sprechi di tempo e il disordine degli ordini manuali. Un sistema di proprietà che gestisce tavoli e asporto h24, riducendo i tuoi costi operativi e garantendoti una sala sempre piena e un servizio impeccabile.
-                </p>
+                <div className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up space-y-1" style={{ animationDelay: "0.1s" }}>
+                  <p>✅ Basta telefoni occupati tra asporto e prenotazioni.</p>
+                  <p>✅ Basta no-show.</p>
+                  <p>✅ Elimina gli sprechi di tempo e il disordine degli ordini manuali.</p>
+                  <p className="mt-4">
+                    Un sistema di proprietà che gestisce tavoli e asporto h24, riducendo i tuoi costi operativi e garantendoti una sala sempre piena e un servizio impeccabile.
+                  </p>
+                </div>
                 
                 <p className="text-sm text-white/50 mb-8 sm:mb-10 animate-slide-up" style={{ animationDelay: "0.25s" }}>
-                  Ogni locale ha le sue regole: progettiamo funzionalità extra basate sul tuo flusso di lavoro.
+                  Ogni locale ha le sue regole: progettiamo funzionalità basate sul tuo flusso di lavoro.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.3s" }}>
