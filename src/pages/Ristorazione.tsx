@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
 import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Quote } from "lucide-react";
 
-// Placeholder images - will use the same structure as health page
-import healthHeroImage from "@/assets/health-hero-custom.webp";
-import healthWhatsappAgent from "@/assets/health-whatsapp-custom.webp";
-import healthManagementApp from "@/assets/health-management-custom.webp";
-import healthInvoicing from "@/assets/health-invoicing-custom.webp";
+// Custom images for Ristorazione page
+import ristorazioneHeroImage from "@/assets/ristorazione-hero.jpg";
+import ristorazioneWhatsappAgent from "@/assets/ristorazione-whatsapp-agent.jpg";
+import ristorazioneAntiNoshow from "@/assets/ristorazione-anti-noshow.jpg";
+import ristorazioneMenuDigitale from "@/assets/ristorazione-menu-digitale.jpg";
 
 const challenges = [
   {
@@ -259,7 +259,7 @@ const Ristorazione = () => {
                     }}
                   >
                     <img
-                      src={healthHeroImage}
+                      src={ristorazioneHeroImage}
                       alt="Ristorante moderno con sistema di prenotazione AI"
                       className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                     />
@@ -340,7 +340,7 @@ const Ristorazione = () => {
 
             <div className="space-y-8 sm:space-y-12">
               {solutions.map((solution, index) => {
-                const solutionImages = [healthWhatsappAgent, healthManagementApp, healthInvoicing];
+                const solutionImages = [ristorazioneWhatsappAgent, ristorazioneAntiNoshow, ristorazioneMenuDigitale];
                 const imageAlts = ["Assistente AI per ristoranti", "Sistema anti no-show", "Menu e ordini proprietari"];
                 return (
                   <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
