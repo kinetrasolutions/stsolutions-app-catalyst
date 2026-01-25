@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
-import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Quote } from "lucide-react";
+import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Quote, ClipboardList } from "lucide-react";
 
 // Custom images for Ristorazione page
 import ristorazioneHeroImage from "@/assets/ristorazione-hero-custom.webp";
@@ -13,7 +13,7 @@ import ristorazioneMenuDigitale from "@/assets/ristorazione-menu-digitale.jpg";
 const challenges = [{
   icon: Phone,
   title: "Telefono sempre occupato",
-  description: "Durante il servizio è impossibile rispondere a tutti. Ogni chiamata persa è un tavolo regalato alla concorrenza.",
+  description: "Durante il servizio è impossibile rispondere a tutti. Ogni chiamata persa è un tavolo o un ordine regalato alla concorrenza.",
   problems: ["Telefono che squilla mentre servi i clienti", "Chiamate perse = tavoli vuoti", "Staff distratto durante il servizio", "Impossibilità di gestire picchi di richieste"]
 }, {
   icon: CalendarX,
@@ -25,6 +25,11 @@ const challenges = [{
   title: "Dipendenza dalle piattaforme",
   description: "Pagare commissioni su ogni cliente che prenota online mangia i tuoi margini. Il cliente deve essere tuo, non del portale.",
   problems: ["Commissioni del 25-30% sugli ordini", "Clienti che sono del portale, non tuoi", "Nessun controllo sui dati dei clienti", "Dipendenza da algoritmi esterni"]
+}, {
+  icon: ClipboardList,
+  title: "Caos Ordini e Asporto",
+  description: "Gestire a mano comande, telefonate per l'asporto e richieste della sala contemporaneamente è un incubo operativo. Il rischio di errori aumenta, il servizio rallenta e i tuoi margini svaniscono nel disordine.",
+  problems: ["Errori nelle comande presi al volo al telefono", "Personale bloccato a scrivere ordini invece di servire", "Ritardi nelle consegne e recensioni negative", "Sprechi di tempo che bloccano la rotazione dei tavoli"]
 }];
 const solutions = [{
   icon: Bot,
@@ -234,9 +239,9 @@ const Ristorazione = () => {
               </p>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            <StaggerContainer className="grid md:grid-cols-2 gap-6 sm:gap-8">
               {challenges.map((challenge, index) => <StaggerItem key={index}>
-                  <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300">
+                  <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300 flex flex-col">
                     <div className="w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center mb-6">
                       <challenge.icon className="w-7 h-7 text-destructive" />
                     </div>
@@ -246,7 +251,7 @@ const Ristorazione = () => {
                     <p className="text-muted-foreground mb-6">
                       {challenge.description}
                     </p>
-                    <div className="space-y-2">
+                    <div className="space-y-2 mt-auto">
                       <span className="text-xs uppercase tracking-wider text-destructive font-semibold">I problemi concreti:</span>
                       <ul className="space-y-2">
                         {challenge.problems.map((problem, idx) => <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
