@@ -10,191 +10,111 @@ import ristorazioneHeroImage from "@/assets/ristorazione-hero-custom.webp";
 import ristorazioneWhatsappAgent from "@/assets/ristorazione-whatsapp-agent.jpg";
 import ristorazioneAntiNoshow from "@/assets/ristorazione-anti-noshow.jpg";
 import ristorazioneMenuDigitale from "@/assets/ristorazione-menu-digitale.jpg";
-
-const challenges = [
-  {
-    icon: Phone,
-    title: "Telefono sempre occupato",
-    description: "Durante il servizio è impossibile rispondere a tutti. Ogni chiamata persa è un tavolo regalato alla concorrenza.",
-    problems: [
-      "Telefono che squilla mentre servi i clienti",
-      "Chiamate perse = tavoli vuoti",
-      "Staff distratto durante il servizio",
-      "Impossibilità di gestire picchi di richieste"
-    ]
-  },
-  {
-    icon: CalendarX,
-    title: "Il danno dei No-Show",
-    description: "Clienti che prenotano e non si presentano. Tavoli vuoti e cibo sprecato che pesano direttamente sul tuo incasso a fine serata.",
-    problems: [
-      "Tavoli vuoti all'ultimo minuto",
-      "Cibo preparato e sprecato",
-      "Incasso ridotto a fine serata",
-      "Nessun sistema di recupero efficace"
-    ]
-  },
-  {
-    icon: CreditCard,
-    title: "Dipendenza dalle piattaforme",
-    description: "Pagare commissioni su ogni cliente che prenota online mangia i tuoi margini. Il cliente deve essere tuo, non del portale.",
-    problems: [
-      "Commissioni del 25-30% sugli ordini",
-      "Clienti che sono del portale, non tuoi",
-      "Nessun controllo sui dati dei clienti",
-      "Dipendenza da algoritmi esterni"
-    ]
-  }
-];
-
-const solutions = [
-  {
-    icon: Bot,
-    title: "Assistente AI (WhatsApp & Voce)",
-    subtitle: "Il tuo collaboratore h24",
-    description: "Un assistente che risponde istantaneamente su WhatsApp o telefono, gestisce le prenotazioni secondo le tue disponibilità reali e risponde a domande su allergie o orari.",
-    features: [
-      "Risponde istantaneamente – Il cliente scrive o chiama, l'AI gestisce la richiesta in automatico",
-      "Gestisce prenotazioni in autonomia – Prenota, modifica, cancella tavoli senza il tuo intervento",
-      "Risponde a domande frequenti – Allergie, ingredienti, orari di apertura, menu del giorno",
-      "Disponibile h24 – Anche quando sei in cucina o in sala, l'AI risponde in 30 secondi",
-      "Multilingue – Gestisce richieste in italiano e inglese per turisti"
-    ],
-    highlight: "Tu servi i clienti. L'AI gestisce tutto il resto.",
-    color: "from-orange-500 to-amber-500"
-  },
-  {
-    icon: ShieldX,
-    title: "Sistema Anti No-Show",
-    subtitle: "Mai più tavoli vuoti",
-    description: "Invio automatico di reminder intelligenti e richiesta di conferma definitiva tramite link. L'AI rileva chi non risponde e libera il tavolo per la lista d'attesa.",
-    features: [
-      "Reminder automatici multi-livello – 48h, 24h, 2h prima della prenotazione",
-      "Conferma con un click – Il cliente conferma tramite link, senza chiamate",
-      "Rilevamento inattività – Chi non risponde viene rimosso e il tavolo liberato",
-      "Lista d'attesa attiva – I tavoli liberati vengono proposti automaticamente a chi aspetta",
-      "Storico affidabilità – Traccia i no-show ripetuti per gestire le prenotazioni future"
-    ],
-    highlight: "Riduci i no-show dal 20% a meno del 5%.",
-    color: "from-red-500 to-rose-500"
-  },
-  {
-    icon: UtensilsCrossed,
-    title: "Menu & Ordini Proprietari",
-    subtitle: "Zero commissioni, clienti tuoi",
-    description: "Un ecosistema digitale dove il cliente consulta il menu e prenota direttamente. I dati rimangono a te per fare marketing e farli tornare, senza intermediari.",
-    features: [
-      "Menu digitale interattivo – QR code al tavolo, descrizioni, foto, allergeni",
-      "Ordini asporto diretti – Il cliente ordina dal tuo sito, zero commissioni",
-      "Database clienti tuo – Email, preferenze, storico ordini per fare remarketing",
-      "Programma fedeltà integrato – Punti, sconti, offerte personalizzate",
-      "Report vendite automatici – Piatti più venduti, orari di punta, analisi margini"
-    ],
-    highlight: "I clienti sono tuoi. I dati sono tuoi. I margini sono tuoi.",
-    color: "from-green-500 to-emerald-500"
-  }
-];
-
-const benefits = [
-  {
-    icon: Shield,
-    title: "Indipendenza Totale",
-    subtitle: "Zero Commissioni, Zero Vincoli",
-    description: "Non paghi commissioni su ogni ordine. Non dipendi da TheFork o Deliveroo che cambiano le regole. Il sistema è tuo, i clienti sono tuoi, i margini sono tuoi.",
-    points: [
-      "Zero commissioni su prenotazioni e asporto",
-      "Piena proprietà del codice e dei dati clienti",
-      "Nessuna dipendenza da algoritmi esterni",
-      "Libertà di scegliere come promuoverti"
-    ]
-  },
-  {
-    icon: Zap,
-    title: "Efficienza h24",
-    subtitle: "Mai più chiamate perse",
-    description: "Il tuo Assistente AI non dorme, non va in pausa pranzo, non si distrae durante il servizio. Risponde in 30 secondi, giorno e notte. Mentre tu cucini, il sistema riempie la sala.",
-    points: [
-      "Risposta immediata h24, anche nei weekend",
-      "Gestione simultanea di più prenotazioni",
-      "Nessuna interruzione durante il servizio",
-      "Tasso di risposta del 100%"
-    ]
-  },
-  {
-    icon: Database,
-    title: "Clienti Fidelizzati",
-    subtitle: "Dati che fanno tornare le persone",
-    description: "Conosci i tuoi clienti: cosa ordinano, quando vengono, le loro preferenze. Usa questi dati per farli tornare con offerte mirate, non per regalarli alle piattaforme.",
-    points: [
-      "Database clienti con storico completo",
-      "Preferenze e allergie memorizzate",
-      "Campagne email/SMS personalizzate",
-      "Programma fedeltà automatizzato"
-    ]
-  }
-];
-
-const results = [
-  {
-    metric: "No-show",
-    before: "20-25%",
-    after: "< 5%"
-  },
-  {
-    metric: "Commissioni",
-    before: "25-30%",
-    after: "0%"
-  },
-  {
-    metric: "Tasso risposta",
-    before: "50-60%",
-    after: "100%"
-  },
-  {
-    metric: "Occupazione sala",
-    before: "65-75%",
-    after: "85-95%"
-  }
-];
-
-const processSteps = [
-  {
-    step: 1,
-    title: "Contatto iniziale",
-    description: "Prenoti una chiamata o ci scrivi su WhatsApp"
-  },
-  {
-    step: 2,
-    title: "Analisi gratuita",
-    description: "Studiamo i tuoi flussi operativi e identifichiamo i colli di bottiglia"
-  },
-  {
-    step: 3,
-    title: "Proposta personalizzata",
-    description: "Ti presentiamo la soluzione su misura con costi trasparenti"
-  },
-  {
-    step: 4,
-    title: "Sviluppo",
-    description: "Costruiamo il tuo ecosistema digitale (2-4 settimane per soluzioni standard)"
-  },
-  {
-    step: 5,
-    title: "Implementazione e formazione",
-    description: "Ti affianchiamo nell'attivazione e formiamo il tuo staff"
-  },
-  {
-    step: 6,
-    title: "Supporto continuativo",
-    description: "Rimaniamo disponibili per ottimizzazioni e aggiornamenti"
-  }
-];
-
+const challenges = [{
+  icon: Phone,
+  title: "Telefono sempre occupato",
+  description: "Durante il servizio è impossibile rispondere a tutti. Ogni chiamata persa è un tavolo regalato alla concorrenza.",
+  problems: ["Telefono che squilla mentre servi i clienti", "Chiamate perse = tavoli vuoti", "Staff distratto durante il servizio", "Impossibilità di gestire picchi di richieste"]
+}, {
+  icon: CalendarX,
+  title: "Il danno dei No-Show",
+  description: "Clienti che prenotano e non si presentano. Tavoli vuoti e cibo sprecato che pesano direttamente sul tuo incasso a fine serata.",
+  problems: ["Tavoli vuoti all'ultimo minuto", "Cibo preparato e sprecato", "Incasso ridotto a fine serata", "Nessun sistema di recupero efficace"]
+}, {
+  icon: CreditCard,
+  title: "Dipendenza dalle piattaforme",
+  description: "Pagare commissioni su ogni cliente che prenota online mangia i tuoi margini. Il cliente deve essere tuo, non del portale.",
+  problems: ["Commissioni del 25-30% sugli ordini", "Clienti che sono del portale, non tuoi", "Nessun controllo sui dati dei clienti", "Dipendenza da algoritmi esterni"]
+}];
+const solutions = [{
+  icon: Bot,
+  title: "Assistente AI (WhatsApp & Voce)",
+  subtitle: "Il tuo collaboratore h24",
+  description: "Un assistente che risponde istantaneamente su WhatsApp o telefono, gestisce le prenotazioni secondo le tue disponibilità reali e risponde a domande su allergie o orari.",
+  features: ["Risponde istantaneamente – Il cliente scrive o chiama, l'AI gestisce la richiesta in automatico", "Gestisce prenotazioni in autonomia – Prenota, modifica, cancella tavoli senza il tuo intervento", "Risponde a domande frequenti – Allergie, ingredienti, orari di apertura, menu del giorno", "Disponibile h24 – Anche quando sei in cucina o in sala, l'AI risponde in 30 secondi", "Multilingue – Gestisce richieste in italiano e inglese per turisti"],
+  highlight: "Tu servi i clienti. L'AI gestisce tutto il resto.",
+  color: "from-orange-500 to-amber-500"
+}, {
+  icon: ShieldX,
+  title: "Sistema Anti No-Show",
+  subtitle: "Mai più tavoli vuoti",
+  description: "Invio automatico di reminder intelligenti e richiesta di conferma definitiva tramite link. L'AI rileva chi non risponde e libera il tavolo per la lista d'attesa.",
+  features: ["Reminder automatici multi-livello – 48h, 24h, 2h prima della prenotazione", "Conferma con un click – Il cliente conferma tramite link, senza chiamate", "Rilevamento inattività – Chi non risponde viene rimosso e il tavolo liberato", "Lista d'attesa attiva – I tavoli liberati vengono proposti automaticamente a chi aspetta", "Storico affidabilità – Traccia i no-show ripetuti per gestire le prenotazioni future"],
+  highlight: "Riduci i no-show dal 20% a meno del 5%.",
+  color: "from-red-500 to-rose-500"
+}, {
+  icon: UtensilsCrossed,
+  title: "Menu & Ordini Proprietari",
+  subtitle: "Zero commissioni, clienti tuoi",
+  description: "Un ecosistema digitale dove il cliente consulta il menu e prenota direttamente. I dati rimangono a te per fare marketing e farli tornare, senza intermediari.",
+  features: ["Menu digitale interattivo – QR code al tavolo, descrizioni, foto, allergeni", "Ordini asporto diretti – Il cliente ordina dal tuo sito, zero commissioni", "Database clienti tuo – Email, preferenze, storico ordini per fare remarketing", "Programma fedeltà integrato – Punti, sconti, offerte personalizzate", "Report vendite automatici – Piatti più venduti, orari di punta, analisi margini"],
+  highlight: "I clienti sono tuoi. I dati sono tuoi. I margini sono tuoi.",
+  color: "from-green-500 to-emerald-500"
+}];
+const benefits = [{
+  icon: Shield,
+  title: "Indipendenza Totale",
+  subtitle: "Zero Commissioni, Zero Vincoli",
+  description: "Non paghi commissioni su ogni ordine. Non dipendi da TheFork o Deliveroo che cambiano le regole. Il sistema è tuo, i clienti sono tuoi, i margini sono tuoi.",
+  points: ["Zero commissioni su prenotazioni e asporto", "Piena proprietà del codice e dei dati clienti", "Nessuna dipendenza da algoritmi esterni", "Libertà di scegliere come promuoverti"]
+}, {
+  icon: Zap,
+  title: "Efficienza h24",
+  subtitle: "Mai più chiamate perse",
+  description: "Il tuo Assistente AI non dorme, non va in pausa pranzo, non si distrae durante il servizio. Risponde in 30 secondi, giorno e notte. Mentre tu cucini, il sistema riempie la sala.",
+  points: ["Risposta immediata h24, anche nei weekend", "Gestione simultanea di più prenotazioni", "Nessuna interruzione durante il servizio", "Tasso di risposta del 100%"]
+}, {
+  icon: Database,
+  title: "Clienti Fidelizzati",
+  subtitle: "Dati che fanno tornare le persone",
+  description: "Conosci i tuoi clienti: cosa ordinano, quando vengono, le loro preferenze. Usa questi dati per farli tornare con offerte mirate, non per regalarli alle piattaforme.",
+  points: ["Database clienti con storico completo", "Preferenze e allergie memorizzate", "Campagne email/SMS personalizzate", "Programma fedeltà automatizzato"]
+}];
+const results = [{
+  metric: "No-show",
+  before: "20-25%",
+  after: "< 5%"
+}, {
+  metric: "Commissioni",
+  before: "25-30%",
+  after: "0%"
+}, {
+  metric: "Tasso risposta",
+  before: "50-60%",
+  after: "100%"
+}, {
+  metric: "Occupazione sala",
+  before: "65-75%",
+  after: "85-95%"
+}];
+const processSteps = [{
+  step: 1,
+  title: "Contatto iniziale",
+  description: "Prenoti una chiamata o ci scrivi su WhatsApp"
+}, {
+  step: 2,
+  title: "Analisi gratuita",
+  description: "Studiamo i tuoi flussi operativi e identifichiamo i colli di bottiglia"
+}, {
+  step: 3,
+  title: "Proposta personalizzata",
+  description: "Ti presentiamo la soluzione su misura con costi trasparenti"
+}, {
+  step: 4,
+  title: "Sviluppo",
+  description: "Costruiamo il tuo ecosistema digitale (2-4 settimane per soluzioni standard)"
+}, {
+  step: 5,
+  title: "Implementazione e formazione",
+  description: "Ti affianchiamo nell'attivazione e formiamo il tuo staff"
+}, {
+  step: 6,
+  title: "Supporto continuativo",
+  description: "Rimaniamo disponibili per ottimizzazioni e aggiornamenti"
+}];
 const Ristorazione = () => {
   const whatsappLink = "https://wa.me/393452838679?text=Buongiorno%20%2C%20sarei%20interessato%20alle%20vostre%20soluzioni%20per%20il%20mio%20ristorante";
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       <main>
         {/* Hero Section */}
@@ -222,7 +142,9 @@ const Ristorazione = () => {
                   <span className="text-white">nel tuo locale</span>
                 </h1>
                 
-                <div className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up space-y-3 text-left" style={{ animationDelay: "0.1s" }}>
+                <div className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up space-y-3 text-left" style={{
+                animationDelay: "0.1s"
+              }}>
                   <p className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(34,211,238,0.6)]">
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
@@ -246,11 +168,13 @@ const Ristorazione = () => {
                   </p>
                 </div>
                 
-                <p className="text-sm text-white/50 mb-8 sm:mb-10 animate-slide-up" style={{ animationDelay: "0.25s" }}>
-                  Ogni locale ha le sue regole: progettiamo funzionalità basate sul tuo flusso di lavoro.
-                </p>
+                <p className="text-sm text-white/50 mb-8 sm:mb-10 animate-slide-up" style={{
+                animationDelay: "0.25s"
+              }}>Ogni locale ha le sue regole: progettiamo funzionalità basate sul tuo flusso di lavoro.</p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.3s" }}>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{
+                animationDelay: "0.3s"
+              }}>
                   <Button variant="hero" size="xl" className="group">
                     Prenota una Chiamata Gratuita
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
@@ -266,26 +190,21 @@ const Ristorazione = () => {
               </div>
 
               {/* Hero Image - Floating with gradient mask effect */}
-              <div className="relative animate-fade-in hidden lg:block" style={{ animationDelay: "0.4s" }}>
+              <div className="relative animate-fade-in hidden lg:block" style={{
+              animationDelay: "0.4s"
+            }}>
                 {/* Glow effects behind image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-amber-500/30 to-transparent blur-3xl scale-105 animate-pulse-slow" />
                 
                 {/* Main image with mask fade - reduced size */}
                 <div className="relative max-w-md mx-auto">
-                  <div
-                    className="relative"
-                    style={{
-                      maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)',
-                      maskComposite: 'intersect',
-                      WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-                      WebkitMaskComposite: 'source-in'
-                    }}
-                  >
-                    <img
-                      src={ristorazioneHeroImage}
-                      alt="Ristorante moderno con sistema di prenotazione AI"
-                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
-                    />
+                  <div className="relative" style={{
+                  maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)',
+                  maskComposite: 'intersect',
+                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+                  WebkitMaskComposite: 'source-in'
+                }}>
+                    <img src={ristorazioneHeroImage} alt="Ristorante moderno con sistema di prenotazione AI" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
                   
                   {/* Subtle overlay gradient for depth */}
@@ -316,8 +235,7 @@ const Ristorazione = () => {
             </ScrollAnimation>
 
             <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
-              {challenges.map((challenge, index) => (
-                <StaggerItem key={index}>
+              {challenges.map((challenge, index) => <StaggerItem key={index}>
                   <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300">
                     <div className="w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center mb-6">
                       <challenge.icon className="w-7 h-7 text-destructive" />
@@ -331,17 +249,14 @@ const Ristorazione = () => {
                     <div className="space-y-2">
                       <span className="text-xs uppercase tracking-wider text-destructive font-semibold">I problemi concreti:</span>
                       <ul className="space-y-2">
-                        {challenge.problems.map((problem, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        {challenge.problems.map((problem, idx) => <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
                             <X className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
                             {problem}
-                          </li>
-                        ))}
+                          </li>)}
                       </ul>
                     </div>
                   </div>
-                </StaggerItem>
-              ))}
+                </StaggerItem>)}
             </StaggerContainer>
           </div>
         </section>
@@ -363,10 +278,9 @@ const Ristorazione = () => {
 
             <div className="space-y-8 sm:space-y-12">
               {solutions.map((solution, index) => {
-                const solutionImages = [ristorazioneWhatsappAgent, ristorazioneAntiNoshow, ristorazioneMenuDigitale];
-                const imageAlts = ["Assistente AI per ristoranti", "Sistema anti no-show", "Menu e ordini proprietari"];
-                return (
-                  <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
+              const solutionImages = [ristorazioneWhatsappAgent, ristorazioneAntiNoshow, ristorazioneMenuDigitale];
+              const imageAlts = ["Assistente AI per ristoranti", "Sistema anti no-show", "Menu e ordini proprietari"];
+              return <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
                     <div className="rounded-3xl border border-border bg-card overflow-hidden">
                       <div className={`h-2 bg-gradient-to-r ${solution.color}`} />
                       <div className="p-6 sm:p-8 lg:p-12">
@@ -378,20 +292,13 @@ const Ristorazione = () => {
                               <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-20 blur-xl scale-105`} />
                               
                               {/* Image with mask fade */}
-                              <div
-                                className="relative"
-                                style={{
-                                  maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%)',
-                                  maskComposite: 'intersect',
-                                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
-                                  WebkitMaskComposite: 'source-in'
-                                }}
-                              >
-                                <img
-                                  src={solutionImages[index]}
-                                  alt={imageAlts[index]}
-                                  className="w-full h-auto object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
-                                />
+                              <div className="relative" style={{
+                            maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%)',
+                            maskComposite: 'intersect',
+                            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+                            WebkitMaskComposite: 'source-in'
+                          }}>
+                                <img src={solutionImages[index]} alt={imageAlts[index]} className="w-full h-auto object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
                               </div>
                               
                               {/* Subtle overlay gradient */}
@@ -411,21 +318,19 @@ const Ristorazione = () => {
                             <p className="text-muted-foreground mb-6">{solution.description}</p>
                             <ul className="space-y-3 mb-6 text-left">
                               {solution.features.map((feature, idx) => {
-                                // Split feature at first " – " to bold the title
-                                const dashIndex = feature.indexOf(' – ');
-                                const hasTitle = dashIndex > -1;
-                                const title = hasTitle ? feature.slice(0, dashIndex) : null;
-                                const rest = hasTitle ? feature.slice(dashIndex) : feature;
-                                return (
-                                  <li key={idx} className="flex items-start gap-3">
+                            // Split feature at first " – " to bold the title
+                            const dashIndex = feature.indexOf(' – ');
+                            const hasTitle = dashIndex > -1;
+                            const title = hasTitle ? feature.slice(0, dashIndex) : null;
+                            const rest = hasTitle ? feature.slice(dashIndex) : feature;
+                            return <li key={idx} className="flex items-start gap-3">
                                     <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                                     <span className="text-foreground text-sm sm:text-base">
                                       {title && <strong>{title}</strong>}
                                       {rest}
                                     </span>
-                                  </li>
-                                );
-                              })}
+                                  </li>;
+                          })}
                             </ul>
                             <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${solution.color} text-white text-xs sm:text-sm font-medium`}>
                               💡 {solution.highlight}
@@ -434,9 +339,8 @@ const Ristorazione = () => {
                         </div>
                       </div>
                     </div>
-                  </ScrollAnimation>
-                );
-              })}
+                  </ScrollAnimation>;
+            })}
             </div>
 
             {/* Custom Solutions CTA */}
@@ -469,8 +373,7 @@ const Ristorazione = () => {
             </ScrollAnimation>
 
             <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
-              {benefits.map((benefit, index) => (
-                <StaggerItem key={index}>
+              {benefits.map((benefit, index) => <StaggerItem key={index}>
                   <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300">
                     <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                       <benefit.icon className="w-7 h-7 text-primary" />
@@ -481,16 +384,13 @@ const Ristorazione = () => {
                     <p className="text-primary font-medium text-sm mb-4">{benefit.subtitle}</p>
                     <p className="text-muted-foreground mb-6">{benefit.description}</p>
                     <ul className="space-y-2">
-                      {benefit.points.map((point, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm">
+                      {benefit.points.map((point, idx) => <li key={idx} className="flex items-start gap-2 text-sm">
                           <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                           <span className="text-foreground">{point}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
-                </StaggerItem>
-              ))}
+                </StaggerItem>)}
             </StaggerContainer>
           </div>
         </section>
@@ -508,8 +408,7 @@ const Ristorazione = () => {
             </ScrollAnimation>
 
             <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {results.map((result, index) => (
-                <StaggerItem key={index} className="h-full">
+              {results.map((result, index) => <StaggerItem key={index} className="h-full">
                   <div className="h-full rounded-2xl bg-white/5 border border-white/10 p-6 text-center flex flex-col">
                     <p className="text-sm text-white/60 mb-4">{result.metric}</p>
                     <div className="flex items-center justify-center gap-3 sm:gap-4 flex-1">
@@ -524,8 +423,7 @@ const Ristorazione = () => {
                       </div>
                     </div>
                   </div>
-                </StaggerItem>
-              ))}
+                </StaggerItem>)}
             </StaggerContainer>
           </div>
         </section>
@@ -597,8 +495,7 @@ const Ristorazione = () => {
             </ScrollAnimation>
 
             <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {processSteps.map((step) => (
-                <StaggerItem key={step.step}>
+              {processSteps.map(step => <StaggerItem key={step.step}>
                   <div className="relative rounded-2xl border border-border bg-card p-6 hover:shadow-lg transition-all duration-300">
                     <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 flex items-center justify-center text-white font-bold shadow-lg">
                       {step.step}
@@ -610,8 +507,7 @@ const Ristorazione = () => {
                       <p className="text-sm text-muted-foreground">{step.description}</p>
                     </div>
                   </div>
-                </StaggerItem>
-              ))}
+                </StaggerItem>)}
             </StaggerContainer>
           </div>
         </section>
@@ -667,21 +563,16 @@ const Ristorazione = () => {
                   </p>
                   
                   <StaggerContainer staggerDelay={0.15}>
-                    {[
-                      {
-                        title: "Costruito su misura, non adattato",
-                        description: "Non ti vendiamo un software standard. Studiamo come lavori oggi, individuiamo i colli di bottiglia, costruiamo la soluzione che si integra perfettamente."
-                      },
-                      {
-                        title: "Persone reali, non call center",
-                        description: "Quando ci contatti, parli direttamente con noi. Noi analizziamo il problema, noi progettiamo la soluzione, noi ti seguiamo nell'implementazione."
-                      },
-                      {
-                        title: "Focus sui risultati misurabili",
-                        description: "Non ti vendiamo 'innovazione'. Ti vendiamo tavoli pieni, commissioni azzerate, clienti che tornano. Numeri concreti che si vedono sul conto corrente."
-                      }
-                    ].map((item, index) => (
-                      <StaggerItem key={index}>
+                    {[{
+                    title: "Costruito su misura, non adattato",
+                    description: "Non ti vendiamo un software standard. Studiamo come lavori oggi, individuiamo i colli di bottiglia, costruiamo la soluzione che si integra perfettamente."
+                  }, {
+                    title: "Persone reali, non call center",
+                    description: "Quando ci contatti, parli direttamente con noi. Noi analizziamo il problema, noi progettiamo la soluzione, noi ti seguiamo nell'implementazione."
+                  }, {
+                    title: "Focus sui risultati misurabili",
+                    description: "Non ti vendiamo 'innovazione'. Ti vendiamo tavoli pieni, commissioni azzerate, clienti che tornano. Numeri concreti che si vedono sul conto corrente."
+                  }].map((item, index) => <StaggerItem key={index}>
                         <div className="group p-5 rounded-xl border border-border bg-card hover:border-orange-500/30 hover:shadow-lg transition-all duration-300 mb-4">
                           <div className="flex gap-4">
                             <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
@@ -695,8 +586,7 @@ const Ristorazione = () => {
                             </div>
                           </div>
                         </div>
-                      </StaggerItem>
-                    ))}
+                      </StaggerItem>)}
                   </StaggerContainer>
                 </div>
               </ScrollAnimation>
@@ -722,45 +612,29 @@ const Ristorazione = () => {
             {/* Business Types List */}
             <ScrollAnimation variant="fadeUp" className="mb-12">
               <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-                {[
-                  "Ristoranti", "Trattorie", "Pizzerie", "Osterie", "Bistrot",
-                  "Wine Bar", "Cocktail Bar", "Pub", "Sushi Bar", "Steakhouse",
-                  "Agriturismi", "B&B con ristorazione", "Catering", "Food Truck"
-                ].map((profession, index) => (
-                  <span 
-                    key={index}
-                    className="px-4 py-2 rounded-full bg-orange-500/10 text-orange-600 text-sm font-medium border border-orange-500/20 hover:bg-orange-500/20 transition-colors"
-                  >
+                {["Ristoranti", "Trattorie", "Pizzerie", "Osterie", "Bistrot", "Wine Bar", "Cocktail Bar", "Pub", "Sushi Bar", "Steakhouse", "Agriturismi", "B&B con ristorazione", "Catering", "Food Truck"].map((profession, index) => <span key={index} className="px-4 py-2 rounded-full bg-orange-500/10 text-orange-600 text-sm font-medium border border-orange-500/20 hover:bg-orange-500/20 transition-colors">
                     {profession}
-                  </span>
-                ))}
+                  </span>)}
               </div>
             </ScrollAnimation>
 
             <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-              {[
-                {
-                  title: "Perdi clienti durante il servizio",
-                  description: "Il telefono squilla mentre servi i clienti. Ogni chiamata persa è un tavolo che va alla concorrenza."
-                },
-                {
-                  title: "I no-show ti mangiano i margini",
-                  description: "Clienti che prenotano e non si presentano. Tavoli vuoti, cibo sprecato, incasso ridotto."
-                },
-                {
-                  title: "Le commissioni erodono i profitti",
-                  description: "Paghi il 25-30% su ogni ordine alle piattaforme. I clienti sono loro, non tuoi."
-                },
-                {
-                  title: "Non hai i dati dei tuoi clienti",
-                  description: "Le piattaforme tengono i contatti. Non puoi fare marketing diretto né fidelizzare."
-                },
-                {
-                  title: "Vuoi soluzioni su misura",
-                  description: "I software standard non si adattano al tuo modo di lavorare. Cerchi qualcosa costruito sulle tue esigenze."
-                }
-              ].map((item, index) => (
-                <StaggerItem key={index}>
+              {[{
+              title: "Perdi clienti durante il servizio",
+              description: "Il telefono squilla mentre servi i clienti. Ogni chiamata persa è un tavolo che va alla concorrenza."
+            }, {
+              title: "I no-show ti mangiano i margini",
+              description: "Clienti che prenotano e non si presentano. Tavoli vuoti, cibo sprecato, incasso ridotto."
+            }, {
+              title: "Le commissioni erodono i profitti",
+              description: "Paghi il 25-30% su ogni ordine alle piattaforme. I clienti sono loro, non tuoi."
+            }, {
+              title: "Non hai i dati dei tuoi clienti",
+              description: "Le piattaforme tengono i contatti. Non puoi fare marketing diretto né fidelizzare."
+            }, {
+              title: "Vuoi soluzioni su misura",
+              description: "I software standard non si adattano al tuo modo di lavorare. Cerchi qualcosa costruito sulle tue esigenze."
+            }].map((item, index) => <StaggerItem key={index}>
                   <div className="group p-6 rounded-2xl border border-border bg-card hover:border-orange-500/30 hover:shadow-lg transition-all duration-300 h-full">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
@@ -774,8 +648,7 @@ const Ristorazione = () => {
                       </div>
                     </div>
                   </div>
-                </StaggerItem>
-              ))}
+                </StaggerItem>)}
             </StaggerContainer>
           </div>
         </section>
@@ -814,8 +687,6 @@ const Ristorazione = () => {
       </main>
       <Footer />
       <CookieBar />
-    </div>
-  );
+    </div>;
 };
-
 export default Ristorazione;
