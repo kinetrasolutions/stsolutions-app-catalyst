@@ -168,7 +168,7 @@ const Ristorazione = () => {
                   </p>
                 </div>
                 
-                <p className="text-sm text-white/50 mb-8 sm:mb-10 animate-slide-up" style={{
+                <p className="text-sm mb-8 sm:mb-10 animate-slide-up text-primary-foreground" style={{
                 animationDelay: "0.25s"
               }}>Ogni locale ha le sue regole: progettiamo funzionalità basate sul tuo flusso di lavoro.</p>
 
