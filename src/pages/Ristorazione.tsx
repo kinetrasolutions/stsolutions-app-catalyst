@@ -215,16 +215,12 @@ const Ristorazione = () => {
                 </span>
                 
                 <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-                  Il Tuo Ecosistema Digitale{" "}
-                  <span className="text-gradient">potenziato dall'AI</span>
+                  L'AI che rivoluziona prenotazioni{" "}
+                  <span className="text-gradient">e servizio nel tuo locale</span>
                 </h1>
                 
-                <p className="text-base sm:text-lg text-white/80 mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-                  Basta telefoni occupati. Basta tavoli vuoti per no-show. Basta commissioni esterne.
-                </p>
-                
-                <p className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                  Gestione intelligente delle prenotazioni, assistente virtuale h24 e menu interattivo. Costruiamo un sistema di proprietà che riempie la sala e lavora per te, eliminando lo stress del servizio.
+                <p className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+                  Basta telefoni occupati tra asporto e prenotazioni. Basta no-show. Basta commissioni. Elimina gli sprechi di tempo e il disordine degli ordini manuali. Un sistema di proprietà che gestisce tavoli e asporto h24, riducendo i tuoi costi operativi e garantendoti una sala sempre piena e un servizio impeccabile.
                 </p>
                 
                 <p className="text-sm text-white/50 mb-8 sm:mb-10 animate-slide-up" style={{ animationDelay: "0.25s" }}>
