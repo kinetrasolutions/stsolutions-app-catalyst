@@ -224,19 +224,19 @@ const Ristorazione = () => {
                 
                 <div className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up space-y-3 text-left" style={{ animationDelay: "0.1s" }}>
                   <p className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(34,211,238,0.6)]">
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
                     </span>
                     Basta telefoni occupati tra asporto e prenotazioni.
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(34,211,238,0.6)]">
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
                     </span>
                     Basta no-show.
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(34,211,238,0.6)]">
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
                     </span>
                     Elimina gli sprechi di tempo e il disordine degli ordini manuali.
