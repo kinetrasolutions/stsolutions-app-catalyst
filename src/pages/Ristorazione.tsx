@@ -33,7 +33,7 @@ const challenges = [{
 }];
 const solutions = [{
   icon: Bot,
-  title: "Asporto e Prenotazioni in Autopilota",
+  title: "Prenotazioni Asporto e Tavoli in automatico",
   subtitle: "Zero stress, massima efficienza",
   description: "L'AI gestisce l'intero flusso dell'asporto e delle prenotazioni su WhatsApp e telefono. Zero errori nelle comande, zero tempi morti e personale finalmente libero di gestire la sala.",
   features: ["Risponde istantaneamente – Il cliente scrive o chiama, l'AI gestisce la richiesta in automatico", "Gestisce prenotazioni in autonomia – Prenota, modifica, cancella tavoli senza il tuo intervento", "Ordini asporto automatizzati – Comande precise senza errori di trascrizione", "Disponibile h24 – Anche quando sei in cucina o in sala, l'AI risponde in 30 secondi", "Multilingue – Gestisce richieste in italiano e inglese per turisti"],
@@ -276,8 +276,13 @@ const Ristorazione = () => {
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Dallo stress delle chiamate alla sala sempre piena
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Mettiamo fine al caos delle prenotazioni e dell'asporto.
-Implementiamo soluzioni AI che riducono drasticamente i tuoi costi operativi e azzerano gli sprechi di tempo, massimizzando l'efficienza e il fatturato del tuo locale.</p>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Mettiamo fine al <strong className="text-foreground">caos delle prenotazioni e dell'asporto</strong>.
+                <br />
+                Implementiamo soluzioni AI che <strong className="text-foreground">riducono drasticamente i tuoi costi operativi</strong> e azzerano gli
+                <br />
+                <strong className="text-foreground">sprechi di tempo</strong>, massimizzando l'efficienza e il <strong className="text-foreground">fatturato del tuo locale.</strong>
+              </p>
             </ScrollAnimation>
 
             <div className="space-y-8 sm:space-y-12">
