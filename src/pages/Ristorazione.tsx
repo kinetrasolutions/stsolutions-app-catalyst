@@ -7,7 +7,7 @@ import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight
 
 // Custom images for Ristorazione page
 import ristorazioneHeroImage from "@/assets/ristorazione-hero-custom.webp";
-import ristorazioneWhatsappAgent from "@/assets/ristorazione-whatsapp-agent.jpg";
+import ristorazioneWhatsappAgent from "@/assets/ristorazione-whatsapp-ok.webp";
 import ristorazioneAntiNoshow from "@/assets/ristorazione-anti-noshow.jpg";
 import ristorazioneMenuDigitale from "@/assets/ristorazione-menu-digitale.jpg";
 const challenges = [{
@@ -44,7 +44,7 @@ const solutions = [{
   title: "Recupero No-Show e Taglio degli Sprechi",
   subtitle: "Ogni tavolo diventa incasso",
   description: "Il sistema conferma ogni tavolo e riempie automaticamente i buchi dell'ultimo minuto. Meno sprechi in cucina e la garanzia che ogni seduta si trasformi in incasso reale.",
-  features: ["Reminder automatici multi-livello – 48h, 24h, 2h prima della prenotazione", "Conferma con un click – Il cliente conferma tramite link, senza chiamate", "Rilevamento inattività – Chi non risponde viene rimosso e il tavolo liberato", "Lista d'attesa attiva – I tavoli liberati vengono proposti automaticamente a chi aspetta", "Storico affidabilità – Traccia i no-show ripetuti per gestire le prenotazioni future"],
+  features: ["Reminder automatici – Conferme a 48h, 24h e 2h dalla prenotazione", "Conferma in un click – Link diretto, zero telefonate", "Pulizia automatica – Nessuna risposta = tavolo libero", "Lista d'attesa smart – Buchi riempiti in automatico", "Blacklist no-show – Blocca i recidivi, proteggi il fatturato"],
   highlight: "Riduci i no-show dal 20% a meno del 5%.",
   color: "from-red-500 to-rose-500"
 }, {
