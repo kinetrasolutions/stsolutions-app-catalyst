@@ -33,25 +33,25 @@ const challenges = [{
 }];
 const solutions = [{
   icon: Bot,
-  title: "Assistente AI (WhatsApp & Voce)",
-  subtitle: "Il tuo collaboratore h24",
-  description: "Un assistente che risponde istantaneamente su WhatsApp o telefono, gestisce le prenotazioni secondo le tue disponibilità reali e risponde a domande su allergie o orari.",
-  features: ["Risponde istantaneamente – Il cliente scrive o chiama, l'AI gestisce la richiesta in automatico", "Gestisce prenotazioni in autonomia – Prenota, modifica, cancella tavoli senza il tuo intervento", "Risponde a domande frequenti – Allergie, ingredienti, orari di apertura, menu del giorno", "Disponibile h24 – Anche quando sei in cucina o in sala, l'AI risponde in 30 secondi", "Multilingue – Gestisce richieste in italiano e inglese per turisti"],
+  title: "Asporto e Prenotazioni in Autopilota",
+  subtitle: "Zero stress, massima efficienza",
+  description: "L'AI gestisce l'intero flusso dell'asporto e delle prenotazioni su WhatsApp e telefono. Zero errori nelle comande, zero tempi morti e personale finalmente libero di gestire la sala.",
+  features: ["Risponde istantaneamente – Il cliente scrive o chiama, l'AI gestisce la richiesta in automatico", "Gestisce prenotazioni in autonomia – Prenota, modifica, cancella tavoli senza il tuo intervento", "Ordini asporto automatizzati – Comande precise senza errori di trascrizione", "Disponibile h24 – Anche quando sei in cucina o in sala, l'AI risponde in 30 secondi", "Multilingue – Gestisce richieste in italiano e inglese per turisti"],
   highlight: "Tu servi i clienti. L'AI gestisce tutto il resto.",
   color: "from-orange-500 to-amber-500"
 }, {
   icon: ShieldX,
-  title: "Sistema Anti No-Show",
-  subtitle: "Mai più tavoli vuoti",
-  description: "Invio automatico di reminder intelligenti e richiesta di conferma definitiva tramite link. L'AI rileva chi non risponde e libera il tavolo per la lista d'attesa.",
+  title: "Recupero No-Show e Taglio degli Sprechi",
+  subtitle: "Ogni tavolo diventa incasso",
+  description: "Il sistema conferma ogni tavolo e riempie automaticamente i buchi dell'ultimo minuto. Meno sprechi in cucina e la garanzia che ogni seduta si trasformi in incasso reale.",
   features: ["Reminder automatici multi-livello – 48h, 24h, 2h prima della prenotazione", "Conferma con un click – Il cliente conferma tramite link, senza chiamate", "Rilevamento inattività – Chi non risponde viene rimosso e il tavolo liberato", "Lista d'attesa attiva – I tavoli liberati vengono proposti automaticamente a chi aspetta", "Storico affidabilità – Traccia i no-show ripetuti per gestire le prenotazioni future"],
   highlight: "Riduci i no-show dal 20% a meno del 5%.",
   color: "from-red-500 to-rose-500"
 }, {
   icon: UtensilsCrossed,
-  title: "Menu & Ordini Proprietari",
+  title: "Controllo Totale e Aumento del Margine",
   subtitle: "Zero commissioni, clienti tuoi",
-  description: "Un ecosistema digitale dove il cliente consulta il menu e prenota direttamente. I dati rimangono a te per fare marketing e farli tornare, senza intermediari.",
+  description: "Elimina le commissioni dei portali esterni. Avrai un sistema di proprietà che raccoglie i dati dei clienti per campagne marketing mirate, aumentando il valore di ogni singolo coperto.",
   features: ["Menu digitale interattivo – QR code al tavolo, descrizioni, foto, allergeni", "Ordini asporto diretti – Il cliente ordina dal tuo sito, zero commissioni", "Database clienti tuo – Email, preferenze, storico ordini per fare remarketing", "Programma fedeltà integrato – Punti, sconti, offerte personalizzate", "Report vendite automatici – Piatti più venduti, orari di punta, analisi margini"],
   highlight: "I clienti sono tuoi. I dati sono tuoi. I margini sono tuoi.",
   color: "from-green-500 to-emerald-500"
@@ -274,10 +274,10 @@ const Ristorazione = () => {
                 Le Nostre Soluzioni
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Come ST Solutions risolve questi problemi
+                Dallo stress delle chiamate alla sala sempre piena
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Non vendiamo software preconfezionati. Costruiamo il tuo ecosistema digitale proprietario.
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Mettiamo fine al caos delle prenotazioni e dell'asporto. Implementiamo soluzioni AI che riducono drasticamente i tuoi costi operativi e azzerano gli sprechi di tempo, massimizzando l'efficienza e il fatturato del tuo locale.
               </p>
             </ScrollAnimation>
 
