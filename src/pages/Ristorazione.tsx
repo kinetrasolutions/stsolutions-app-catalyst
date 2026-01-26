@@ -276,9 +276,8 @@ const Ristorazione = () => {
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Dallo stress delle chiamate alla sala sempre piena
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Mettiamo fine al caos delle prenotazioni e dell'asporto. Implementiamo soluzioni AI che riducono drasticamente i tuoi costi operativi e azzerano gli sprechi di tempo, massimizzando l'efficienza e il fatturato del tuo locale.
-              </p>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Mettiamo fine al caos delle prenotazioni e dell'asporto.
+Implementiamo soluzioni AI che riducono drasticamente i tuoi costi operativi e azzerano gli sprechi di tempo, massimizzando l'efficienza e il fatturato del tuo locale.</p>
             </ScrollAnimation>
 
             <div className="space-y-8 sm:space-y-12">
