@@ -36,7 +36,7 @@ const solutions = [{
   title: "Prenotazioni Asporto e Tavoli in automatico",
   subtitle: "Zero stress, massima efficienza",
   description: "L'AI gestisce l'intero flusso dell'asporto e delle prenotazioni su WhatsApp e telefono. Zero errori nelle comande, zero tempi morti e personale finalmente libero di gestire la sala.",
-  features: ["Risponde istantaneamente – Il cliente scrive o chiama, l'AI gestisce la richiesta in automatico", "Gestisce prenotazioni in autonomia – Prenota, modifica, cancella tavoli senza il tuo intervento", "Ordini asporto automatizzati – Comande precise senza errori di trascrizione", "Disponibile h24 – Anche quando sei in cucina o in sala, l'AI risponde in 30 secondi", "Multilingue – Gestisce richieste in italiano e inglese per turisti"],
+  features: ["Risponde istantaneamente – Il cliente scrive o chiama, l'AI gestisce la richiesta in automatico", "Gestisce prenotazioni in autonomia – Prenota, modifica, cancella tavoli senza il tuo intervento", "Ordini e Orari in Autopilota – Comande precise senza errori di trascrizione e coordinamento automatico dei tempi di consegna/ritiro grazie al calendario intelligente integrato", "Disponibile h24 – Anche quando sei in cucina o in sala, l'AI risponde in 30 secondi", "Multilingue – Gestisce richieste in italiano e inglese per turisti"],
   highlight: "Tu servi i clienti. L'AI gestisce tutto il resto.",
   color: "from-orange-500 to-amber-500"
 }, {
