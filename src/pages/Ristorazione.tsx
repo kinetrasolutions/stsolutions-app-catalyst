@@ -239,11 +239,11 @@ const Ristorazione = () => {
               </p>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-2 gap-6 sm:gap-8">
+            <StaggerContainer className="grid md:grid-cols-2 gap-6">
               {challenges.map((challenge, index) => <StaggerItem key={index}>
-                  <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300 flex flex-col">
-                    <div className="w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center mb-6">
-                      <challenge.icon className="w-7 h-7 text-destructive" />
+                  <div className="h-full rounded-3xl border border-border bg-card p-6 hover:shadow-xl hover:-translate-y-1 hover:border-destructive/40 transition-all duration-300 flex flex-col">
+                    <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
+                      <challenge.icon className="w-6 h-6 text-destructive" />
                     </div>
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">
                       {challenge.title}
