@@ -52,7 +52,7 @@ const solutions = [{
   title: "Controllo Totale e Aumento del Margine",
   subtitle: "Zero commissioni, clienti tuoi",
   description: "Smetti di regalare il 25-30% di ogni ordine alle piattaforme. L'AI ti restituisce il controllo: un sistema di proprietà che elimina le commissioni, cattura i dati dei clienti e trasforma ogni coperto in un'opportunità di fidelizzazione e remarketing.",
-  features: ["Azzeramento Commissioni – Ordini asporto diretti dal tuo sito. Ogni euro resta nel tuo cassetto", "Database Clienti Blindato – Email, preferenze, storico ordini: dati tuoi per campagne che fanno tornare le persone", "Menu Digitale Intelligente – QR code al tavolo con descrizioni, foto e allergeni. Il cliente ordina, tu incassi", "Fidelizzazione Automatica – Programma punti e offerte personalizzate che trasformano clienti occasionali in habitué"],
+  features: ["Azzeramento Commissioni – Ordini asporto direttamente dalla tua app. Ogni euro resta nel tuo cassetto", "Database Clienti Blindato – Email, preferenze, storico ordini: dati tuoi per campagne che fanno tornare le persone", "Menu Digitale Intelligente – QR code al tavolo con descrizioni, foto e allergeni. Il cliente ordina, tu incassi", "Fidelizzazione Automatica – Programma punti e offerte personalizzate che trasformano clienti occasionali in habitué"],
   highlight: "💰 Obiettivo: Margini pieni, zero intermediari",
   color: "from-green-500 to-emerald-500"
 }];
