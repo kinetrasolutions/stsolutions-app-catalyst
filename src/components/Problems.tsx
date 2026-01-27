@@ -27,36 +27,36 @@ const problems = [
 const Problems = () => {
   return (
     <section className="section-padding bg-background">
-      <div className="container-custom">
+      <div className="container-custom px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <ScrollAnimation variant="fadeUp" className="text-center mb-16">
+        <ScrollAnimation variant="fadeUp" className="text-center mb-10 md:mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-4">
             I Problemi che Risolviamo
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Ti riconosci in queste situazioni?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Sono i problemi più comuni delle attività locali. E sono tutti risolvibili.
           </p>
         </ScrollAnimation>
 
         {/* Problems Grid */}
-        <StaggerContainer className="grid md:grid-cols-2 gap-6 lg:gap-8" staggerDelay={0.15}>
+        <StaggerContainer className="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8" staggerDelay={0.15}>
           {problems.map((problem, index) => (
             <StaggerItem key={index}>
               <div
-                className="group p-6 lg:p-8 rounded-2xl border border-border bg-card hover:border-destructive/30 hover:shadow-lg transition-all duration-300 h-full"
+                className="group p-5 sm:p-6 lg:p-8 rounded-2xl border border-border bg-card hover:border-destructive/30 hover:shadow-lg transition-all duration-300 h-full"
               >
-                <div className="flex items-start gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center group-hover:bg-destructive/20 transition-colors">
-                    <problem.icon className="w-7 h-7 text-destructive" />
+                <div className="flex items-start gap-4 sm:gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-destructive/10 flex items-center justify-center group-hover:bg-destructive/20 transition-colors">
+                    <problem.icon className="w-6 h-6 sm:w-7 sm:h-7 text-destructive" />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-2">
                       {problem.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {problem.description}
                     </p>
                   </div>

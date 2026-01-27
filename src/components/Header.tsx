@@ -104,7 +104,9 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className={`md:hidden p-2 transition-colors ${
+              isScrolled || isLightBackgroundPage ? "text-foreground" : "text-white"
+            }`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

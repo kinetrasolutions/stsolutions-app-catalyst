@@ -101,45 +101,45 @@ const Contatti = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-32 pb-20">
-        <div className="container-custom">
+      <main className="pt-28 sm:pt-32 pb-16 sm:pb-20">
+        <div className="container-custom px-5 sm:px-6 lg:px-8">
           {/* Header Section */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
               Contattaci
             </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">
               Parliamo del tuo{" "}
               <span className="text-gradient">progetto</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
               Compila il form, scrivici su WhatsApp o prenota direttamente una chiamata. 
               Ti risponderemo entro 24 ore.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <div className="bg-card border border-border rounded-3xl p-8 lg:p-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-primary-foreground" />
+            <div className="bg-card border border-border rounded-3xl p-6 sm:p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-5 sm:mb-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-primary flex items-center justify-center">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h2 className="font-display text-xl font-bold text-foreground">Inviaci un messaggio</h2>
-                  <p className="text-sm text-muted-foreground">Ti risponderemo al più presto</p>
+                  <h2 className="font-display text-lg sm:text-xl font-bold text-foreground">Inviaci un messaggio</h2>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Ti risponderemo al più presto</p>
                 </div>
               </div>
 
               {isSubmitted ? (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="w-8 h-8 text-green-500" />
+                <div className="text-center py-10 sm:py-12">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8 text-green-500" />
                   </div>
-                  <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-2">
                     Messaggio inviato!
                   </h3>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-6">
                     Abbiamo ricevuto il tuo messaggio e ti risponderemo al più presto.
                   </p>
                   <Button variant="outline" onClick={() => setIsSubmitted(false)}>
@@ -147,9 +147,9 @@ const Contatti = () => {
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Nome e Cognome *</Label>
+                    <Label htmlFor="name" className="text-sm sm:text-base">Nome e Cognome *</Label>
                     <Input
                       id="name"
                       name="name"
@@ -158,11 +158,11 @@ const Contatti = () => {
                       placeholder="Mario Rossi"
                       className={errors.name ? "border-destructive" : ""}
                     />
-                    {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
+                    {errors.name && <p className="text-xs sm:text-sm text-destructive">{errors.name}</p>}
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="email" className="text-sm sm:text-base">Email *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -172,11 +172,11 @@ const Contatti = () => {
                       placeholder="mario@esempio.it"
                       className={errors.email ? "border-destructive" : ""}
                     />
-                    {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
+                    {errors.email && <p className="text-xs sm:text-sm text-destructive">{errors.email}</p>}
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Telefono (opzionale)</Label>
+                    <Label htmlFor="phone" className="text-sm sm:text-base">Telefono (opzionale)</Label>
                     <Input
                       id="phone"
                       name="phone"
@@ -188,17 +188,17 @@ const Contatti = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Messaggio *</Label>
+                    <Label htmlFor="message" className="text-sm sm:text-base">Messaggio *</Label>
                     <Textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Descrivi brevemente la tua attività e come possiamo aiutarti..."
-                      rows={5}
+                      rows={4}
                       className={errors.message ? "border-destructive" : ""}
                     />
-                    {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
+                    {errors.message && <p className="text-xs sm:text-sm text-destructive">{errors.message}</p>}
                   </div>
 
                   <div className="space-y-2">
@@ -216,7 +216,7 @@ const Contatti = () => {
                       />
                       <Label 
                         htmlFor="privacyAccepted" 
-                        className="text-sm text-muted-foreground leading-relaxed cursor-pointer"
+                        className="text-xs sm:text-sm text-muted-foreground leading-relaxed cursor-pointer"
                       >
                         Accetto la{" "}
                         <a 
@@ -229,7 +229,7 @@ const Contatti = () => {
                         e acconsento al trattamento dei miei dati personali *
                       </Label>
                     </div>
-                    {errors.privacyAccepted && <p className="text-sm text-destructive">{errors.privacyAccepted}</p>}
+                    {errors.privacyAccepted && <p className="text-xs sm:text-sm text-destructive">{errors.privacyAccepted}</p>}
                   </div>
 
                   <Button 
@@ -239,7 +239,7 @@ const Contatti = () => {
                     className="w-full group"
                     disabled={isSubmitting}
                   >
-                    <Send className="w-5 h-5 mr-2" />
+                    <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     {isSubmitting ? "Preparazione..." : "Invia Messaggio"}
                     <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -248,19 +248,19 @@ const Contatti = () => {
             </div>
 
             {/* Alternative Contact Options */}
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {/* WhatsApp Card */}
-              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/5 border border-green-500/20 rounded-3xl p-8">
+              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/5 border border-green-500/20 rounded-3xl p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center">
+                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-bold text-foreground">WhatsApp</h3>
-                    <p className="text-sm text-muted-foreground">Risposta immediata</p>
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">WhatsApp</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Risposta immediata</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-5 sm:mb-6">
                   Preferisci una risposta veloce? Scrivici direttamente su WhatsApp per una chat immediata.
                 </p>
                 <Button 
@@ -270,7 +270,7 @@ const Contatti = () => {
                   asChild
                 >
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-5 h-5 mr-2" />
+                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     Scrivici su WhatsApp
                     <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                   </a>
@@ -278,22 +278,22 @@ const Contatti = () => {
               </div>
 
               {/* Calendar Card */}
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-3xl p-8">
+              <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-3xl p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-primary flex items-center justify-center">
+                    <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-bold text-foreground">Prenota una Chiamata</h3>
-                    <p className="text-sm text-muted-foreground">10 minuti, senza impegno</p>
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">Prenota una Chiamata</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">10 minuti, senza impegno</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-5 sm:mb-6">
                   Vuoi parlare direttamente con noi? Prenota una chiamata conoscitiva gratuita quando preferisci.
                 </p>
                 <Button variant="hero" size="lg" className="w-full group" asChild>
                   <a href="https://calendly.com/studio-stsolutions/30min" target="_blank" rel="noopener noreferrer">
-                    <Calendar className="w-5 h-5 mr-2" />
+                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     Prenota una Chiamata
                     <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                   </a>
@@ -301,17 +301,17 @@ const Contatti = () => {
               </div>
 
               {/* Trust Indicators */}
-              <div className="bg-muted/50 rounded-2xl p-6">
-                <h4 className="font-semibold text-foreground mb-4">Cosa aspettarsi</h4>
-                <ul className="space-y-3">
+              <div className="bg-muted/50 rounded-2xl p-5 sm:p-6">
+                <h4 className="font-semibold text-sm sm:text-base text-foreground mb-3 sm:mb-4">Cosa aspettarsi</h4>
+                <ul className="space-y-2 sm:space-y-3">
                   {[
                     "Risposta entro 24 ore lavorative",
                     "Analisi gratuita della tua situazione",
                     "Proposta personalizzata senza impegno",
                     "Nessun costo nascosto"
                   ].map((item, index) => (
-                    <li key={index} className="flex items-center gap-3 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <li key={index} className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
