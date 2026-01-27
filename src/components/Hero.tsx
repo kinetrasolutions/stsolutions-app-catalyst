@@ -54,9 +54,11 @@ const Hero = () => {
           animationDelay: "0.2s"
         }}>
             <div className="flex flex-col items-center">
-              <Button variant="hero" size="xl" className="group">
-                Prenota una Chiamata Gratuita
-                <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+              <Button variant="hero" size="xl" className="group" asChild>
+                <a href="https://calendly.com/studio-stsolutions/30min" target="_blank" rel="noopener noreferrer">
+                  Prenota una Chiamata Gratuita
+                  <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
               <span className="text-sm text-white/70 mt-2">Chiamata gratuita di 10 minuti – senza impegno</span>
             </div>

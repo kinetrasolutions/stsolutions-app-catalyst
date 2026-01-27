@@ -257,10 +257,12 @@ const Contatti = () => {
                 <p className="text-muted-foreground mb-6">
                   Vuoi parlare direttamente con noi? Prenota una chiamata conoscitiva gratuita quando preferisci.
                 </p>
-                <Button variant="hero" size="lg" className="w-full group">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Prenota una Chiamata
-                  <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                <Button variant="hero" size="lg" className="w-full group" asChild>
+                  <a href="https://calendly.com/studio-stsolutions/30min" target="_blank" rel="noopener noreferrer">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Prenota una Chiamata
+                    <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
               </div>
 
