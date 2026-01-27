@@ -1,5 +1,11 @@
 import { Phone, Headphones, FileSearch, Code, Rocket } from "lucide-react";
-import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
+import { ScrollAnimation } from "@/components/ui/scroll-animation";
+import { useIsMobile } from "@/hooks/use-mobile";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const steps = [
   {
@@ -34,7 +40,33 @@ const steps = [
   },
 ];
 
+const StepCard = ({ step, index }: { step: typeof steps[0]; index: number }) => (
+  <div className="relative group h-full">
+    <div className="relative bg-secondary-foreground/5 border border-secondary-foreground/10 rounded-2xl p-5 sm:p-6 hover:bg-secondary-foreground/10 hover:border-primary/30 transition-all duration-300 h-full min-h-[280px] flex flex-col">
+      {/* Number badge */}
+      <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 shadow-button group-hover:scale-110 transition-transform">
+        <step.icon className="w-6 h-6 text-primary-foreground" />
+      </div>
+
+      {/* Step number */}
+      <span className="text-xs font-bold text-primary tracking-widest">
+        STEP {step.number}
+      </span>
+
+      <h3 className="font-display text-base sm:text-lg font-bold mt-2 mb-3">
+        {step.title}
+      </h3>
+
+      <p className="text-sm text-secondary-foreground/70 leading-relaxed flex-grow">
+        {step.description}
+      </p>
+    </div>
+  </div>
+);
+
 const HowItWorks = () => {
+  const isMobile = useIsMobile();
+
   return (
     <section id="come-funziona" className="section-padding bg-secondary text-secondary-foreground">
       <div className="container-custom px-5 sm:px-6 lg:px-8">
@@ -51,51 +83,57 @@ const HowItWorks = () => {
           </p>
         </ScrollAnimation>
 
-        {/* Steps */}
+        {/* Steps - Carousel on mobile, Grid on desktop */}
         <div className="relative">
-          {/* Connection line (desktop) */}
+          {/* Connection line (desktop only) */}
           <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
 
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-6" staggerDelay={0.1}>
-            {steps.map((step, index) => (
-              <StaggerItem key={index}>
-                <div className="relative group h-full">
-                  {/* Card */}
-                  <div className="relative bg-secondary-foreground/5 border border-secondary-foreground/10 rounded-2xl p-4 sm:p-6 hover:bg-secondary-foreground/10 hover:border-primary/30 transition-all duration-300 h-full">
-                    {/* Number badge */}
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-primary flex items-center justify-center mb-3 sm:mb-4 shadow-button group-hover:scale-110 transition-transform">
-                      <step.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
-                    </div>
-
-                    {/* Step number */}
-                    <span className="text-xs font-bold text-primary tracking-widest">
-                      STEP {step.number}
-                    </span>
-
-                    <h3 className="font-display text-sm sm:text-base md:text-lg font-bold mt-2 mb-2 sm:mb-3">
-                      {step.title}
-                    </h3>
-
-                    <p className="text-xs sm:text-sm text-secondary-foreground/70 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          {isMobile ? (
+            <Carousel
+              opts={{
+                align: "start",
+                loop: false,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-3">
+                {steps.map((step, index) => (
+                  <CarouselItem key={index} className="pl-3 basis-[85%]">
+                    <StepCard step={step} index={index} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              {/* Scroll indicator */}
+              <div className="flex justify-center gap-1.5 mt-6">
+                {steps.map((_, index) => (
+                  <div
+                    key={index}
+                    className="w-2 h-2 rounded-full bg-primary/30"
+                  />
+                ))}
+              </div>
+            </Carousel>
+          ) : (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+              {steps.map((step, index) => (
+                <ScrollAnimation key={index} variant="fadeUp" delay={index * 0.1}>
+                  <StepCard step={step} index={index} />
+                </ScrollAnimation>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Trust points */}
-        <StaggerContainer className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" staggerDelay={0.1}>
-          {[
-            { title: "Trasparenza totale", desc: "Costi chiari, tempi realistici" },
-            { title: "Comunicazione costante", desc: "Sapete sempre a che punto siamo" },
-            { title: "Focus sui risultati", desc: "Se non migliora, non ha senso farlo" },
-            { title: "Supporto continuativo", desc: "Non vi lasciamo soli dopo la consegna" },
-          ].map((item, index) => (
-            <StaggerItem key={index}>
-              <div className="text-center p-3 sm:p-4">
+        <ScrollAnimation variant="fadeUp" delay={0.2}>
+          <div className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {[
+              { title: "Trasparenza totale", desc: "Costi chiari, tempi realistici" },
+              { title: "Comunicazione costante", desc: "Sapete sempre a che punto siamo" },
+              { title: "Focus sui risultati", desc: "Se non migliora, non ha senso farlo" },
+              { title: "Supporto continuativo", desc: "Non vi lasciamo soli dopo la consegna" },
+            ].map((item, index) => (
+              <div key={index} className="text-center p-3 sm:p-4">
                 <h4 className="font-display text-sm sm:text-base font-semibold text-primary mb-1">
                   {item.title}
                 </h4>
@@ -103,9 +141,9 @@ const HowItWorks = () => {
                   {item.desc}
                 </p>
               </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+            ))}
+          </div>
+        </ScrollAnimation>
       </div>
     </section>
   );
