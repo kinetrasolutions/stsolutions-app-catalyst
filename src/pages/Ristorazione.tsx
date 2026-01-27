@@ -43,9 +43,9 @@ const solutions = [{
   icon: ShieldX,
   title: "Recupero No-Show e Taglio degli Sprechi",
   subtitle: "Ogni tavolo diventa incasso",
-  description: "Il sistema conferma ogni tavolo e riempie automaticamente i buchi dell'ultimo minuto. Meno sprechi in cucina e la garanzia che ogni seduta si trasformi in incasso reale.",
-  features: ["Reminder automatici – Conferme a 48h, 24h e 2h dalla prenotazione", "Conferma in un click – Link diretto, zero telefonate", "Pulizia automatica – Nessuna risposta = tavolo libero", "Lista d'attesa smart – Buchi riempiti in automatico", "Blacklist no-show – Blocca i recidivi, proteggi il fatturato"],
-  highlight: "Riduci i no-show dal 20% a meno del 5%.",
+  description: "Smetti di perdere soldi per colpa di chi prenota e non si presenta. L'AI trasforma l'incertezza in incasso garantito: gestisce i promemoria al posto tuo e riempie istantaneamente i buchi dell'ultimo minuto, salvando il fatturato.",
+  features: ["Notifiche Anti-Dimenticanza – Promemoria strategici a 48h, 24h e 2h che eliminano le dimenticanze", "Conferma Istantanea – Il cliente conferma via link, zero telefonate perse a rincorrere le persone", "Recupero Coperti h24 – Lista d'attesa intelligente che riempie i tavoli vuoti in automatico", "Protezione Fatturato – Blacklist automatica per bloccare i clienti recidivi e inaffidabili"],
+  highlight: "💡 Obiettivo: Zero tavoli vuoti, 100% incasso",
   color: "from-red-500 to-rose-500"
 }, {
   icon: UtensilsCrossed,
