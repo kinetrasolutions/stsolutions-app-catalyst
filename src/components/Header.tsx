@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoDark from "@/assets/logo-dark.png";
@@ -87,12 +87,12 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center justify-center">
             {isParrucchieriEstetica ? (
-              <Button size="default" className={getButtonStyle()}>
-                Prenota una Chiamata Gratuita
+              <Button size="default" className={getButtonStyle()} asChild>
+                <Link to="/contatti">Contattaci</Link>
               </Button>
             ) : (
-              <Button variant="hero" size="default">
-                Prenota una Chiamata Gratuita
+              <Button variant="hero" size="default" asChild>
+                <Link to="/contatti">Contattaci</Link>
               </Button>
             )}
           </div>
@@ -122,12 +122,12 @@ const Header = () => {
                 </a>
               ))}
               {isParrucchieriEstetica ? (
-                <Button size="lg" className={getButtonStyle() + " mt-4"}>
-                  Prenota una Chiamata Gratuita
+                <Button size="lg" className={getButtonStyle() + " mt-4"} asChild>
+                  <Link to="/contatti" onClick={() => setIsMobileMenuOpen(false)}>Contattaci</Link>
                 </Button>
               ) : (
-                <Button variant="hero" size="lg" className="mt-4">
-                  Prenota una Chiamata Gratuita
+                <Button variant="hero" size="lg" className="mt-4" asChild>
+                  <Link to="/contatti" onClick={() => setIsMobileMenuOpen(false)}>Contattaci</Link>
                 </Button>
               )}
             </div>
