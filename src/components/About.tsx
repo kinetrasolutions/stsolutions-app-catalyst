@@ -94,36 +94,52 @@ const About = () => {
         <ScrollAnimation variant="fadeUp" delay={0.2}>
           <div className="mt-16 md:mt-20 p-6 sm:p-8 lg:p-12 rounded-3xl bg-gradient-dark text-secondary-foreground">
             <div className="max-w-4xl">
-              <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
+              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
                 A chi si rivolge ST Solutions?
               </h3>
-              <p className="text-sm sm:text-base text-secondary-foreground/80 mb-4 sm:mb-6">
-                Lavoriamo a fianco di titolari d'azienda, professionisti e attività locali che vogliono scalare i propri risultati eliminando il caos operativo. Siete nel posto giusto se:
+              <p className="text-base sm:text-lg text-secondary-foreground/80 mb-6 sm:mb-8">
+                Titolari e professionisti che vogliono eliminare il caos operativo.
               </p>
-              <StaggerContainer staggerDelay={0.08}>
-                <ul className="space-y-3 sm:space-y-4">
-                  {[
-                    { title: "Il lavoro gestionale vi assorbe troppo tempo", desc: "Passate ore al telefono o al PC per coordinare appuntamenti invece di produrre valore per la vostra attività." },
-                    { title: "La tempestività è il vostro punto debole", desc: "Perdete potenziali clienti perché non riuscite a rispondere a ogni richiesta in tempo reale o fuori orario d'ufficio." },
-                    { title: "Volete un canale diretto con i vostri clienti", desc: "Desiderate un'app o un portale che gestisca ordini, prenotazioni e comunicazioni in totale autonomia, senza che dobbiate mai intervenire manualmente." },
-                    { title: "Volete eliminare commissioni inutili", desc: "Siete stanchi di regalare il 20-30% del vostro fatturato a piattaforme esterne che tengono in ostaggio i vostri dati e i vostri margini." },
-                    { title: "Gestite tutto manualmente e cercate ordine", desc: "I vostri flussi di lavoro sono frammentati e desiderate un sistema digitale unico, proprietario e automatico." },
-                    { title: "Il software \"standard\" non si adatta a voi", desc: "Avete provato soluzioni pronte all'uso, ma nessuna è in grado di ricalcare il vostro modello di business specifico." },
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
-                      <li className="flex items-start gap-2 sm:gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <div className="text-sm sm:text-base">
-                          <span className="font-semibold">{item.title}:</span>{" "}
-                          <span className="text-secondary-foreground/80">{item.desc}</span>
+              
+              <div className="grid gap-4 sm:gap-5">
+                {[
+                  { 
+                    title: "Il lavoro gestionale vi ruba tempo", 
+                    desc: "Ore perse al telefono invece di produrre valore." 
+                  },
+                  { 
+                    title: "Perdete clienti per risposte lente", 
+                    desc: "Non riuscite a rispondere in tempo reale." 
+                  },
+                  { 
+                    title: "Pagate troppe commissioni", 
+                    desc: "Il 20-30% va alle piattaforme esterne." 
+                  },
+                  { 
+                    title: "Il software standard non basta", 
+                    desc: "Nessuna soluzione si adatta al vostro business." 
+                  },
+                ].map((item, index) => (
+                  <StaggerItem key={index}>
+                    <div className="p-4 sm:p-5 rounded-xl border border-secondary-foreground/20 bg-secondary-foreground/5 backdrop-blur-sm">
+                      <div className="flex gap-3 sm:gap-4 items-start">
+                        <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-0.5" />
+                        <div>
+                          <h4 className="font-semibold text-base sm:text-lg text-secondary-foreground mb-1">
+                            {item.title}
+                          </h4>
+                          <p className="text-sm sm:text-base text-secondary-foreground/70">
+                            {item.desc}
+                          </p>
                         </div>
-                      </li>
-                    </StaggerItem>
-                  ))}
-                </ul>
-              </StaggerContainer>
-              <p className="mt-4 sm:mt-6 text-base sm:text-lg font-semibold text-primary">
-                ...se vi riconoscete in queste sfide, possiamo aiutarvi concretamente.
+                      </div>
+                    </div>
+                  </StaggerItem>
+                ))}
+              </div>
+              
+              <p className="mt-6 sm:mt-8 text-lg sm:text-xl font-semibold text-primary">
+                Ti riconosci? Possiamo aiutarti.
               </p>
             </div>
           </div>
