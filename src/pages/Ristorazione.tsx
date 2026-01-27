@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
-import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Quote, ClipboardList } from "lucide-react";
+import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Quote, ClipboardList, Clock, Package, type LucideIcon } from "lucide-react";
 
 // Custom images for Ristorazione page
 import ristorazioneHeroImage from "@/assets/ristorazione-hero-custom.webp";
@@ -75,22 +75,26 @@ const benefits = [{
   description: "Conosci i tuoi clienti: cosa ordinano, quando vengono, le loro preferenze. Usa questi dati per farli tornare con offerte mirate, non per regalarli alle piattaforme.",
   points: ["Database clienti con storico completo", "Preferenze e allergie memorizzate", "Campagne email/SMS personalizzate", "Programma fedeltà automatizzato"]
 }];
-const results = [{
+const results: { metric: string; before: string; after: string; icon: LucideIcon }[] = [{
   metric: "No-show",
   before: "20-25%",
-  after: "< 5%"
+  after: "< 5%",
+  icon: CalendarX
 }, {
   metric: "Ordini Asporto",
   before: "Caos",
-  after: "Automatizzati"
+  after: "Automatizzati",
+  icon: Package
 }, {
   metric: "Tempo di Risposta",
   before: "5-10 min",
-  after: "< 30 sec"
+  after: "< 30 sec",
+  icon: Clock
 }, {
   metric: "Coperti Gestiti",
   before: "Manuale",
-  after: "Automatizzati"
+  after: "Automatizzati",
+  icon: UtensilsCrossed
 }];
 const processSteps = [{
   step: 1,
@@ -418,22 +422,30 @@ const Ristorazione = () => {
             </ScrollAnimation>
 
             <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {results.map((result, index) => <StaggerItem key={index} className="h-full">
-                  <div className="h-full rounded-2xl bg-white/5 border border-white/10 p-6 text-center flex flex-col">
-                    <p className="text-sm text-white/60 mb-4">{result.metric}</p>
-                    <div className="flex items-center justify-center gap-3 sm:gap-4 flex-1">
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs text-white/40 mb-1">Prima</p>
-                        <p className="text-base sm:text-lg font-bold text-destructive break-words">{result.before}</p>
+              {results.map((result, index) => {
+                const IconComponent = result.icon;
+                return (
+                  <StaggerItem key={index} className="h-full">
+                    <div className="h-full rounded-2xl bg-white/5 border border-white/10 p-6 text-center flex flex-col">
+                      <div className="flex items-center justify-center gap-2 mb-4">
+                        <IconComponent className="w-5 h-5 text-cyan-400" />
+                        <p className="text-sm text-white/60">{result.metric}</p>
                       </div>
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0" />
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs text-white/40 mb-1">Dopo</p>
-                        <p className="text-base sm:text-lg font-bold text-primary break-words">{result.after}</p>
+                      <div className="flex items-center justify-center gap-3 sm:gap-4 flex-1">
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs text-white/40 mb-1">Prima</p>
+                          <p className="text-base sm:text-lg font-bold text-destructive break-words">{result.before}</p>
+                        </div>
+                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0" />
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs text-white/40 mb-1">Dopo</p>
+                          <p className="text-base sm:text-lg font-bold text-primary break-words">{result.after}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </StaggerItem>)}
+                  </StaggerItem>
+                );
+              })}
             </StaggerContainer>
           </div>
         </section>
