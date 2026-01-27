@@ -1,87 +1,81 @@
 
-# Piano: Redesign Pagina Parrucchieri/Estetica con Tema Rosa + Oro su Sfondo Chiaro
+# Piano: Redesign Sezione "A chi si rivolge" per Mobile
 
-## Obiettivo
-Trasformare la pagina Parrucchieri/Estetica da tema scuro con accenti cyan a un design premium con **sfondo bianco/chiaro** e accenti **rosa + oro combinati**.
+## Problema Identificato
+La sezione con i 6 punti target è presentata come una lista continua di testo su sfondo scuro. Su mobile risulta:
+- Troppo densa e ammassata
+- Faticosa da leggere (muro di testo)
+- Poco respiro visivo tra i punti
 
----
+## Soluzione Proposta
 
-## Panoramica Cambiamenti
+### Approccio: Card Separate con Design Arioso
 
-### Palette Colori Nuova
-- **Sfondo Hero**: Gradiente chiaro crema/rosato invece di scuro
-- **Accenti primari**: Rosa/fuchsia (`pink-500`, `rose-500`)  
-- **Accenti secondari**: Oro/gold (`amber-400`, `yellow-500`)
-- **Checkmark/Glow**: Rosa con riflessi dorati
-- **Testo principale**: Scuro su sfondo chiaro
+Trasformare i 6 punti da lista compatta a **card individuali** con più spazio e gerarchia visiva chiara.
 
----
+### Modifiche Tecniche
 
-## Modifiche Tecniche
+**File: `src/components/About.tsx`**
 
-### 1. Hero Section
-**File:** `src/pages/ParrucchieriEstetica.tsx`
+1. **Ridurre i punti da 6 a 4** (i più impattanti) per alleggerire
+2. **Trasformare in card separate** invece di lista bullet
+3. **Aggiungere più padding e gap** tra gli elementi
+4. **Separare visivamente titolo e descrizione** con line-height maggiore
+5. **Su mobile: mostrare solo titoli** con descrizioni più corte o nascoste
 
-- Cambiare `bg-gradient-hero` (scuro) → nuovo gradiente chiaro
-- Background: `bg-gradient-to-b from-white via-pink-50/30 to-rose-50/50`
-- Glow decorativi: rosa/oro invece di primary/cyan
-- Testo headline: scuro (`text-gray-900`) con parole chiave in rosa/oro
-- Checkmark: gradiente da rosa a oro con glow rosa
-
-**Prima:**
-```text
-bg-gradient-hero (nero/scuro)
-text-cyan-400 (accenti)
-from-cyan-400 to-cyan-600 (checkmark)
-```
-
-**Dopo:**
-```text
-bg-gradient-to-b from-white via-pink-50/30 to-rose-50/50
-text-pink-500 / text-amber-500 (accenti)
-from-pink-500 to-rose-500 + oro (checkmark)
-```
-
-### 2. Badge e Elementi Decorativi
-- Badge header: `bg-pink-100 text-pink-600` invece di `bg-pink-500/20 text-pink-400`
-- Orbs decorativi: `bg-pink-200/50` e `bg-amber-200/40`
-- Grid pattern: più visibile su sfondo chiaro
-
-### 3. Bottoni CTA
-- Bottone primario: gradiente rosa-oro
-- Mantiene il bottone WhatsApp verde per riconoscibilità
-
-### 4. Sezioni Successive
-Le sezioni Challenges, Solutions, ecc. mantengono sfondo bianco/chiaro con accenti rosa/oro coerenti.
-
----
-
-## Esempio Visivo del Nuovo Stile
+### Nuovo Layout Mobile
 
 ```text
-┌──────────────────────────────────────────────────┐
-│  SFONDO: Bianco → Rosa pallido → Crema           │
-│                                                   │
-│  [Badge rosa su rosa chiaro]                     │
-│                                                   │
-│  L'AI che rivoluziona                            │
-│  LA GESTIONE (rosa) E I TRATTAMENTI (oro)        │
-│  nel tuo Salone                                  │
-│                                                   │
-│  ✓ (rosa glow) Prenotazioni h24...               │
-│  ✓ (rosa glow) Richiami automatici...            │
-│  ✓ (rosa glow) Trasforma il tuo tempo...         │
-│                                                   │
-│  [PRENOTA CHIAMATA - rosa/oro]  [WHATSAPP]       │
-└──────────────────────────────────────────────────┘
+┌────────────────────────────────────┐
+│  A chi si rivolge ST Solutions?    │
+│                                    │
+│  Breve intro (2 righe max)         │
+├────────────────────────────────────┤
+│                                    │
+│  ┌──────────────────────────────┐  │
+│  │ ✓ Troppo tempo in gestione   │  │
+│  │   Descrizione breve          │  │
+│  └──────────────────────────────┘  │
+│                                    │
+│  ┌──────────────────────────────┐  │
+│  │ ✓ Risposte lente ai clienti  │  │
+│  │   Descrizione breve          │  │
+│  └──────────────────────────────┘  │
+│                                    │
+│  ┌──────────────────────────────┐  │
+│  │ ✓ Commissioni piattaforme    │  │
+│  │   Descrizione breve          │  │
+│  └──────────────────────────────┘  │
+│                                    │
+│  ┌──────────────────────────────┐  │
+│  │ ✓ Software non adatto        │  │
+│  │   Descrizione breve          │  │
+│  └──────────────────────────────┘  │
+│                                    │
+│  Ti riconosci? Possiamo aiutarti.  │
+└────────────────────────────────────┘
 ```
 
----
+### Dettagli Implementazione
 
-## File da Modificare
-1. **`src/pages/ParrucchieriEstetica.tsx`** - Tutti i cambiamenti concentrati qui
+| Elemento | Prima | Dopo |
+|----------|-------|------|
+| Punti | 6 | 4 (più essenziali) |
+| Layout | Lista bullet continua | Card separate con bordi |
+| Spacing | `space-y-3` | `space-y-5` o `gap-5` |
+| Descrizioni | Lunghe | Accorciate (max 15 parole) |
+| Bullet | Pallino piccolo | Icona CheckCircle colorata |
+| Padding card | Nessuno | `p-4` con bordo sottile |
 
-## Impatto
-- Look premium e lussuoso specifico per saloni di bellezza
-- Maggiore differenziazione dalle altre pagine verticali (Salute=scuro+cyan, Ristorazione=scuro+cyan)
-- Coerenza con l'estetica del settore beauty
+### Contenuti Rivisti (4 punti chiave)
+
+1. **"Il lavoro gestionale vi ruba tempo"** - Ore perse al telefono invece di lavorare
+2. **"Perdete clienti per risposte lente"** - Non riuscite a rispondere in tempo reale
+3. **"Pagate troppe commissioni"** - Il 20-30% va alle piattaforme esterne
+4. **"Il software standard non basta"** - Nessuna soluzione si adatta al vostro business
+
+### Vantaggi
+- Lettura più scorrevole e meno faticosa
+- Maggiore respiro visivo tra i concetti
+- Ogni card è un "blocco mentale" separato
+- Descrizioni corte = meno sforzo cognitivo
