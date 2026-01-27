@@ -358,11 +358,11 @@ const Ristorazione = () => {
                 <p className="text-xl sm:text-2xl md:text-3xl font-display font-semibold text-foreground">
                   Ogni locale ha le sue regole:{" "}
                   <span className="text-gradient">
-                    progettiamo e implementiamo qualsiasi funzionalità extra basata sul tuo flusso di lavoro.
+                    progettiamo e implementiamo qualsiasi funzionalità basata sul tuo flusso di lavoro.
                   </span>
                 </p>
-                <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                  Se hai un problema nel servizio o nella gestione, noi costruiamo l'automazione per risolverlo.
+                <p className="text-foreground mt-6 max-w-2xl mx-auto text-lg sm:text-xl">
+                  Se hai un problema nel servizio o nella gestione O semplicemente vuoi migliorare qualcosa, noi costruiamo l'automazione per risolverlo.
                 </p>
               </div>
             </ScrollAnimation>
