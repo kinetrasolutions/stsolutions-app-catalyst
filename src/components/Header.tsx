@@ -12,7 +12,8 @@ const Header = () => {
   
   const isProfessionistiSalute = location.pathname === "/professionisti-salute";
   const isRistorazione = location.pathname === "/ristorazione";
-  const isVerticalPage = isProfessionistiSalute || isRistorazione;
+  const isParrucchieriEstetica = location.pathname === "/parrucchieri-estetica";
+  const isVerticalPage = isProfessionistiSalute || isRistorazione || isParrucchieriEstetica;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +37,21 @@ const Header = () => {
         { href: "#chi-siamo", label: "Chi Siamo" },
       ];
 
+  // Theme-specific styles for Parrucchieri/Estetica page (pink/gold theme with light background)
+  const getLinkHoverColor = () => {
+    if (isParrucchieriEstetica) {
+      return isScrolled ? "text-foreground hover:text-pink-500" : "text-gray-700 hover:text-pink-500";
+    }
+    return isScrolled ? "text-foreground hover:text-primary" : "text-white/90 hover:text-white";
+  };
+
+  const getButtonStyle = () => {
+    if (isParrucchieriEstetica) {
+      return "bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:via-rose-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300";
+    }
+    return "";
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -49,7 +65,7 @@ const Header = () => {
           {/* Logo - Always links to homepage */}
           <a href="/" className="flex items-center gap-2 group">
             <img
-              src={isScrolled ? logoDark : logoLight}
+              src={isScrolled || isParrucchieriEstetica ? logoDark : logoLight}
               alt="ST Solutions"
               className="h-8 md:h-10 w-auto transition-all duration-300 group-hover:scale-105"
             />
@@ -61,11 +77,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors animated-underline ${
-                  isScrolled
-                    ? "text-foreground hover:text-primary"
-                    : "text-white/90 hover:text-white"
-                }`}
+                className={`text-sm font-medium transition-colors animated-underline ${getLinkHoverColor()}`}
               >
                 {link.label}
               </a>
@@ -74,9 +86,15 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center justify-center">
-            <Button variant="hero" size="default">
-              Prenota una Chiamata Gratuita
-            </Button>
+            {isParrucchieriEstetica ? (
+              <Button size="default" className={getButtonStyle()}>
+                Prenota una Chiamata Gratuita
+              </Button>
+            ) : (
+              <Button variant="hero" size="default">
+                Prenota una Chiamata Gratuita
+              </Button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,9 +121,15 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-4">
-                Prenota una Chiamata Gratuita
-              </Button>
+              {isParrucchieriEstetica ? (
+                <Button size="lg" className={getButtonStyle() + " mt-4"}>
+                  Prenota una Chiamata Gratuita
+                </Button>
+              ) : (
+                <Button variant="hero" size="lg" className="mt-4">
+                  Prenota una Chiamata Gratuita
+                </Button>
+              )}
             </div>
           </div>
         )}
