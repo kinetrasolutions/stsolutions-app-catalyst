@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import ProfessionistiSalute from "./pages/ProfessionistiSalute";
 import Ristorazione from "./pages/Ristorazione";
 import ParrucchieriEstetica from "./pages/ParrucchieriEstetica";
+import Contatti from "./pages/Contatti";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/professionisti-salute" element={<ProfessionistiSalute />} />
           <Route path="/ristorazione" element={<Ristorazione />} />
           <Route path="/parrucchieri-estetica" element={<ParrucchieriEstetica />} />
+          <Route path="/contatti" element={<Contatti />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

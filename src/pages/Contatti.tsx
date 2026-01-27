@@ -1,0 +1,279 @@
+import { useState } from "react";
+import { ArrowRight, MessageCircle, Calendar, Mail, Send, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CookieBar from "@/components/CookieBar";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Il nome è obbligatorio").max(100, "Il nome è troppo lungo"),
+  email: z.string().trim().email("Email non valida").max(255, "Email troppo lunga"),
+  phone: z.string().trim().optional(),
+  message: z.string().trim().min(1, "Il messaggio è obbligatorio").max(2000, "Il messaggio è troppo lungo")
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
+
+const Contatti = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name as keyof ContactFormData]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrors({});
+
+    // Validate form data
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
+      result.error.errors.forEach(err => {
+        const field = err.path[0] as keyof ContactFormData;
+        fieldErrors[field] = err.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Richiesta contatto da ${formData.name}`);
+    const body = encodeURIComponent(
+      `Nome: ${formData.name}\nEmail: ${formData.email}\nTelefono: ${formData.phone || 'Non specificato'}\n\nMessaggio:\n${formData.message}`
+    );
+    
+    // Open email client
+    window.location.href = `mailto:studio.stsolutions@protonmail.com?subject=${subject}&body=${body}`;
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    toast({
+      title: "Email pronta!",
+      description: "Si aprirà il tuo client email per inviare il messaggio.",
+    });
+  };
+
+  const whatsappLink = "https://wa.me/393452838679?text=Buongiorno%20%2C%20sarei%20interessato%20alle%20vostre%20soluzioni%20per%20la%20mia%20attività";
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <main className="pt-32 pb-20">
+        <div className="container-custom">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              Contattaci
+            </span>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              Parliamo del tuo{" "}
+              <span className="text-gradient">progetto</span>
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Compila il form, scrivici su WhatsApp o prenota direttamente una chiamata. 
+              Ti risponderemo entro 24 ore.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Contact Form */}
+            <div className="bg-card border border-border rounded-3xl p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <h2 className="font-display text-xl font-bold text-foreground">Inviaci un messaggio</h2>
+                  <p className="text-sm text-muted-foreground">Ti risponderemo al più presto</p>
+                </div>
+              </div>
+
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle2 className="w-8 h-8 text-green-500" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                    Messaggio pronto!
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    Il tuo client email si è aperto con il messaggio già compilato. Clicca "Invia" per completare.
+                  </p>
+                  <Button variant="outline" onClick={() => setIsSubmitted(false)}>
+                    Invia un altro messaggio
+                  </Button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Nome e Cognome *</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Mario Rossi"
+                      className={errors.name ? "border-destructive" : ""}
+                    />
+                    {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email *</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="mario@esempio.it"
+                      className={errors.email ? "border-destructive" : ""}
+                    />
+                    {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Telefono (opzionale)</Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="+39 123 456 7890"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Messaggio *</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Descrivi brevemente la tua attività e come possiamo aiutarti..."
+                      rows={5}
+                      className={errors.message ? "border-destructive" : ""}
+                    />
+                    {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    variant="hero" 
+                    size="lg" 
+                    className="w-full group"
+                    disabled={isSubmitting}
+                  >
+                    <Send className="w-5 h-5 mr-2" />
+                    {isSubmitting ? "Preparazione..." : "Invia Messaggio"}
+                    <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </form>
+              )}
+            </div>
+
+            {/* Alternative Contact Options */}
+            <div className="space-y-6">
+              {/* WhatsApp Card */}
+              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/5 border border-green-500/20 rounded-3xl p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-bold text-foreground">WhatsApp</h3>
+                    <p className="text-sm text-muted-foreground">Risposta immediata</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-6">
+                  Preferisci una risposta veloce? Scrivici direttamente su WhatsApp per una chat immediata.
+                </p>
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 group"
+                  asChild
+                >
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Scrivici su WhatsApp
+                    <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </Button>
+              </div>
+
+              {/* Calendar Card */}
+              <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-3xl p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center">
+                    <Calendar className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-bold text-foreground">Prenota una Chiamata</h3>
+                    <p className="text-sm text-muted-foreground">10 minuti, senza impegno</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-6">
+                  Vuoi parlare direttamente con noi? Prenota una chiamata conoscitiva gratuita quando preferisci.
+                </p>
+                <Button variant="hero" size="lg" className="w-full group">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Prenota una Chiamata
+                  <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="bg-muted/50 rounded-2xl p-6">
+                <h4 className="font-semibold text-foreground mb-4">Cosa aspettarsi</h4>
+                <ul className="space-y-3">
+                  {[
+                    "Risposta entro 24 ore lavorative",
+                    "Analisi gratuita della tua situazione",
+                    "Proposta personalizzata senza impegno",
+                    "Nessun costo nascosto"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center gap-3 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <Footer />
+      <CookieBar />
+    </div>
+  );
+};
+
+export default Contatti;
