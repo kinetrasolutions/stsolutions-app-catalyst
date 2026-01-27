@@ -23,9 +23,9 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full glass-dark border border-primary/20 mb-6 md:mb-8 animate-fade-in">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-xs sm:text-sm font-medium text-secondary-foreground">
-              Automazioni AI per Attività Locali e Professionisti
-            </span>
+          <span className="text-sm sm:text-base font-medium text-secondary-foreground">
+            Automazioni AI per Attività Locali e Professionisti
+          </span>
           </div>
 
           {/* Main Headline */}
@@ -36,12 +36,12 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-3 md:mb-4 animate-slide-up px-2" style={{ animationDelay: "0.1s" }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-3 md:mb-4 animate-slide-up px-2" style={{ animationDelay: "0.1s" }}>
             Clienti, appuntamenti, comunicazioni e operazioni quotidiane automatizzate con soluzioni AI su misura, senza software standard.
           </p>
 
           {/* Micro-copy */}
-          <p className="text-sm sm:text-base md:text-lg text-primary font-medium mb-8 md:mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
+          <p className="text-base sm:text-lg md:text-xl text-primary font-medium mb-8 md:mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
             L'AI lavora per te anche quando non sei operativo.
           </p>
 
@@ -54,7 +54,7 @@ const Hero = () => {
                   <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <span className="text-xs sm:text-sm text-white/70 mt-2">Chiamata gratuita di 10 minuti – senza impegno</span>
+              <span className="text-sm sm:text-base text-white/70 mt-2">Chiamata gratuita di 10 minuti – senza impegno</span>
             </div>
           </div>
 
@@ -62,22 +62,22 @@ const Hero = () => {
           <div className="mt-12 md:mt-16 pb-6 md:pb-8 grid grid-cols-2 sm:flex sm:flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <div className="flex items-center gap-2 justify-center">
               <span className="text-2xl md:text-3xl font-bold text-primary">✓</span>
-              <span className="text-xs sm:text-sm text-white font-medium text-left">Riduzione<br />Costi Operativi</span>
+              <span className="text-sm sm:text-base text-white font-medium text-left">Riduzione<br />Costi Operativi</span>
             </div>
             <div className="w-px h-10 bg-white/30 hidden sm:block" />
             <div className="flex items-center gap-2 justify-center">
               <span className="text-2xl md:text-3xl font-bold text-primary">∞</span>
-              <span className="text-xs sm:text-sm text-white font-medium text-left">Tempo Liberato<br />Per Te</span>
+              <span className="text-sm sm:text-base text-white font-medium text-left">Tempo Liberato<br />Per Te</span>
             </div>
             <div className="w-px h-10 bg-white/30 hidden sm:block" />
             <div className="flex items-center gap-2 justify-center">
               <span className="text-2xl md:text-3xl font-bold text-primary">H24</span>
-              <span className="text-xs sm:text-sm text-white font-medium text-left">Assistente AI<br />Sempre Attivo</span>
+              <span className="text-sm sm:text-base text-white font-medium text-left">Assistente AI<br />Sempre Attivo</span>
             </div>
             <div className="w-px h-10 bg-white/30 hidden sm:block" />
             <div className="flex items-center gap-2 justify-center">
               <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-primary" strokeWidth={2.5} />
-              <span className="text-xs sm:text-sm text-white font-medium text-left">Incremento Fatturato<br />Senza Sforzi</span>
+              <span className="text-sm sm:text-base text-white font-medium text-left">Incremento Fatturato<br />Senza Sforzi</span>
             </div>
           </div>
         </div>

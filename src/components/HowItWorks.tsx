@@ -57,7 +57,7 @@ const StepCard = ({ step, index }: { step: typeof steps[0]; index: number }) => 
         {step.title}
       </h3>
 
-      <p className="text-sm text-secondary-foreground/70 leading-relaxed flex-grow">
+      <p className="text-base text-secondary-foreground/70 leading-relaxed flex-grow">
         {step.description}
       </p>
     </div>
@@ -78,7 +78,7 @@ const HowItWorks = () => {
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Un processo semplice, trasparente
           </h2>
-          <p className="text-base sm:text-lg text-secondary-foreground/70 max-w-2xl mx-auto px-2">
+          <p className="text-lg sm:text-xl text-secondary-foreground/70 max-w-2xl mx-auto px-2">
             Senza sorprese. Saprete sempre a che punto siamo e cosa stiamo facendo.
           </p>
         </ScrollAnimation>
@@ -134,10 +134,10 @@ const HowItWorks = () => {
               { title: "Supporto continuativo", desc: "Non vi lasciamo soli dopo la consegna" },
             ].map((item, index) => (
               <div key={index} className="text-center p-3 sm:p-4">
-                <h4 className="font-display text-sm sm:text-base font-semibold text-primary mb-1">
+                <h4 className="font-display text-base sm:text-lg font-semibold text-primary mb-1">
                   {item.title}
                 </h4>
-                <p className="text-xs sm:text-sm text-secondary-foreground/70">
+                <p className="text-sm sm:text-base text-secondary-foreground/70">
                   {item.desc}
                 </p>
               </div>

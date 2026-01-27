@@ -21,7 +21,7 @@ const CTA = () => {
               <span className="text-gradient">gestire tutto manualmente</span>?
             </h2>
 
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 px-2">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 px-2">
               Prenotate un appuntamento conoscitivo di 10 minuti, senza impegno. 
               Scopriamo insieme come automatizzare la vostra attività.
             </p>
@@ -48,7 +48,7 @@ const CTA = () => {
           </ScrollAnimation>
 
           {/* Trust indicators */}
-          <StaggerContainer className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 text-xs sm:text-sm text-muted-foreground" staggerDelay={0.1}>
+          <StaggerContainer className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base text-muted-foreground" staggerDelay={0.1}>
             <StaggerItem>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full" />

@@ -36,7 +36,7 @@ const Problems = () => {
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Ti riconosci in queste situazioni?
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
             Sono i problemi più comuni delle attività locali. E sono tutti risolvibili.
           </p>
         </ScrollAnimation>
@@ -56,7 +56,7 @@ const Problems = () => {
                     <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-2">
                       {problem.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                       {problem.description}
                     </p>
                   </div>
