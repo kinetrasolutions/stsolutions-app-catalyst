@@ -134,43 +134,34 @@ const ProfessionistiSalute = () => {
                   Professionisti della Salute
                 </span>
                 
-                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
+                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-slide-up leading-[1.1]">
                   L'Intelligenza Artificiale al Servizio del{" "}
                   <span className="text-gradient">Tuo Studio</span>
                 </h1>
                 
-                <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-4 animate-slide-up" style={{
+                <p className="text-base sm:text-lg md:text-xl text-white/80 mb-3 animate-slide-up" style={{
                 animationDelay: "0.1s"
               }}>
-                  Il Tuo Ecosistema Digitale potenziato dall'AI
+                  Un sistema AI proprietario gestisce appuntamenti e pazienti h24.
                 </p>
                 
-                <p className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up" style={{
-                animationDelay: "0.2s"
+                <p className="text-sm sm:text-base text-primary font-medium mb-6 sm:mb-8 animate-slide-up" style={{
+                animationDelay: "0.15s"
               }}>
-                  Basta lavoro manuale: un sistema AI proprietario gestisce appuntamenti e pazienti h24. Più efficienza per lo studio, più tempo libero per te.
-                </p>
-                
-                <p className="text-sm text-white/50 mb-8 sm:mb-10 animate-slide-up" style={{
-                animationDelay: "0.25s"
-              }}>
-                  E se hai esigenze particolari, sviluppiamo la soluzione su misura per risolverle.
+                  Più efficienza per lo studio, più tempo libero per te.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{
-                animationDelay: "0.3s"
+                {/* Single CTA with micro-copy */}
+                <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start animate-slide-up" style={{
+                animationDelay: "0.2s"
               }}>
-                  <Button variant="hero" size="xl" className="group">
-                    Prenota una Chiamata Gratuita
-                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                  <Button size="xl" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                      <MessageSquare className="w-5 h-5 mr-2" />
-                      Scrivici su WhatsApp
+                  <Button variant="hero" size="xl" className="group w-full sm:w-auto" asChild>
+                    <a href="https://calendly.com/studio-stsolutions/30min" target="_blank" rel="noopener noreferrer">
+                      Prenota una Chiamata Gratuita
                       <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                     </a>
                   </Button>
+                  <span className="text-xs sm:text-sm text-white/60 mt-3">Chiamata gratuita di 10 minuti – senza impegno</span>
                 </div>
               </div>
 
