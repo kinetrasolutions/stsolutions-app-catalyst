@@ -363,7 +363,7 @@ const Ristorazione = () => {
                   </span>
                 </p>
                 <p className="text-foreground mt-6 max-w-2xl mx-auto text-lg sm:text-xl">
-                  Se hai un problema nel servizio o nella gestione O semplicemente vuoi migliorare qualcosa, noi costruiamo l'automazione per risolverlo.
+                  Se hai un problema nel servizio o nella gestione o semplicemente vuoi migliorare qualcosa, noi costruiamo l'automazione per risolverlo.
                 </p>
               </div>
             </ScrollAnimation>
