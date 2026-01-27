@@ -205,35 +205,35 @@ const ProfessionistiSalute = () => {
         </section>
 
         {/* Challenges Section */}
-        <section className="section-padding bg-background">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-4">
+        <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-8 sm:mb-10">
+              <span className="inline-block px-3 py-1 rounded-full bg-destructive/10 text-destructive text-xs sm:text-sm font-medium mb-3">
                 Le Sfide Quotidiane
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 I problemi che affronti ogni giorno
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Riconosciamo queste sfide perché le abbiamo studiate a fondo insieme a decine di professionisti come te.
               </p>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-4 sm:gap-6">
+            <StaggerContainer className="grid md:grid-cols-3 gap-3 sm:gap-4">
               {challenges.map((challenge, index) => <StaggerItem key={index}>
-                  <div className="h-full rounded-2xl border border-border bg-card p-5 sm:p-6 hover:shadow-xl hover:border-destructive/30 hover:-translate-y-1 transition-all duration-300">
-                    <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
-                      <challenge.icon className="w-6 h-6 text-destructive" />
+                  <div className="h-full rounded-xl border border-border bg-card p-4 sm:p-5 hover:shadow-lg hover:border-destructive/30 hover:-translate-y-1 transition-all duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center mb-3">
+                      <challenge.icon className="w-5 h-5 text-destructive" />
                     </div>
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-2">
+                    <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-1.5">
                       {challenge.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-3 line-clamp-3">
                       {challenge.description}
                     </p>
-                    <div className="space-y-1.5">
-                      {challenge.problems.slice(0, 3).map((problem, idx) => <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
-                          <X className="w-3.5 h-3.5 text-destructive shrink-0 mt-0.5" />
+                    <div className="space-y-1">
+                      {challenge.problems.slice(0, 3).map((problem, idx) => <div key={idx} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                          <X className="w-3 h-3 text-destructive shrink-0 mt-0.5" />
                           <span className="line-clamp-1">{problem}</span>
                         </div>)}
                     </div>
@@ -244,31 +244,31 @@ const ProfessionistiSalute = () => {
         </section>
 
         {/* Solutions Section */}
-        <section id="soluzioni" className="section-padding bg-muted/50">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <section id="soluzioni" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-muted/50">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-8 sm:mb-10">
+              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-3">
                 Le Nostre Soluzioni
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 Come ST Solutions risolve questi problemi
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Non vendiamo software preconfezionati. Costruiamo il tuo ecosistema digitale proprietario.
               </p>
             </ScrollAnimation>
 
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-5 sm:space-y-6">
               {solutions.map((solution, index) => {
               const solutionImages = [healthWhatsappAgent, healthManagementApp, healthInvoicing];
               const imageAlts = ["Agente AI WhatsApp per prenotazioni mediche", "App gestionale per studi medici", "Sistema di fatturazione automatica"];
               return <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
-                    <div className="rounded-3xl border border-border bg-card overflow-hidden">
-                      <div className={`h-2 bg-gradient-to-r ${solution.color}`} />
-                      <div className="p-6 sm:p-8 lg:p-12">
-                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 sm:gap-8 items-center`}>
+                    <div className="rounded-2xl border border-border bg-card overflow-hidden">
+                      <div className={`h-1.5 bg-gradient-to-r ${solution.color}`} />
+                      <div className="p-4 sm:p-6 lg:p-8">
+                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-4 sm:gap-6 items-center`}>
                           {/* Image with gradient mask fade - reduced size */}
-                          <div className="w-full max-w-xs sm:max-w-sm lg:w-1/3">
+                          <div className="w-full max-w-[200px] sm:max-w-[240px] lg:w-1/4">
                             <div className="relative group mx-auto">
                               {/* Glow effect behind image */}
                               <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-20 blur-xl scale-105`} />
@@ -280,7 +280,7 @@ const ProfessionistiSalute = () => {
                             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
                             WebkitMaskComposite: 'source-in'
                           }}>
-                                <img src={solutionImages[index]} alt={imageAlts[index]} className="w-full h-auto object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
+                                <img src={solutionImages[index]} alt={imageAlts[index]} className="w-full h-auto object-cover rounded-xl transition-transform duration-500 group-hover:scale-105" />
                               </div>
                               
                               {/* Subtle overlay gradient */}
@@ -289,32 +289,32 @@ const ProfessionistiSalute = () => {
                           </div>
                           
                           {/* Content */}
-                          <div className="w-full lg:w-2/3 text-center lg:text-left">
-                            <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-4 mx-auto lg:mx-0`}>
-                              <solution.icon className="w-8 h-8 text-white" />
+                          <div className="w-full lg:w-3/4 text-center lg:text-left">
+                            <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-3 mx-auto lg:mx-0`}>
+                              <solution.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                             </div>
-                            <h3 className="font-display text-2xl font-bold text-foreground mb-1">
+                            <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-0.5">
                               {solution.title}
                             </h3>
-                            <p className="text-primary font-medium mb-4">{solution.subtitle}</p>
-                            <p className="text-muted-foreground mb-6">{solution.description}</p>
-                            <ul className="space-y-3 mb-6 text-left">
+                            <p className="text-primary font-medium text-sm mb-2">{solution.subtitle}</p>
+                            <p className="text-sm text-muted-foreground mb-4">{solution.description}</p>
+                            <ul className="space-y-2 mb-4 text-left">
                               {solution.features.map((feature, idx) => {
                             // Split feature at first " – " to bold the title
                             const dashIndex = feature.indexOf(' – ');
                             const hasTitle = dashIndex > -1;
                             const title = hasTitle ? feature.slice(0, dashIndex) : null;
                             const rest = hasTitle ? feature.slice(dashIndex) : feature;
-                            return <li key={idx} className="flex items-start gap-3">
-                                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                    <span className="text-foreground text-sm sm:text-base">
+                            return <li key={idx} className="flex items-start gap-2">
+                                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                                    <span className="text-foreground text-xs sm:text-sm">
                                       {title && <strong>{title}</strong>}
                                       {rest}
                                     </span>
                                   </li>;
                           })}
                             </ul>
-                            <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${solution.color} text-white text-xs sm:text-sm font-medium`}>
+                            <div className={`inline-block px-3 py-1.5 rounded-full bg-gradient-to-r ${solution.color} text-white text-xs font-medium`}>
                               💡 {solution.highlight}
                             </div>
                           </div>
@@ -326,9 +326,9 @@ const ProfessionistiSalute = () => {
             </div>
 
             {/* Custom Solutions CTA */}
-            <ScrollAnimation variant="fadeUp" className="mt-12 sm:mt-16">
-              <div className="text-center p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-primary/10 via-cyan-500/5 to-transparent border border-primary/20">
-                <p className="text-xl sm:text-2xl md:text-3xl font-display font-semibold text-foreground">
+            <ScrollAnimation variant="fadeUp" className="mt-8 sm:mt-10">
+              <div className="text-center p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-primary/10 via-cyan-500/5 to-transparent border border-primary/20">
+                <p className="text-base sm:text-lg md:text-xl font-display font-semibold text-foreground">
                   Hai esigenze diverse?{" "}
                   <span className="text-gradient">
 Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
@@ -339,31 +339,31 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         </section>
 
         {/* Benefits Section */}
-        <section className="section-padding bg-background">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-8 sm:mb-10">
+              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-3">
                 Perché Sceglierci
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 Perché scegliere ST Solutions
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            <StaggerContainer className="grid md:grid-cols-3 gap-3 sm:gap-4">
               {benefits.map((benefit, index) => <StaggerItem key={index}>
-                  <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300">
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                      <benefit.icon className="w-7 h-7 text-primary" />
+                  <div className="h-full rounded-xl border border-border bg-card p-4 sm:p-5 hover:shadow-lg transition-all duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                      <benefit.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="font-display text-xl font-bold text-foreground mb-1">
+                    <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-0.5">
                       {benefit.title}
                     </h3>
-                    <p className="text-primary font-medium text-sm mb-4">{benefit.subtitle}</p>
-                    <p className="text-muted-foreground mb-6">{benefit.description}</p>
-                    <ul className="space-y-2">
-                      {benefit.points.map((point, idx) => <li key={idx} className="flex items-start gap-2 text-sm">
-                          <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <p className="text-primary font-medium text-xs sm:text-sm mb-2">{benefit.subtitle}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-3">{benefit.description}</p>
+                    <ul className="space-y-1.5">
+                      {benefit.points.map((point, idx) => <li key={idx} className="flex items-start gap-1.5 text-xs">
+                          <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
                           <span className="text-foreground">{point}</span>
                         </li>)}
                     </ul>
@@ -374,30 +374,30 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         </section>
 
         {/* Results Section */}
-        <section className="section-padding bg-secondary text-secondary-foreground">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
+        <section className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-secondary text-secondary-foreground">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-6 sm:mb-8">
+              <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs sm:text-sm font-medium mb-3">
                 Risultati Misurabili
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
                 Risultati concreti che puoi misurare
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+            <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
               {results.map((result, index) => <StaggerItem key={index} className="h-full">
-                  <div className="h-full rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 p-4 sm:p-6 text-center flex flex-col">
-                    <p className="text-xs sm:text-sm text-white/60 mb-3 font-medium">{result.metric}</p>
-                    <div className="flex items-center justify-center gap-2 sm:gap-3 flex-1">
+                  <div className="h-full rounded-lg sm:rounded-xl bg-white/5 border border-white/10 p-3 sm:p-4 text-center flex flex-col">
+                    <p className="text-[10px] sm:text-xs text-white/60 mb-2 font-medium">{result.metric}</p>
+                    <div className="flex items-center justify-center gap-1.5 sm:gap-2 flex-1">
                       <div className="flex-1 min-w-0">
-                        <p className="text-[10px] sm:text-xs text-white/40 mb-0.5">Prima</p>
-                        <p className="text-sm sm:text-lg font-bold text-destructive">{result.before}</p>
+                        <p className="text-[9px] sm:text-[10px] text-white/40 mb-0.5">Prima</p>
+                        <p className="text-xs sm:text-sm font-bold text-destructive">{result.before}</p>
                       </div>
-                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-primary shrink-0" />
+                      <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <p className="text-[10px] sm:text-xs text-white/40 mb-0.5">Dopo</p>
-                        <p className="text-sm sm:text-lg font-bold text-primary">{result.after}</p>
+                        <p className="text-[9px] sm:text-[10px] text-white/40 mb-0.5">Dopo</p>
+                        <p className="text-xs sm:text-sm font-bold text-primary">{result.after}</p>
                       </div>
                     </div>
                   </div>
@@ -407,51 +407,51 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         </section>
 
         {/* Mid-Page CTA Section */}
-        <section className="section-padding bg-gradient-to-br from-primary/10 via-background to-cyan-500/5 relative overflow-hidden">
+        <section className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-cyan-500/5 relative overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl" />
+            <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/4 w-36 h-36 bg-cyan-500/10 rounded-full blur-2xl" />
           </div>
           
-          <div className="container-custom px-6 sm:px-8 relative z-10">
+          <div className="container-custom relative z-10">
             <ScrollAnimation variant="fadeUp">
-              <div className="max-w-3xl mx-auto text-center">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6">
+              <div className="max-w-2xl mx-auto text-center">
+                <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs sm:text-sm font-medium mb-4">
                   Inizia Ora
                 </span>
-                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+                <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3">
                   Pronto a trasformare il tuo studio?
                 </h2>
-                <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+                <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-xl mx-auto">
                   Prenota una chiamata gratuita di 10 minuti. Analizzeremo insieme i tuoi flussi operativi e ti mostreremo come possiamo aiutarti.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg" className="group">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button variant="hero" size="default" className="group">
                     Prenota una Chiamata Gratuita
-                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
-                  <Button size="lg" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
+                  <Button size="default" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                      <MessageSquare className="w-5 h-5 mr-2" />
+                      <MessageSquare className="w-4 h-4 mr-2" />
                       Scrivici su WhatsApp
                     </a>
                   </Button>
                 </div>
                 
                 {/* Trust indicators */}
-                <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
+                <div className="mt-5 flex flex-wrap justify-center gap-3 text-xs sm:text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-primary" />
                     Zero impegno
                   </span>
-                  <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
+                  <span className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-primary" />
                     Analisi gratuita
                   </span>
-                  <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
+                  <span className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-primary" />
                     Risposta rapida
                   </span>
                 </div>
@@ -461,28 +461,28 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         </section>
 
         {/* Process Section */}
-        <section id="come-funziona" className="section-padding bg-background">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <section id="come-funziona" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-6 sm:mb-8">
+              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-3">
                 Il Nostro Processo
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 Come funziona il nostro processo
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {processSteps.map(step => <StaggerItem key={step.step}>
-                  <div className="relative rounded-2xl border border-border bg-card p-6 hover:shadow-lg transition-all duration-300">
-                    <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold shadow-lg">
+                  <div className="relative rounded-xl border border-border bg-card p-4 sm:p-5 hover:shadow-lg transition-all duration-300">
+                    <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-white text-sm font-bold shadow-lg">
                       {step.step}
                     </div>
-                    <div className="pt-4">
-                      <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                    <div className="pt-3">
+                      <h3 className="font-display text-sm sm:text-base font-bold text-foreground mb-1">
                         {step.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground">{step.description}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{step.description}</p>
                     </div>
                   </div>
                 </StaggerItem>)}
@@ -491,31 +491,31 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         </section>
 
         {/* Chi Siamo Section */}
-        <section id="chi-siamo" className="section-padding bg-muted/30">
-          <div className="container-custom px-6 sm:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <section id="chi-siamo" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-muted/30">
+          <div className="container-custom">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left Column - Content */}
               <ScrollAnimation variant="slideLeft">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-4">
                   Chi Siamo
                 </span>
 
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Stefano Taino
-                  <span className="block text-xl md:text-2xl font-normal text-muted-foreground mt-2">
+                  <span className="block text-base sm:text-lg font-normal text-muted-foreground mt-1">
                     Founder & System Architect
                   </span>
                 </h2>
 
                 {/* Quote */}
-                <div className="relative pl-6 border-l-4 border-primary mb-8">
-                  <Quote className="absolute -left-3 -top-2 w-6 h-6 text-primary bg-muted/30" />
-                  <p className="text-xl italic text-foreground">
+                <div className="relative pl-4 border-l-3 border-primary mb-5">
+                  <Quote className="absolute -left-2.5 -top-1.5 w-5 h-5 text-primary bg-muted/30" />
+                  <p className="text-base sm:text-lg italic text-foreground">
                     "Dietro ogni automazione c'è una visione umana."
                   </p>
                 </div>
 
-                <div className="space-y-4 text-muted-foreground mb-8">
+                <div className="space-y-3 text-sm text-muted-foreground mb-5">
                   <p>
                     Mi chiamo Stefano Taino e con ST Solutions aiuto i professionisti della salute a uscire dal caos operativo.
                   </p>
@@ -532,15 +532,15 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
 
               {/* Right Column - Differentiators */}
               <ScrollAnimation variant="slideRight">
-                <div className="space-y-4">
-                  <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                <div className="space-y-3">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-2">
                     Perché ST Solutions è diverso
                   </h3>
-                  <p className="text-lg font-semibold text-primary mb-6">
+                  <p className="text-sm sm:text-base font-semibold text-primary mb-4">
                     Non vendiamo software. Costruiamo sistemi che lavorano al posto tuo.
                   </p>
                   
-                  <StaggerContainer staggerDelay={0.15}>
+                  <StaggerContainer staggerDelay={0.1}>
                     {[
                       {
                         title: "Costruito su misura, non adattato",
@@ -556,14 +556,14 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                       },
                     ].map((item, index) => (
                       <StaggerItem key={index}>
-                        <div className="group p-5 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 mb-4">
-                          <div className="flex gap-4">
-                            <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                        <div className="group p-3 sm:p-4 rounded-lg border border-border bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 mb-2">
+                          <div className="flex gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                              <h4 className="font-display font-semibold text-foreground mb-1">
+                              <h4 className="font-display font-semibold text-sm sm:text-base text-foreground mb-0.5">
                                 {item.title}
                               </h4>
-                              <p className="text-sm text-muted-foreground leading-relaxed">
+                              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                                 {item.description}
                               </p>
                             </div>
@@ -579,30 +579,30 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         </section>
 
         {/* A Chi Si Rivolge Section */}
-        <section className="section-padding bg-background">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-10 sm:mb-12">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <section className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-6 sm:mb-8">
+              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-3">
                 Il Nostro Target
               </span>
-              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2">
                 A chi si rivolge ST Solutions?
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto">
                 Professionisti della salute pronti a crescere.
               </p>
             </ScrollAnimation>
 
             {/* Professions - Compact Chips */}
-            <ScrollAnimation variant="fadeUp" className="mb-10 sm:mb-12">
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto">
+            <ScrollAnimation variant="fadeUp" className="mb-6 sm:mb-8">
+              <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 max-w-2xl mx-auto">
                 {[
                   "Medici", "Dentisti", "Fisioterapisti", "Psicologi",
                   "Nutrizionisti", "Veterinari", "Specialisti", "...e altri"
                 ].map((profession, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium border border-primary/20"
+                    className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full bg-primary/10 text-primary text-[10px] sm:text-xs font-medium border border-primary/20"
                   >
                     {profession}
                   </span>
@@ -610,8 +610,8 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
               </div>
             </ScrollAnimation>
 
-            {/* Target Cards - Airy Design */}
-            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {/* Target Cards - Compact Design */}
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
               {[
                 {
                   title: "Tempo perso in gestione",
@@ -631,14 +631,14 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                 }
               ].map((item, index) => (
                 <StaggerItem key={index}>
-                  <div className="group p-5 sm:p-6 rounded-2xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div className="group p-3 sm:p-4 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-display font-semibold text-base sm:text-lg text-foreground mb-1">
+                        <h4 className="font-display font-semibold text-xs sm:text-sm text-foreground mb-0.5">
                           {item.title}
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
                       </div>
@@ -651,31 +651,31 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-hero">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="max-w-3xl mx-auto text-center">
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+        <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-hero">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="max-w-2xl mx-auto text-center">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
                 Pronto a trasformare il tuo studio?
               </h2>
-              <div className="space-y-4 text-lg text-white/80 mb-10">
+              <div className="space-y-2 text-sm sm:text-base text-white/80 mb-6">
                 <p>Smetti di perdere tempo in attività ripetitive.</p>
                 <p>Smetti di perdere pazienti perché non riesci a rispondere.</p>
                 <p>Smetti di subire no-show e slot vuoti.</p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" className="group">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button variant="hero" size="lg" className="group">
                   Prenota una Chiamata Gratuita
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button size="xl" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
+                <Button size="lg" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <MessageSquare className="w-5 h-5 mr-2" />
+                    <MessageSquare className="w-4 h-4 mr-2" />
                     Scrivici su WhatsApp
-                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
               </div>
-              <p className="text-white/60 mt-8">
+              <p className="text-white/60 mt-5 text-xs sm:text-sm">
                 Consulenza strategica di 10 minuti per analizzare il tuo studio e capire come automatizzare i processi chiave.
               </p>
             </ScrollAnimation>
