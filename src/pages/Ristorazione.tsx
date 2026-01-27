@@ -80,17 +80,17 @@ const results = [{
   before: "20-25%",
   after: "< 5%"
 }, {
-  metric: "Commissioni",
-  before: "25-30%",
-  after: "0%"
+  metric: "Ordini Asporto",
+  before: "Caos",
+  after: "Automatizzati"
 }, {
-  metric: "Tasso risposta",
-  before: "50-60%",
-  after: "100%"
+  metric: "Tempo di Risposta",
+  before: "5-10 min",
+  after: "< 30 sec"
 }, {
-  metric: "Occupazione sala",
-  before: "65-75%",
-  after: "85-95%"
+  metric: "Coperti Gestiti",
+  before: "Manuale",
+  after: "Automatizzati"
 }];
 const processSteps = [{
   step: 1,
