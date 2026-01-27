@@ -106,8 +106,8 @@ const processSteps = [{
   description: "Ti presentiamo la soluzione su misura con costi trasparenti"
 }, {
   step: 4,
-  title: "Sviluppo",
-  description: "Costruiamo il tuo ecosistema digitale"
+  title: "Sviluppo e Test",
+  description: "Costruiamo il tuo ecosistema digitale e lo testiamo insieme a te prima dell'attivazione"
 }, {
   step: 5,
   title: "Implementazione e formazione",
