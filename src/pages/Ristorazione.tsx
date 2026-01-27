@@ -640,28 +640,31 @@ const Ristorazione = () => {
               </div>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto">
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {[{
               title: "Perdi clienti durante il servizio",
-              description: "Il telefono squilla mentre servi. Chiamate perse = tavoli vuoti."
+              description: "Il telefono squilla mentre servi i clienti. Ogni chiamata persa è un tavolo che va alla concorrenza."
             }, {
               title: "I no-show ti mangiano i margini",
-              description: "Tavoli vuoti, cibo sprecato, incasso ridotto."
+              description: "Clienti che prenotano e non si presentano. Tavoli vuoti, cibo sprecato, incasso ridotto."
             }, {
-              title: "Commissioni che erodono i profitti",
-              description: "25-30% per ordine va alle piattaforme."
+              title: "Le commissioni erodono i profitti",
+              description: "Paghi il 25-30% su ogni ordine alle piattaforme. I clienti sono loro, non tuoi."
             }, {
-              title: "Cerchi soluzioni su misura",
-              description: "I software standard non si adattano al tuo locale."
+              title: "Non hai i dati dei tuoi clienti",
+              description: "Le piattaforme tengono i contatti. Non puoi fare marketing diretto né fidelizzare."
+            }, {
+              title: "Vuoi soluzioni su misura",
+              description: "I software standard non si adattano al tuo modo di lavorare. Cerchi qualcosa costruito sulle tue esigenze."
             }].map((item, index) => <StaggerItem key={index}>
-                  <div className="group p-4 sm:p-5 rounded-xl border border-border bg-card hover:border-orange-500/30 hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="group p-6 rounded-2xl border border-border bg-card hover:border-orange-500/30 hover:shadow-lg transition-all duration-300 h-full">
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-display font-semibold text-foreground text-sm sm:text-base mb-1">
+                        <h4 className="font-display font-semibold text-foreground mb-2">
                           {item.title}
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
                       </div>
