@@ -107,7 +107,7 @@ const processSteps = [{
 }, {
   step: 4,
   title: "Sviluppo",
-  description: "Costruiamo il tuo ecosistema digitale (2-4 settimane per soluzioni standard)"
+  description: "Costruiamo il tuo ecosistema digitale"
 }, {
   step: 5,
   title: "Implementazione e formazione",
