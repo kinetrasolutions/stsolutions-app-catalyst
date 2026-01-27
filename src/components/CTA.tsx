@@ -30,10 +30,12 @@ const CTA = () => {
           {/* CTA Buttons */}
           <ScrollAnimation variant="scale" delay={0.2}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Button variant="hero" size="xl" className="group w-full sm:w-auto">
-                <Calendar className="w-5 h-5 mr-2" />
-                Prenota una Chiamata Gratuita
-                <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+              <Button variant="hero" size="xl" className="group w-full sm:w-auto" asChild>
+                <a href="https://calendly.com/studio-stsolutions/30min" target="_blank" rel="noopener noreferrer">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Prenota una Chiamata Gratuita
+                  <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
               <Button variant="hero" size="xl" className="group w-full sm:w-auto bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700" asChild>
                 <a href="https://wa.me/393452838679?text=Buongiorno%20%2C%20sarei%20interessato%20alle%20vostre%20soluzioni%20per%20la%20mia%20attività" target="_blank" rel="noopener noreferrer">
