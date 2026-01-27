@@ -688,7 +688,7 @@ const Ristorazione = () => {
                 </Button>
               </div>
               <p className="text-white/60 mt-8">
-                Consulenza strategica di 20 minuti per analizzare il tuo locale e capire come automatizzare i processi chiave.
+                Consulenza strategica di 10 minuti per analizzare il tuo locale e capire come automatizzare i processi chiave.
               </p>
             </ScrollAnimation>
           </div>

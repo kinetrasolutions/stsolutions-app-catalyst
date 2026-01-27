@@ -684,7 +684,7 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
                 </Button>
               </div>
               <p className="text-white/60 mt-8">
-                Consulenza strategica di 20 minuti per analizzare il tuo studio e capire come automatizzare i processi chiave.
+                Consulenza strategica di 10 minuti per analizzare il tuo studio e capire come automatizzare i processi chiave.
               </p>
             </ScrollAnimation>
           </div>
