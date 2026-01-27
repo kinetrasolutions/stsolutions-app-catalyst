@@ -219,26 +219,23 @@ const ProfessionistiSalute = () => {
               </p>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            <StaggerContainer className="grid md:grid-cols-3 gap-4 sm:gap-6">
               {challenges.map((challenge, index) => <StaggerItem key={index}>
-                  <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300">
-                    <div className="w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center mb-6">
-                      <challenge.icon className="w-7 h-7 text-destructive" />
+                  <div className="h-full rounded-2xl border border-border bg-card p-5 sm:p-6 hover:shadow-xl hover:border-destructive/30 hover:-translate-y-1 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
+                      <challenge.icon className="w-6 h-6 text-destructive" />
                     </div>
-                    <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-2">
                       {challenge.title}
                     </h3>
-                    <p className="text-muted-foreground mb-6">
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                       {challenge.description}
                     </p>
-                    <div className="space-y-2">
-                      <span className="text-xs uppercase tracking-wider text-destructive font-semibold">I problemi concreti:</span>
-                      <ul className="space-y-2">
-                        {challenge.problems.map((problem, idx) => <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                            <X className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
-                            {problem}
-                          </li>)}
-                      </ul>
+                    <div className="space-y-1.5">
+                      {challenge.problems.slice(0, 3).map((problem, idx) => <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
+                          <X className="w-3.5 h-3.5 text-destructive shrink-0 mt-0.5" />
+                          <span className="line-clamp-1">{problem}</span>
+                        </div>)}
                     </div>
                   </div>
                 </StaggerItem>)}
@@ -388,19 +385,19 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
               {results.map((result, index) => <StaggerItem key={index} className="h-full">
-                  <div className="h-full rounded-2xl bg-white/5 border border-white/10 p-6 text-center flex flex-col">
-                    <p className="text-sm text-white/60 mb-4">{result.metric}</p>
-                    <div className="flex items-center justify-center gap-3 sm:gap-4 flex-1">
+                  <div className="h-full rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 p-4 sm:p-6 text-center flex flex-col">
+                    <p className="text-xs sm:text-sm text-white/60 mb-3 font-medium">{result.metric}</p>
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 flex-1">
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs text-white/40 mb-1">Prima</p>
-                        <p className="text-base sm:text-lg font-bold text-destructive break-words">{result.before}</p>
+                        <p className="text-[10px] sm:text-xs text-white/40 mb-0.5">Prima</p>
+                        <p className="text-sm sm:text-lg font-bold text-destructive">{result.before}</p>
                       </div>
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0" />
+                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-primary shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs text-white/40 mb-1">Dopo</p>
-                        <p className="text-base sm:text-lg font-bold text-primary break-words">{result.after}</p>
+                        <p className="text-[10px] sm:text-xs text-white/40 mb-0.5">Dopo</p>
+                        <p className="text-sm sm:text-lg font-bold text-primary">{result.after}</p>
                       </div>
                     </div>
                   </div>
@@ -584,30 +581,28 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
         {/* A Chi Si Rivolge Section */}
         <section className="section-padding bg-background">
           <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-10 sm:mb-12">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                 Il Nostro Target
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 A chi si rivolge ST Solutions?
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Le nostre soluzioni sono pensate per professionisti della salute che vogliono crescere senza rinunciare al controllo.
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Professionisti della salute pronti a crescere.
               </p>
             </ScrollAnimation>
 
-            {/* Professions List */}
-            <ScrollAnimation variant="fadeUp" className="mb-12">
-              <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {/* Professions - Compact Chips */}
+            <ScrollAnimation variant="fadeUp" className="mb-10 sm:mb-12">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto">
                 {[
-                  "Medici di base", "Specialisti", "Chirurghi", "Dentisti", "Ortodontisti",
-                  "Fisioterapisti", "Osteopati", "Dietologi", "Nutrizionisti", "Psicologi",
-                  "Psicoterapeuti", "Logopedisti", "Oculisti", "Dermatologi", "Cardiologi",
-                  "Ginecologi", "Pediatri", "Veterinari"
+                  "Medici", "Dentisti", "Fisioterapisti", "Psicologi",
+                  "Nutrizionisti", "Veterinari", "Specialisti", "...e altri"
                 ].map((profession, index) => (
                   <span 
                     key={index}
-                    className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium border border-primary/20"
                   >
                     {profession}
                   </span>
@@ -615,38 +610,35 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
               </div>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {/* Target Cards - Airy Design */}
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
               {[
                 {
-                  title: "Perdi tempo in coordinamento",
-                  description: "Rispondi a chiamate, confermi appuntamenti, gestisci disdette. Il tempo che potrebbe essere dedicato ai pazienti se ne va in attività amministrative."
+                  title: "Tempo perso in gestione",
+                  description: "Ore spese al telefono invece che con i pazienti"
                 },
                 {
-                  title: "Non riesci a rispondere subito",
-                  description: "Ogni chiamata persa è un paziente che potrebbe andare altrove. Non puoi permetterti di essere sempre reperibile, ma neanche di perdere opportunità."
+                  title: "Chiamate perse",
+                  description: "Pazienti che vanno altrove se non rispondi subito"
                 },
                 {
-                  title: "Vuoi ottimizzare i costi operativi",
-                  description: "Il tuo staff è impegnato in attività ripetitive a basso valore. Con l'AI automatizzi la gestione ordinaria e liberi le persone per ciò che conta davvero."
+                  title: "Costi fissi elevati",
+                  description: "Canoni mensili e commissioni che erodono i margini"
                 },
                 {
-                  title: "Vuoi indipendenza dalle piattaforme",
-                  description: "Sei stanco di pagare commissioni o canoni mensili che erodono i tuoi margini. Vuoi possedere i tuoi strumenti, non affittarli."
-                },
-                {
-                  title: "Hai bisogno di soluzioni su misura",
-                  description: "I software standard non si adattano al tuo modo di lavorare. Cerchi qualcosa costruito sulle tue esigenze specifiche."
+                  title: "Software inadeguati",
+                  description: "Soluzioni standard che non si adattano a te"
                 }
               ].map((item, index) => (
                 <StaggerItem key={index}>
-                  <div className="group p-6 rounded-2xl border border-border bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="group p-5 sm:p-6 rounded-2xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full">
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-display font-semibold text-foreground mb-2">
+                        <h4 className="font-display font-semibold text-base sm:text-lg text-foreground mb-1">
                           {item.title}
                         </h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
                       </div>
