@@ -504,8 +504,8 @@ const Ristorazione = () => {
             </ScrollAnimation>
 
             <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {processSteps.map(step => <StaggerItem key={step.step}>
-                  <div className="relative rounded-2xl border border-border bg-card p-6 hover:shadow-lg transition-all duration-300">
+              {processSteps.map(step => <StaggerItem key={step.step} className="h-full">
+                  <div className="relative rounded-2xl border border-border bg-card p-6 hover:shadow-lg transition-all duration-300 h-full">
                     <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 flex items-center justify-center text-white font-bold shadow-lg">
                       {step.step}
                     </div>
