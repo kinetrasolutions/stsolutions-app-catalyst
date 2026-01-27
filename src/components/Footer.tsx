@@ -97,11 +97,11 @@ const Footer = () => {
             <p>P.IVA: 01744080191</p>
           </div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-secondary-foreground transition-colors">
+            <a href="/privacy-policy" className="hover:text-secondary-foreground transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-secondary-foreground transition-colors">
-              Cookie Policy
+            <a href="/termini-condizioni" className="hover:text-secondary-foreground transition-colors">
+              Termini e Condizioni
             </a>
           </div>
         </div>
