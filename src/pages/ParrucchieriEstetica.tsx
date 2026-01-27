@@ -8,7 +8,7 @@ import { Phone, CalendarX, UserMinus, TrendingDown, Bot, ShieldCheck, Megaphone,
 // Custom images for Parrucchieri/Estetica page
 import parrucchieriHeroImage from "@/assets/parrucchieri-hero.webp";
 import parrucchieriWhatsapp from "@/assets/parrucchieri-whatsapp.webp";
-import parrucchieriAgenda from "@/assets/parrucchieri-agenda.webp";
+import parrucchieriNoshowCustom from "@/assets/parrucchieri-noshow-custom.webp";
 import parrucchieriMarketing from "@/assets/parrucchieri-marketing.webp";
 
 const challenges = [{
@@ -303,7 +303,7 @@ const ParrucchieriEstetica = () => {
 
             <div className="space-y-8 sm:space-y-12">
               {solutions.map((solution, index) => {
-                const solutionImages = [parrucchieriWhatsapp, parrucchieriAgenda, parrucchieriMarketing];
+                const solutionImages = [parrucchieriWhatsapp, parrucchieriNoshowCustom, parrucchieriMarketing];
                 const imageAlts = ["Assistente AI per saloni", "Sistema di recupero no-show", "Marketing automatico"];
                 return (
                   <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
