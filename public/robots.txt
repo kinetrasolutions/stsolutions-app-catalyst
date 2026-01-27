@@ -1,3 +1,5 @@
+# Robots.txt for ST Solutions
+
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +14,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://stsolutions-app-catalyst.lovable.app/sitemap.xml
