@@ -356,7 +356,8 @@ const Ristorazione = () => {
             <ScrollAnimation variant="fadeUp" className="mt-12 sm:mt-16">
               <div className="text-center p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-orange-500/10 via-amber-500/5 to-transparent border border-orange-500/20">
                 <p className="text-xl sm:text-2xl md:text-3xl font-display font-semibold text-foreground">
-                  Ogni locale ha le sue regole:{" "}
+                  Ogni locale ha le sue regole:
+                  <br />
                   <span className="text-gradient">
                     progettiamo e implementiamo qualsiasi funzionalità basata sul tuo flusso di lavoro.
                   </span>
