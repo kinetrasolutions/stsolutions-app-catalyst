@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,7 +16,8 @@ const contactSchema = z.object({
   name: z.string().trim().min(1, "Il nome è obbligatorio").max(100, "Il nome è troppo lungo"),
   email: z.string().trim().email("Email non valida").max(255, "Email troppo lunga"),
   phone: z.string().trim().optional(),
-  message: z.string().trim().min(1, "Il messaggio è obbligatorio").max(2000, "Il messaggio è troppo lungo")
+  message: z.string().trim().min(1, "Il messaggio è obbligatorio").max(2000, "Il messaggio è troppo lungo"),
+  privacyAccepted: z.literal(true, { errorMap: () => ({ message: "Devi accettare la privacy policy" }) })
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -28,7 +30,8 @@ const Contatti = () => {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
+    privacyAccepted: false as unknown as true
   });
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
 
@@ -74,7 +77,7 @@ const Contatti = () => {
       }
 
       setIsSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "", privacyAccepted: false as unknown as true });
       
       toast({
         title: "Messaggio inviato!",
@@ -196,6 +199,37 @@ const Contatti = () => {
                       className={errors.message ? "border-destructive" : ""}
                     />
                     {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-3">
+                      <Checkbox
+                        id="privacyAccepted"
+                        checked={formData.privacyAccepted}
+                        onCheckedChange={(checked) => {
+                          setFormData(prev => ({ ...prev, privacyAccepted: checked as boolean as true }));
+                          if (errors.privacyAccepted) {
+                            setErrors(prev => ({ ...prev, privacyAccepted: undefined }));
+                          }
+                        }}
+                        className={errors.privacyAccepted ? "border-destructive" : ""}
+                      />
+                      <Label 
+                        htmlFor="privacyAccepted" 
+                        className="text-sm text-muted-foreground leading-relaxed cursor-pointer"
+                      >
+                        Accetto la{" "}
+                        <a 
+                          href="/privacy-policy" 
+                          target="_blank" 
+                          className="text-primary hover:underline"
+                        >
+                          Privacy Policy
+                        </a>{" "}
+                        e acconsento al trattamento dei miei dati personali *
+                      </Label>
+                    </div>
+                    {errors.privacyAccepted && <p className="text-sm text-destructive">{errors.privacyAccepted}</p>}
                   </div>
 
                   <Button 
