@@ -51,9 +51,9 @@ const solutions = [{
   icon: UtensilsCrossed,
   title: "Controllo Totale e Aumento del Margine",
   subtitle: "Zero commissioni, clienti tuoi",
-  description: "Elimina le commissioni dei portali esterni. Avrai un sistema di proprietà che raccoglie i dati dei clienti per campagne marketing mirate, aumentando il valore di ogni singolo coperto.",
-  features: ["Menu digitale interattivo – QR code al tavolo, descrizioni, foto, allergeni", "Ordini asporto diretti – Il cliente ordina dal tuo sito, zero commissioni", "Database clienti tuo – Email, preferenze, storico ordini per fare remarketing", "Programma fedeltà integrato – Punti, sconti, offerte personalizzate", "Report vendite automatici – Piatti più venduti, orari di punta, analisi margini"],
-  highlight: "I clienti sono tuoi. I dati sono tuoi. I margini sono tuoi.",
+  description: "Smetti di regalare il 25-30% di ogni ordine alle piattaforme. L'AI ti restituisce il controllo: un sistema di proprietà che elimina le commissioni, cattura i dati dei clienti e trasforma ogni coperto in un'opportunità di fidelizzazione e remarketing.",
+  features: ["Azzeramento Commissioni – Ordini asporto diretti dal tuo sito. Ogni euro resta nel tuo cassetto", "Database Clienti Blindato – Email, preferenze, storico ordini: dati tuoi per campagne che fanno tornare le persone", "Menu Digitale Intelligente – QR code al tavolo con descrizioni, foto e allergeni. Il cliente ordina, tu incassi", "Fidelizzazione Automatica – Programma punti e offerte personalizzate che trasformano clienti occasionali in habitué"],
+  highlight: "💰 Obiettivo: Margini pieni, zero intermediari",
   color: "from-green-500 to-emerald-500"
 }];
 const benefits = [{
