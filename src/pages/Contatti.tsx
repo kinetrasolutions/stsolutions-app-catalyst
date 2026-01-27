@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
+import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -58,22 +59,37 @@ const Contatti = () => {
 
     setIsSubmitting(true);
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Richiesta contatto da ${formData.name}`);
-    const body = encodeURIComponent(
-      `Nome: ${formData.name}\nEmail: ${formData.email}\nTelefono: ${formData.phone || 'Non specificato'}\n\nMessaggio:\n${formData.message}`
-    );
-    
-    // Open email client
-    window.location.href = `mailto:studio.stsolutions@protonmail.com?subject=${subject}&body=${body}`;
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    toast({
-      title: "Email pronta!",
-      description: "Si aprirà il tuo client email per inviare il messaggio.",
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || undefined,
+          message: formData.message
+        }
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      
+      toast({
+        title: "Messaggio inviato!",
+        description: "Ti risponderemo al più presto.",
+      });
+    } catch (error: any) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Errore",
+        description: "Si è verificato un errore nell'invio del messaggio. Riprova o contattaci via WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const whatsappLink = "https://wa.me/393452838679?text=Buongiorno%20%2C%20sarei%20interessato%20alle%20vostre%20soluzioni%20per%20la%20mia%20attività";
@@ -118,10 +134,10 @@ const Contatti = () => {
                     <CheckCircle2 className="w-8 h-8 text-green-500" />
                   </div>
                   <h3 className="font-display text-xl font-bold text-foreground mb-2">
-                    Messaggio pronto!
+                    Messaggio inviato!
                   </h3>
                   <p className="text-muted-foreground mb-6">
-                    Il tuo client email si è aperto con il messaggio già compilato. Clicca "Invia" per completare.
+                    Abbiamo ricevuto il tuo messaggio e ti risponderemo al più presto.
                   </p>
                   <Button variant="outline" onClick={() => setIsSubmitted(false)}>
                     Invia un altro messaggio
