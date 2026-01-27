@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import logoLight from "@/assets/logo-light.png";
 
 const Footer = () => {
@@ -15,26 +15,10 @@ const Footer = () => {
               alt="ST Solutions"
               className="h-8 sm:h-10 w-auto mb-4 sm:mb-6"
             />
-            <p className="text-sm sm:text-base text-secondary-foreground/70 max-w-md mb-4 sm:mb-6">
+            <p className="text-sm sm:text-base text-secondary-foreground/70 max-w-md">
               Automazione AI e Sistemi Digitali su Misura per attività locali. 
               Riduci i costi operativi, elimina le attività ripetitive e concentrati sui tuoi clienti.
             </p>
-            <div className="flex gap-3 sm:gap-4">
-              <a
-                href="#"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={16} className="sm:w-[18px] sm:h-[18px]" />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={16} className="sm:w-[18px] sm:h-[18px]" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
