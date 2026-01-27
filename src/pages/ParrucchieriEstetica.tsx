@@ -135,64 +135,64 @@ const ParrucchieriEstetica = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-pink-50/30 to-rose-50/50">
           {/* Background elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" />
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float" />
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-200/50 rounded-full blur-3xl animate-pulse-slow" />
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-200/40 rounded-full blur-3xl animate-float" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
           </div>
 
           <div className="container-custom px-6 sm:px-8 lg:px-8 relative z-10 pt-24 pb-16">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Text Content */}
               <div className="text-center lg:text-left">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-pink-500/20 text-pink-400 text-sm font-medium mb-6 animate-fade-in">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-6 animate-fade-in border border-pink-200">
                   L'Intelligenza Artificiale al servizio del tuo Salone
                 </span>
                 
-                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
+                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-slide-up">
                   L'AI che rivoluziona{" "}
-                  <span className="text-cyan-400">la gestione</span> e i{" "}
-                  <span className="text-cyan-400">trattamenti</span>
+                  <span className="text-pink-500">la gestione</span> e i{" "}
+                  <span className="text-amber-500">trattamenti</span>
                   <br />
-                  <span className="text-white">nel tuo Salone</span>
+                  <span className="text-gray-900">nel tuo Salone</span>
                 </h1>
                 
-                <div className="text-base sm:text-lg text-white/70 mb-4 animate-slide-up space-y-3 text-left" style={{
+                <div className="text-base sm:text-lg text-gray-600 mb-4 animate-slide-up space-y-3 text-left" style={{
                   animationDelay: "0.1s"
                 }}>
                   <p className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(34,211,238,0.6)]">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(236,72,153,0.5)]">
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
                     </span>
                     Prenotazioni h24, gestione agenda intelligente.
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(34,211,238,0.6)]">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(236,72,153,0.5)]">
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
                     </span>
                     Richiami automatici e recupero no-show.
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(34,211,238,0.6)]">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center mt-0.5 shadow-[0_0_12px_rgba(236,72,153,0.5)]">
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
                     </span>
                     Trasforma il tuo tempo in pura arte.
                   </p>
-                  <p className="mt-4">
+                  <p className="mt-4 text-gray-600">
                     Un sistema di proprietà che gestisce appuntamenti e clienti h24, riducendo i tuoi costi operativi e garantendoti un'agenda sempre piena.
                   </p>
                 </div>
                 
-                <p className="text-sm mb-8 sm:mb-10 animate-slide-up text-primary-foreground" style={{
+                <p className="text-sm mb-8 sm:mb-10 animate-slide-up text-gray-500" style={{
                   animationDelay: "0.25s"
                 }}>Ogni salone ha le sue regole: progettiamo funzionalità basate sul tuo flusso di lavoro.</p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{
                   animationDelay: "0.3s"
                 }}>
-                  <Button variant="hero" size="xl" className="group">
+                  <Button size="xl" className="bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:via-rose-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 transform">
                     Prenota una Chiamata Gratuita
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -283,10 +283,10 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Solutions Section */}
-        <section id="soluzioni" className="section-padding bg-muted/50">
+        <section id="soluzioni" className="section-padding bg-gradient-to-b from-pink-50/30 to-white">
           <div className="container-custom px-6 sm:px-8">
             <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-4 border border-pink-200">
                 Le Nostre Soluzioni
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -391,10 +391,10 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="section-padding bg-background">
+        <section className="section-padding bg-white">
           <div className="container-custom px-6 sm:px-8">
             <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-600 text-sm font-medium mb-4 border border-amber-200">
                 Perché Sceglierci
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -405,19 +405,19 @@ const ParrucchieriEstetica = () => {
             <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
               {benefits.map((benefit, index) => (
                 <StaggerItem key={index}>
-                  <div className="h-full rounded-3xl border border-border bg-card p-8 hover:shadow-xl transition-all duration-300">
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                      <benefit.icon className="w-7 h-7 text-primary" />
+                  <div className="h-full rounded-3xl border border-pink-100 bg-white p-8 hover:shadow-xl hover:border-pink-200 transition-all duration-300">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-100 to-amber-100 flex items-center justify-center mb-6">
+                      <benefit.icon className="w-7 h-7 text-pink-500" />
                     </div>
                     <h3 className="font-display text-xl font-bold text-foreground mb-1">
                       {benefit.title}
                     </h3>
-                    <p className="text-primary font-medium text-sm mb-4">{benefit.subtitle}</p>
+                    <p className="text-amber-600 font-medium text-sm mb-4">{benefit.subtitle}</p>
                     <p className="text-muted-foreground mb-6">{benefit.description}</p>
                     <ul className="space-y-2">
                       {benefit.points.map((point, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm">
-                          <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                          <Check className="w-4 h-4 text-pink-500 shrink-0 mt-0.5" />
                           <span className="text-foreground">{point}</span>
                         </li>
                       ))}
@@ -430,13 +430,13 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Results Section */}
-        <section className="section-padding bg-secondary text-secondary-foreground">
+        <section className="section-padding bg-gradient-to-br from-pink-50 via-rose-50/50 to-amber-50/30">
           <div className="container-custom px-6 sm:px-8">
             <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-4 border border-pink-200">
                 Risultati Misurabili
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                 Risultati concreti che puoi misurare
               </h2>
             </ScrollAnimation>
@@ -446,20 +446,20 @@ const ParrucchieriEstetica = () => {
                 const IconComponent = result.icon;
                 return (
                   <StaggerItem key={index} className="h-full">
-                    <div className="h-full rounded-2xl bg-white/5 border border-white/10 p-6 text-center flex flex-col">
+                    <div className="h-full rounded-2xl bg-white border border-pink-100 p-6 text-center flex flex-col shadow-sm hover:shadow-lg transition-shadow">
                       <div className="flex items-center justify-center gap-2 mb-4">
-                        <IconComponent className="w-5 h-5 text-cyan-400" />
-                        <p className="text-sm text-white/60">{result.metric}</p>
+                        <IconComponent className="w-5 h-5 text-pink-500" />
+                        <p className="text-sm text-gray-600">{result.metric}</p>
                       </div>
                       <div className="flex items-center justify-center gap-3 sm:gap-4 flex-1">
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs text-white/40 mb-1">Prima</p>
-                          <p className="text-base sm:text-lg font-bold text-destructive break-words">{result.before}</p>
+                          <p className="text-xs text-gray-400 mb-1">Prima</p>
+                          <p className="text-base sm:text-lg font-bold text-red-500 break-words">{result.before}</p>
                         </div>
-                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0" />
+                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 shrink-0" />
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs text-white/40 mb-1">Dopo</p>
-                          <p className="text-base sm:text-lg font-bold text-primary break-words">{result.after}</p>
+                          <p className="text-xs text-gray-400 mb-1">Dopo</p>
+                          <p className="text-base sm:text-lg font-bold text-pink-500 break-words">{result.after}</p>
                         </div>
                       </div>
                     </div>
@@ -492,7 +492,7 @@ const ParrucchieriEstetica = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg" className="group">
+                  <Button size="lg" className="bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:via-rose-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 transform">
                     Prenota una Chiamata Gratuita
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -507,15 +507,15 @@ const ParrucchieriEstetica = () => {
                 {/* Trust indicators */}
                 <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
+                    <Check className="w-4 h-4 text-pink-500" />
                     Zero impegno
                   </span>
                   <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
+                    <Check className="w-4 h-4 text-pink-500" />
                     Analisi gratuita
                   </span>
                   <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
+                    <Check className="w-4 h-4 text-pink-500" />
                     Risposta rapida
                   </span>
                 </div>
@@ -525,10 +525,10 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Process Section */}
-        <section id="come-funziona" className="section-padding bg-background">
+        <section id="come-funziona" className="section-padding bg-gradient-to-b from-white to-pink-50/20">
           <div className="container-custom px-6 sm:px-8">
             <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-4 border border-pink-200">
                 Il Nostro Processo
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -557,12 +557,12 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Chi Siamo Section */}
-        <section id="chi-siamo" className="section-padding bg-muted/30">
+        <section id="chi-siamo" className="section-padding bg-gradient-to-b from-rose-50/30 to-white">
           <div className="container-custom px-6 sm:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left Column - Content */}
               <ScrollAnimation variant="slideLeft">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-600 text-sm font-medium mb-6 border border-amber-200">
                   Chi Siamo
                 </span>
 
@@ -641,10 +641,10 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* A Chi Si Rivolge Section */}
-        <section className="section-padding bg-background">
+        <section className="section-padding bg-white">
           <div className="container-custom px-6 sm:px-8">
             <ScrollAnimation variant="fadeUp" className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-pink-500/10 text-pink-500 text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-4 border border-pink-200">
                 Il Nostro Target
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -704,19 +704,24 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-hero">
-          <div className="container-custom px-6 sm:px-8">
+        <section className="section-padding bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-amber-300/20 rounded-full blur-3xl" />
+          </div>
+          <div className="container-custom px-6 sm:px-8 relative z-10">
             <ScrollAnimation variant="fadeUp" className="max-w-3xl mx-auto text-center">
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Pronto a rilanciare il tuo salone?
               </h2>
-              <div className="space-y-4 text-lg text-white/80 mb-10">
+              <div className="space-y-4 text-lg text-white/90 mb-10">
                 <p>Smetti di perdere chiamate mentre lavori.</p>
                 <p>Smetti di subire no-show e buchi in agenda.</p>
                 <p>Smetti di rincorrere i clienti per farli tornare.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" className="group">
+                <Button size="xl" className="bg-white text-pink-600 hover:bg-pink-50 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 transform font-semibold">
                   Prenota una Chiamata Gratuita
                   <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -728,7 +733,7 @@ const ParrucchieriEstetica = () => {
                   </a>
                 </Button>
               </div>
-              <p className="text-white/60 mt-8">
+              <p className="text-white/80 mt-8">
                 ST Solutions – Non vendiamo solo software. Vendiamo libertà operativa.
               </p>
             </ScrollAnimation>
