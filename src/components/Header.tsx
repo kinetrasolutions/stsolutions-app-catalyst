@@ -13,7 +13,11 @@ const Header = () => {
   const isProfessionistiSalute = location.pathname === "/professionisti-salute";
   const isRistorazione = location.pathname === "/ristorazione";
   const isParrucchieriEstetica = location.pathname === "/parrucchieri-estetica";
+  const isTerminiCondizioni = location.pathname === "/termini-condizioni";
+  const isPrivacyPolicy = location.pathname === "/privacy-policy";
+  const isContatti = location.pathname === "/contatti";
   const isVerticalPage = isProfessionistiSalute || isRistorazione || isParrucchieriEstetica;
+  const isLightBackgroundPage = isParrucchieriEstetica || isTerminiCondizioni || isPrivacyPolicy || isContatti;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,10 +41,10 @@ const Header = () => {
         { href: "#chi-siamo", label: "Chi Siamo" },
       ];
 
-  // Theme-specific styles for Parrucchieri/Estetica page (pink/gold theme with light background)
+  // Theme-specific styles for pages with light backgrounds
   const getLinkHoverColor = () => {
-    if (isParrucchieriEstetica) {
-      return isScrolled ? "text-foreground hover:text-pink-500" : "text-gray-700 hover:text-pink-500";
+    if (isLightBackgroundPage) {
+      return isScrolled ? "text-foreground hover:text-primary" : "text-gray-700 hover:text-primary";
     }
     return isScrolled ? "text-foreground hover:text-primary" : "text-white/90 hover:text-white";
   };
@@ -65,7 +69,7 @@ const Header = () => {
           {/* Logo - Always links to homepage */}
           <a href="/" className="flex items-center gap-2 group">
             <img
-              src={isScrolled || isParrucchieriEstetica ? logoDark : logoLight}
+              src={isScrolled || isLightBackgroundPage ? logoDark : logoLight}
               alt="ST Solutions"
               className="h-8 md:h-10 w-auto transition-all duration-300 group-hover:scale-105"
             />
