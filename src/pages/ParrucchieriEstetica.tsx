@@ -154,7 +154,7 @@ const ParrucchieriEstetica = () => {
                 <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-slide-up">
                   L'AI che rivoluziona{" "}
                   <span className="text-pink-500">la gestione</span> e i{" "}
-                  <span className="text-amber-500">trattamenti</span>
+                  <span className="text-pink-500">trattamenti</span>
                   <br />
                   <span className="text-gray-900">nel tuo Salone</span>
                 </h1>
