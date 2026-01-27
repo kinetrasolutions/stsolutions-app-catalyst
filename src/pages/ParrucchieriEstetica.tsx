@@ -237,39 +237,39 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Challenges Section */}
-        <section className="section-padding bg-background">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
+        <section className="py-14 md:py-20 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-10 sm:mb-12">
               <span className="inline-block px-4 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-4">
                 I Problemi Quotidiani
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 I problemi che affronti ogni giorno
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Riconosciamo queste sfide perché le abbiamo studiate a fondo insieme a decine di saloni come il tuo.
               </p>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-2 gap-6">
+            <StaggerContainer className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {challenges.map((challenge, index) => (
                 <StaggerItem key={index}>
-                  <div className="h-full rounded-3xl border border-border bg-card p-6 hover:shadow-xl hover:-translate-y-1 hover:border-destructive/40 transition-all duration-300 flex flex-col">
-                    <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
-                      <challenge.icon className="w-6 h-6 text-destructive" />
+                  <div className="h-full rounded-2xl border border-border bg-card p-5 sm:p-6 hover:shadow-xl hover:-translate-y-1 hover:border-destructive/40 transition-all duration-300 flex flex-col">
+                    <div className="w-11 h-11 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
+                      <challenge.icon className="w-5 h-5 text-destructive" />
                     </div>
-                    <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-2">
                       {challenge.title}
                     </h3>
-                    <p className="text-muted-foreground mb-6">
+                    <p className="text-sm sm:text-base text-muted-foreground mb-4">
                       {challenge.description}
                     </p>
                     <div className="space-y-2 mt-auto">
                       <span className="text-xs uppercase tracking-wider text-destructive font-semibold">I problemi concreti:</span>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1.5">
                         {challenge.problems.map((problem, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                            <X className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                            <X className="w-3.5 h-3.5 text-destructive shrink-0 mt-0.5" />
                             {problem}
                           </li>
                         ))}
@@ -283,76 +283,65 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Solutions Section */}
-        <section id="soluzioni" className="section-padding bg-gradient-to-b from-pink-50/30 to-white">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
+        <section id="soluzioni" className="py-14 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50/30 to-white">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-10 sm:mb-12">
               <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-4 border border-pink-200">
                 Le Nostre Soluzioni
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Dallo stress delle chiamate alla tua agenda sempre piena
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
                 Mettiamo fine al <strong className="text-foreground">caos delle prenotazioni e delle chiamate perse</strong>.
-                <br />
-                Implementiamo soluzioni AI che <strong className="text-foreground">riducono drasticamente i tuoi costi operativi</strong> e ti permettono
-                <br />
-                di concentrarti sulla <strong className="text-foreground">tua arte</strong>.
+                Implementiamo soluzioni AI che <strong className="text-foreground">riducono drasticamente i tuoi costi operativi</strong> e ti permettono di concentrarti sulla <strong className="text-foreground">tua arte</strong>.
               </p>
             </ScrollAnimation>
 
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-6 sm:space-y-8">
               {solutions.map((solution, index) => {
                 const solutionImages = [parrucchieriWhatsapp, parrucchieriNoshowCustom, parrucchieriMarketing];
                 const imageAlts = ["Assistente AI per saloni", "Sistema di recupero no-show", "Marketing automatico"];
                 return (
                   <ScrollAnimation key={index} variant={index % 2 === 0 ? "slideLeft" : "slideRight"}>
-                    <div className="rounded-3xl border border-border bg-card overflow-hidden">
-                      <div className={`h-2 bg-gradient-to-r ${solution.color}`} />
-                      <div className="p-6 sm:p-8 lg:p-12">
-                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 sm:gap-8 items-center`}>
-                          {/* Image with gradient mask fade */}
-                          <div className="w-full max-w-xs sm:max-w-sm lg:w-1/3">
+                    <div className="rounded-2xl border border-border bg-card overflow-hidden">
+                      <div className={`h-1.5 bg-gradient-to-r ${solution.color}`} />
+                      <div className="p-5 sm:p-6 lg:p-8">
+                        <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-5 sm:gap-6 items-center`}>
+                          <div className="w-full max-w-[220px] sm:max-w-[260px] lg:w-1/4">
                             <div className="relative group mx-auto">
-                              {/* Glow effect behind image */}
                               <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-20 blur-xl scale-105`} />
-                              
-                              {/* Image with mask fade */}
                               <div className="relative" style={{
                                 maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%)',
                                 maskComposite: 'intersect',
                                 WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
                                 WebkitMaskComposite: 'source-in'
                               }}>
-                                <img src={solutionImages[index]} alt={imageAlts[index]} className="w-full h-auto object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
+                                <img src={solutionImages[index]} alt={imageAlts[index]} className="w-full h-auto object-cover rounded-xl transition-transform duration-500 group-hover:scale-105" />
                               </div>
-                              
-                              {/* Subtle overlay gradient */}
                               <div className={`absolute inset-0 bg-gradient-to-t ${solution.color} opacity-5 pointer-events-none`} />
                             </div>
                           </div>
                           
-                          {/* Content */}
-                          <div className="w-full lg:w-2/3 text-center lg:text-left">
-                            <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-4 mx-auto lg:mx-0`}>
-                              <solution.icon className="w-8 h-8 text-white" />
+                          <div className="w-full lg:w-3/4 text-center lg:text-left">
+                            <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-3 mx-auto lg:mx-0`}>
+                              <solution.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                             </div>
-                            <h3 className="font-display text-2xl font-bold text-foreground mb-1">
+                            <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-1">
                               {solution.title}
                             </h3>
-                            <p className="text-primary font-medium mb-4">{solution.subtitle}</p>
-                            <p className="text-muted-foreground mb-6">{solution.description}</p>
-                            <ul className="space-y-3 mb-6 text-left">
+                            <p className="text-primary font-medium text-sm mb-3">{solution.subtitle}</p>
+                            <p className="text-sm sm:text-base text-muted-foreground mb-4">{solution.description}</p>
+                            <ul className="space-y-2 mb-4 text-left">
                               {solution.features.map((feature, idx) => {
-                                // Split feature at first " – " to bold the title
                                 const dashIndex = feature.indexOf(' – ');
                                 const hasTitle = dashIndex > -1;
                                 const title = hasTitle ? feature.slice(0, dashIndex) : null;
                                 const rest = hasTitle ? feature.slice(dashIndex) : feature;
                                 return (
-                                  <li key={idx} className="flex items-start gap-3">
-                                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                    <span className="text-foreground text-sm sm:text-base">
+                                  <li key={idx} className="flex items-start gap-2">
+                                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                                    <span className="text-foreground text-sm">
                                       {title && <strong>{title}</strong>}
                                       {rest}
                                     </span>
@@ -360,7 +349,7 @@ const ParrucchieriEstetica = () => {
                                 );
                               })}
                             </ul>
-                            <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${solution.color} text-white text-xs sm:text-sm font-medium`}>
+                            <div className={`inline-block px-3 py-1.5 rounded-full bg-gradient-to-r ${solution.color} text-white text-xs font-medium`}>
                               💡 {solution.highlight}
                             </div>
                           </div>
@@ -373,16 +362,15 @@ const ParrucchieriEstetica = () => {
             </div>
 
             {/* Custom Solutions CTA */}
-            <ScrollAnimation variant="fadeUp" className="mt-12 sm:mt-16">
-              <div className="text-center p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-pink-500/10 via-rose-500/5 to-transparent border border-pink-500/20">
-                <p className="text-xl sm:text-2xl md:text-3xl font-display font-semibold text-foreground">
-                  Ogni salone ha le sue regole:
-                  <br />
+            <ScrollAnimation variant="fadeUp" className="mt-8 sm:mt-10">
+              <div className="text-center p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-pink-500/10 via-rose-500/5 to-transparent border border-pink-500/20">
+                <p className="text-lg sm:text-xl md:text-2xl font-display font-semibold text-foreground">
+                  Ogni salone ha le sue regole:{" "}
                   <span className="text-gradient">
                     progettiamo e implementiamo qualsiasi funzionalità basata sul tuo flusso di lavoro.
                   </span>
                 </p>
-                <p className="text-foreground mt-6 max-w-2xl mx-auto text-lg sm:text-xl">
+                <p className="text-foreground mt-4 max-w-2xl mx-auto text-sm sm:text-base">
                   Se hai un problema nella gestione o semplicemente vuoi migliorare qualcosa, noi costruiamo l'automazione per risolverlo.
                 </p>
               </div>
@@ -391,33 +379,33 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="section-padding bg-white">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
+        <section className="py-14 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-10 sm:mb-12">
               <span className="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-600 text-sm font-medium mb-4 border border-amber-200">
                 Perché Sceglierci
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Perché scegliere ST Solutions
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            <StaggerContainer className="grid md:grid-cols-3 gap-4 sm:gap-6">
               {benefits.map((benefit, index) => (
                 <StaggerItem key={index}>
-                  <div className="h-full rounded-3xl border border-pink-100 bg-white p-8 hover:shadow-xl hover:border-pink-200 transition-all duration-300">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-100 to-amber-100 flex items-center justify-center mb-6">
-                      <benefit.icon className="w-7 h-7 text-pink-500" />
+                  <div className="h-full rounded-2xl border border-pink-100 bg-white p-5 sm:p-6 hover:shadow-xl hover:border-pink-200 transition-all duration-300">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-100 to-amber-100 flex items-center justify-center mb-4">
+                      <benefit.icon className="w-5 h-5 text-pink-500" />
                     </div>
-                    <h3 className="font-display text-xl font-bold text-foreground mb-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-1">
                       {benefit.title}
                     </h3>
-                    <p className="text-amber-600 font-medium text-sm mb-4">{benefit.subtitle}</p>
-                    <p className="text-muted-foreground mb-6">{benefit.description}</p>
-                    <ul className="space-y-2">
+                    <p className="text-amber-600 font-medium text-sm mb-3">{benefit.subtitle}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground mb-4">{benefit.description}</p>
+                    <ul className="space-y-1.5">
                       {benefit.points.map((point, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm">
-                          <Check className="w-4 h-4 text-pink-500 shrink-0 mt-0.5" />
+                          <Check className="w-3.5 h-3.5 text-pink-500 shrink-0 mt-0.5" />
                           <span className="text-foreground">{point}</span>
                         </li>
                       ))}
@@ -430,36 +418,36 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Results Section */}
-        <section className="section-padding bg-gradient-to-br from-pink-50 via-rose-50/50 to-amber-50/30">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
+        <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-rose-50/50 to-amber-50/30">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-8 sm:mb-10">
               <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-4 border border-pink-200">
                 Risultati Misurabili
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Risultati concreti che puoi misurare
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {results.map((result, index) => {
                 const IconComponent = result.icon;
                 return (
                   <StaggerItem key={index} className="h-full">
-                    <div className="h-full rounded-2xl bg-white border border-pink-100 p-6 text-center flex flex-col shadow-sm hover:shadow-lg transition-shadow">
-                      <div className="flex items-center justify-center gap-2 mb-4">
-                        <IconComponent className="w-5 h-5 text-pink-500" />
-                        <p className="text-sm text-gray-600">{result.metric}</p>
+                    <div className="h-full rounded-xl bg-white border border-pink-100 p-4 sm:p-5 text-center flex flex-col shadow-sm hover:shadow-lg transition-shadow">
+                      <div className="flex items-center justify-center gap-2 mb-3">
+                        <IconComponent className="w-4 h-4 text-pink-500" />
+                        <p className="text-xs sm:text-sm text-gray-600">{result.metric}</p>
                       </div>
-                      <div className="flex items-center justify-center gap-3 sm:gap-4 flex-1">
+                      <div className="flex items-center justify-center gap-2 sm:gap-3 flex-1">
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs text-gray-400 mb-1">Prima</p>
-                          <p className="text-base sm:text-lg font-bold text-red-500 break-words">{result.before}</p>
+                          <p className="text-[10px] sm:text-xs text-gray-400 mb-0.5">Prima</p>
+                          <p className="text-sm sm:text-base font-bold text-red-500 break-words">{result.before}</p>
                         </div>
-                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 shrink-0" />
+                        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500 shrink-0" />
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs text-gray-400 mb-1">Dopo</p>
-                          <p className="text-base sm:text-lg font-bold text-pink-500 break-words">{result.after}</p>
+                          <p className="text-[10px] sm:text-xs text-gray-400 mb-0.5">Dopo</p>
+                          <p className="text-sm sm:text-base font-bold text-pink-500 break-words">{result.after}</p>
                         </div>
                       </div>
                     </div>
@@ -471,51 +459,49 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Mid-Page CTA Section */}
-        <section className="section-padding bg-gradient-to-br from-pink-500/10 via-background to-rose-500/5 relative overflow-hidden">
-          {/* Background decorative elements */}
+        <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-500/10 via-background to-rose-500/5 relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-rose-500/10 rounded-full blur-2xl" />
+            <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-pink-500/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/4 w-36 h-36 bg-rose-500/10 rounded-full blur-2xl" />
           </div>
           
-          <div className="container-custom px-6 sm:px-8 relative z-10">
+          <div className="container-custom relative z-10">
             <ScrollAnimation variant="fadeUp">
-              <div className="max-w-3xl mx-auto text-center">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-pink-500/20 text-pink-500 text-sm font-medium mb-6">
+              <div className="max-w-2xl mx-auto text-center">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-pink-500/20 text-pink-500 text-sm font-medium mb-4">
                   Inizia Ora
                 </span>
-                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+                <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3">
                   Pronto a rilanciare il tuo salone?
                 </h2>
-                <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+                <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-xl mx-auto">
                   Prenota una chiamata gratuita di 10 minuti. Analizzeremo insieme i tuoi flussi operativi e ti mostreremo come possiamo aiutarti.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Button size="lg" className="bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:via-rose-600 hover:to-amber-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 transform">
                     Prenota una Chiamata Gratuita
-                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button size="lg" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                      <MessageSquare className="w-5 h-5 mr-2" />
+                      <MessageSquare className="w-4 h-4 mr-2" />
                       Scrivici su WhatsApp
                     </a>
                   </Button>
                 </div>
                 
-                {/* Trust indicators */}
-                <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-pink-500" />
+                <div className="mt-5 flex flex-wrap justify-center gap-3 text-xs sm:text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-pink-500" />
                     Zero impegno
                   </span>
-                  <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-pink-500" />
+                  <span className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-pink-500" />
                     Analisi gratuita
                   </span>
-                  <span className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-pink-500" />
+                  <span className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-pink-500" />
                     Risposta rapida
                   </span>
                 </div>
@@ -525,26 +511,26 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Process Section */}
-        <section id="come-funziona" className="section-padding bg-gradient-to-b from-white to-pink-50/20">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12 sm:mb-16">
+        <section id="come-funziona" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-pink-50/20">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-8 sm:mb-10">
               <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-4 border border-pink-200">
                 Il Nostro Processo
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Come funziona il nostro processo
               </h2>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               {processSteps.map(step => (
                 <StaggerItem key={step.step} className="h-full">
-                  <div className="relative rounded-2xl border border-border bg-card p-6 hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-white font-bold shadow-lg">
+                  <div className="relative rounded-xl border border-border bg-card p-5 hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-white text-sm font-bold shadow-lg">
                       {step.step}
                     </div>
-                    <div className="pt-4">
-                      <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                    <div className="pt-3">
+                      <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-1">
                         {step.title}
                       </h3>
                       <p className="text-sm text-muted-foreground">{step.description}</p>
@@ -557,31 +543,29 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* Chi Siamo Section */}
-        <section id="chi-siamo" className="section-padding bg-gradient-to-b from-rose-50/30 to-white">
-          <div className="container-custom px-6 sm:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-              {/* Left Column - Content */}
+        <section id="chi-siamo" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-rose-50/30 to-white">
+          <div className="container-custom">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <ScrollAnimation variant="slideLeft">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-600 text-sm font-medium mb-6 border border-amber-200">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-600 text-sm font-medium mb-4 border border-amber-200">
                   Chi Siamo
                 </span>
 
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Stefano Taino
-                  <span className="block text-xl md:text-2xl font-normal text-muted-foreground mt-2">
+                  <span className="block text-base sm:text-lg font-normal text-muted-foreground mt-1">
                     Founder & System Architect
                   </span>
                 </h2>
 
-                {/* Quote */}
-                <div className="relative pl-6 border-l-4 border-pink-500 mb-8">
-                  <Quote className="absolute -left-3 -top-2 w-6 h-6 text-pink-500 bg-muted/30" />
-                  <p className="text-xl italic text-foreground">
+                <div className="relative pl-4 border-l-3 border-pink-500 mb-5">
+                  <Quote className="absolute -left-2.5 -top-1.5 w-5 h-5 text-pink-500 bg-muted/30" />
+                  <p className="text-base sm:text-lg italic text-foreground">
                     "Dietro ogni automazione c'è una visione umana."
                   </p>
                 </div>
 
-                <div className="space-y-4 text-muted-foreground mb-8">
+                <div className="space-y-3 text-sm sm:text-base text-muted-foreground mb-5">
                   <p>
                     Mi chiamo Stefano Taino e con ST Solutions aiuto i saloni a uscire dal caos operativo.
                   </p>
@@ -596,17 +580,16 @@ const ParrucchieriEstetica = () => {
                 </div>
               </ScrollAnimation>
 
-              {/* Right Column - Differentiators */}
               <ScrollAnimation variant="slideRight">
-                <div className="space-y-4">
-                  <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                <div className="space-y-3">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-2">
                     Perché ST Solutions è diverso
                   </h3>
-                  <p className="text-lg font-semibold text-pink-500 mb-6">
+                  <p className="text-sm sm:text-base font-semibold text-pink-500 mb-4">
                     Non vendiamo software. Costruiamo sistemi che lavorano al posto tuo.
                   </p>
                   
-                  <StaggerContainer staggerDelay={0.15}>
+                  <StaggerContainer staggerDelay={0.1}>
                     {[{
                       title: "Costruito su misura, non adattato",
                       description: "Non ti vendiamo un software standard. Studiamo come lavori oggi, individuiamo i colli di bottiglia, costruiamo la soluzione che si integra perfettamente."
@@ -618,14 +601,14 @@ const ParrucchieriEstetica = () => {
                       description: "Non ti vendiamo 'innovazione'. Ti vendiamo agenda piena, clienti che tornano, scontrino medio più alto. Numeri concreti che si vedono sul conto corrente."
                     }].map((item, index) => (
                       <StaggerItem key={index}>
-                        <div className="group p-5 rounded-xl border border-border bg-card hover:border-pink-500/30 hover:shadow-lg transition-all duration-300 mb-4">
-                          <div className="flex gap-4">
-                            <CheckCircle2 className="w-6 h-6 text-pink-500 flex-shrink-0 mt-0.5" />
+                        <div className="group p-4 rounded-lg border border-border bg-card hover:border-pink-500/30 hover:shadow-lg transition-all duration-300 mb-2">
+                          <div className="flex gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-pink-500 flex-shrink-0 mt-0.5" />
                             <div>
-                              <h4 className="font-display font-semibold text-foreground mb-1">
+                              <h4 className="font-display font-semibold text-sm sm:text-base text-foreground mb-0.5">
                                 {item.title}
                               </h4>
-                              <p className="text-sm text-muted-foreground leading-relaxed">
+                              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                                 {item.description}
                               </p>
                             </div>
@@ -641,32 +624,31 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* A Chi Si Rivolge Section */}
-        <section className="section-padding bg-white">
-          <div className="container-custom px-6 sm:px-8">
-            <ScrollAnimation variant="fadeUp" className="text-center mb-12">
+        <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="container-custom">
+            <ScrollAnimation variant="fadeUp" className="text-center mb-8 sm:mb-10">
               <span className="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-600 text-sm font-medium mb-4 border border-pink-200">
                 Il Nostro Target
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
                 A chi si rivolge ST Solutions?
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Le nostre soluzioni sono pensate per saloni che vogliono crescere senza sacrificare la qualità del servizio.
               </p>
             </ScrollAnimation>
 
-            {/* Business Types List */}
-            <ScrollAnimation variant="fadeUp" className="mb-12">
-              <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            <ScrollAnimation variant="fadeUp" className="mb-8">
+              <div className="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto">
                 {["Parrucchieri", "Barbieri", "Centri Estetici", "Nail Salon", "Spa & Wellness", "Centri Massaggi", "Solarium", "Makeup Artist", "Hair Stylist Freelance", "Centri Depilazione"].map((profession, index) => (
-                  <span key={index} className="px-4 py-2 rounded-full bg-pink-500/10 text-pink-600 text-sm font-medium border border-pink-500/20 hover:bg-pink-500/20 transition-colors">
+                  <span key={index} className="px-3 py-1.5 rounded-full bg-pink-500/10 text-pink-600 text-xs sm:text-sm font-medium border border-pink-500/20 hover:bg-pink-500/20 transition-colors">
                     {profession}
                   </span>
                 ))}
               </div>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
               {[{
                 title: "Perdi clienti durante i trattamenti",
                 description: "Il telefono squilla mentre hai le mani occupate. Ogni chiamata persa è un cliente che va altrove."
@@ -684,14 +666,14 @@ const ParrucchieriEstetica = () => {
                 description: "I software standard non si adattano al tuo modo di lavorare. Cerchi qualcosa costruito sulle tue esigenze."
               }].map((item, index) => (
                 <StaggerItem key={index}>
-                  <div className="group p-6 rounded-2xl border border-border bg-card hover:border-pink-500/30 hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-pink-500 flex-shrink-0 mt-0.5" />
+                  <div className="group p-4 rounded-xl border border-border bg-card hover:border-pink-500/30 hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-pink-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-display font-semibold text-foreground mb-2">
+                        <h4 className="font-display font-semibold text-sm text-foreground mb-1">
                           {item.title}
                         </h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
                       </div>
@@ -704,36 +686,35 @@ const ParrucchieriEstetica = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 relative overflow-hidden">
-          {/* Decorative elements */}
+        <section className="py-14 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-1/4 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-amber-300/20 rounded-full blur-3xl" />
+            <div className="absolute top-1/4 -left-20 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 -right-20 w-48 h-48 bg-amber-300/20 rounded-full blur-3xl" />
           </div>
-          <div className="container-custom px-6 sm:px-8 relative z-10">
-            <ScrollAnimation variant="fadeUp" className="max-w-3xl mx-auto text-center">
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <div className="container-custom relative z-10">
+            <ScrollAnimation variant="fadeUp" className="max-w-2xl mx-auto text-center">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
                 Pronto a rilanciare il tuo salone?
               </h2>
-              <div className="space-y-4 text-lg text-white/90 mb-10">
+              <div className="space-y-2 text-sm sm:text-base text-white/90 mb-6">
                 <p>Smetti di perdere chiamate mentre lavori.</p>
                 <p>Smetti di subire no-show e buchi in agenda.</p>
                 <p>Smetti di rincorrere i clienti per farli tornare.</p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="xl" className="bg-white text-pink-600 hover:bg-pink-50 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 transform font-semibold">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button size="lg" className="bg-white text-pink-600 hover:bg-pink-50 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 transform font-semibold">
                   Prenota una Chiamata Gratuita
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button size="xl" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
+                <Button size="lg" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <MessageSquare className="w-5 h-5 mr-2" />
+                    <MessageSquare className="w-4 h-4 mr-2" />
                     Scrivici su WhatsApp
-                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
               </div>
-              <p className="text-white/80 mt-8">
+              <p className="text-white/80 mt-5 text-xs sm:text-sm">
                 ST Solutions – Non vendiamo solo software. Vendiamo libertà operativa.
               </p>
             </ScrollAnimation>
