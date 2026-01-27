@@ -43,11 +43,11 @@ const solutions = [{
   color: "from-pink-500 to-rose-500"
 }, {
   icon: ShieldCheck,
-  title: "Recupero No-Show",
-  subtitle: "Occupazione dal 70% al 95%",
-  description: "Reminder automatici e lista d'attesa intelligente per riempire ogni slot. Mai più buchi in agenda che ti costano soldi.",
-  features: ["Promemoria multi-livello – Notifiche a 48h, 24h e 2h che eliminano le dimenticanze", "Recupero slot automatico – Lista d'attesa che riempie i buchi in tempo reale", "Ottimizzazione orari – L'AI suggerisce orari alternativi per massimizzare l'occupazione", "Blacklist intelligente – Blocca automaticamente i clienti inaffidabili"],
-  highlight: "Occupazione dal 70% al 95%.",
+  title: "Recupero No-Show e Ordine in Agenda",
+  subtitle: "Ogni appuntamento diventa incasso",
+  description: "L'AI mette fine al caos tra disdette dell'ultimo secondo e richieste urgenti. Gestisce i promemoria al posto tuo, filtra i clienti poco affidabili e riempie istantaneamente i buchi in agenda, proteggendo il tuo tempo e il tuo fatturato.",
+  features: ["Reminder anti-dimenticanza – Notifiche WhatsApp a 48h, 24h e 2h per azzerare le scuse.", "Conferma istantanea – Il cliente conferma con un click, eliminando ore di telefonate a vuoto.", "Gestione Caos Last-Minute – Se un cliente disdice, l'AI contatta subito la lista d'attesa per coprire il buco.", "Lista d'attesa intelligente – I posti liberati vengono riassegnati in automatico ai clienti più fedeli.", "Protezione dai No-Show seriali – Blocca chi non si presenta ripetutamente e proteggi i tuoi margini."],
+  highlight: "Zero buchi in agenda, 100% produttività.",
   color: "from-violet-500 to-purple-500"
 }, {
   icon: Megaphone,
