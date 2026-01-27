@@ -615,38 +615,34 @@ Sviluppiamo qualsiasi funzionalità su misura per il tuo studio.</span>
               </div>
             </ScrollAnimation>
 
-            <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto">
               {[
                 {
                   title: "Perdi tempo in coordinamento",
-                  description: "Rispondi a chiamate, confermi appuntamenti, gestisci disdette. Il tempo che potrebbe essere dedicato ai pazienti se ne va in attività amministrative."
+                  description: "Ore perse tra chiamate e conferme appuntamenti."
                 },
                 {
                   title: "Non riesci a rispondere subito",
-                  description: "Ogni chiamata persa è un paziente che potrebbe andare altrove. Non puoi permetterti di essere sempre reperibile, ma neanche di perdere opportunità."
+                  description: "Chiamate perse = pazienti persi."
                 },
                 {
-                  title: "Vuoi ottimizzare i costi operativi",
-                  description: "Il tuo staff è impegnato in attività ripetitive a basso valore. Con l'AI automatizzi la gestione ordinaria e liberi le persone per ciò che conta davvero."
+                  title: "Vuoi ottimizzare i costi",
+                  description: "Staff impegnato in attività ripetitive a basso valore."
                 },
                 {
-                  title: "Vuoi indipendenza dalle piattaforme",
-                  description: "Sei stanco di pagare commissioni o canoni mensili che erodono i tuoi margini. Vuoi possedere i tuoi strumenti, non affittarli."
-                },
-                {
-                  title: "Hai bisogno di soluzioni su misura",
-                  description: "I software standard non si adattano al tuo modo di lavorare. Cerchi qualcosa costruito sulle tue esigenze specifiche."
+                  title: "Cerchi soluzioni su misura",
+                  description: "I software standard non si adattano al tuo studio."
                 }
               ].map((item, index) => (
                 <StaggerItem key={index}>
-                  <div className="group p-6 rounded-2xl border border-border bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="group p-4 sm:p-5 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full">
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-display font-semibold text-foreground mb-2">
+                        <h4 className="font-display font-semibold text-foreground text-sm sm:text-base mb-1">
                           {item.title}
                         </h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm text-muted-foreground">
                           {item.description}
                         </p>
                       </div>
