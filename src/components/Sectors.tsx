@@ -51,22 +51,22 @@ const sectors = [
 const Sectors = () => {
   return (
     <section id="settori" className="section-padding bg-background">
-      <div className="container-custom">
+      <div className="container-custom px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Per Chi Lavoriamo
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Soluzioni specifiche per ogni settore
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Costruiamo soluzioni specifiche perché sappiamo che ogni attività ha sfide diverse.
           </p>
         </div>
 
         {/* Sectors Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {sectors.map((sector, index) => (
             <div
               key={index}
@@ -75,39 +75,39 @@ const Sectors = () => {
               {/* Top gradient bar */}
               <div className={`h-2 bg-gradient-to-r ${sector.color}`} />
               
-              <div className="p-8 flex-1 flex flex-col">
+              <div className="p-5 sm:p-6 md:p-8 flex-1 flex flex-col">
                 {/* Icon & Title */}
-                <div className="flex items-center gap-4 mb-6">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${sector.color} flex items-center justify-center`}>
-                    <sector.icon className="w-7 h-7 text-primary-foreground" />
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${sector.color} flex items-center justify-center`}>
+                    <sector.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
                   </div>
-                  <h3 className="font-display text-xl font-bold text-foreground">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">
                     {sector.title}
                   </h3>
                 </div>
 
                 {/* Headline */}
-                <p className="font-display text-2xl font-semibold text-foreground mb-4">
+                <p className="font-display text-xl sm:text-2xl font-semibold text-foreground mb-3 sm:mb-4">
                   {sector.headline}
                 </p>
 
                 {/* Problem */}
-                <div className="mb-4">
+                <div className="mb-3 sm:mb-4">
                   <span className="text-xs uppercase tracking-wider text-destructive font-semibold">Il problema</span>
-                  <p className="text-sm text-muted-foreground mt-1">{sector.problem}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">{sector.problem}</p>
                 </div>
 
                 {/* Solution */}
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-6">
                   <span className="text-xs uppercase tracking-wider text-primary font-semibold">La soluzione</span>
-                  <p className="text-sm text-foreground mt-1">{sector.solution}</p>
+                  <p className="text-xs sm:text-sm text-foreground mt-1">{sector.solution}</p>
                 </div>
 
                 {/* Benefits */}
-                <div className="mt-auto pt-6 border-t border-border">
-                  <ul className="space-y-2">
+                <div className="mt-auto pt-4 sm:pt-6 border-t border-border">
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {sector.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">
+                      <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm">
                         <span className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${sector.color}`} />
                         <span className="text-foreground">{benefit}</span>
                       </li>
@@ -117,7 +117,7 @@ const Sectors = () => {
               </div>
 
               {/* CTA */}
-              <div className="px-8 pb-8">
+              <div className="px-5 sm:px-6 md:px-8 pb-5 sm:pb-6 md:pb-8">
                 {index === 0 ? (
                   <Button variant="outline" className="w-full group/btn" asChild>
                     <Link to="/professionisti-salute">
@@ -151,11 +151,11 @@ const Sectors = () => {
         </div>
 
         {/* Other sectors mention */}
-        <div className="mt-12 text-center">
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
+        <div className="mt-10 md:mt-12 text-center px-2">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
             Anche se sei titolare di officina, palestra o qualsiasi altra attività le nostre soluzioni possono fare al caso tuo in quanto sono costruite sul tuo modello di lavoro.
           </p>
-          <Button variant="hero" className="group" asChild>
+          <Button variant="hero" className="group w-full sm:w-auto" asChild>
             <a href="https://wa.me/393452838679?text=Buongiorno%20%2C%20sarei%20interessato%20alle%20vostre%20soluzioni%20per%20la%20mia%20attività" target="_blank" rel="noopener noreferrer">
               Contattaci
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />

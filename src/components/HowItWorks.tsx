@@ -37,16 +37,16 @@ const steps = [
 const HowItWorks = () => {
   return (
     <section id="come-funziona" className="section-padding bg-secondary text-secondary-foreground">
-      <div className="container-custom">
+      <div className="container-custom px-5 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <ScrollAnimation variant="fadeUp" className="text-center mb-16">
+        <ScrollAnimation variant="fadeUp" className="text-center mb-10 md:mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
             Come Funziona
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Un processo semplice, trasparente
           </h2>
-          <p className="text-lg text-secondary-foreground/70 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-secondary-foreground/70 max-w-2xl mx-auto px-2">
             Senza sorprese. Saprete sempre a che punto siamo e cosa stiamo facendo.
           </p>
         </ScrollAnimation>
@@ -56,15 +56,15 @@ const HowItWorks = () => {
           {/* Connection line (desktop) */}
           <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
 
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6" staggerDelay={0.1}>
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-6" staggerDelay={0.1}>
             {steps.map((step, index) => (
               <StaggerItem key={index}>
                 <div className="relative group h-full">
                   {/* Card */}
-                  <div className="relative bg-secondary-foreground/5 border border-secondary-foreground/10 rounded-2xl p-6 hover:bg-secondary-foreground/10 hover:border-primary/30 transition-all duration-300 h-full">
+                  <div className="relative bg-secondary-foreground/5 border border-secondary-foreground/10 rounded-2xl p-4 sm:p-6 hover:bg-secondary-foreground/10 hover:border-primary/30 transition-all duration-300 h-full">
                     {/* Number badge */}
-                    <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 shadow-button group-hover:scale-110 transition-transform">
-                      <step.icon className="w-6 h-6 text-primary-foreground" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-primary flex items-center justify-center mb-3 sm:mb-4 shadow-button group-hover:scale-110 transition-transform">
+                      <step.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                     </div>
 
                     {/* Step number */}
@@ -72,11 +72,11 @@ const HowItWorks = () => {
                       STEP {step.number}
                     </span>
 
-                    <h3 className="font-display text-lg font-bold mt-2 mb-3">
+                    <h3 className="font-display text-sm sm:text-base md:text-lg font-bold mt-2 mb-2 sm:mb-3">
                       {step.title}
                     </h3>
 
-                    <p className="text-sm text-secondary-foreground/70 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-secondary-foreground/70 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -87,7 +87,7 @@ const HowItWorks = () => {
         </div>
 
         {/* Trust points */}
-        <StaggerContainer className="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
+        <StaggerContainer className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" staggerDelay={0.1}>
           {[
             { title: "Trasparenza totale", desc: "Costi chiari, tempi realistici" },
             { title: "Comunicazione costante", desc: "Sapete sempre a che punto siamo" },
@@ -95,11 +95,11 @@ const HowItWorks = () => {
             { title: "Supporto continuativo", desc: "Non vi lasciamo soli dopo la consegna" },
           ].map((item, index) => (
             <StaggerItem key={index}>
-              <div className="text-center p-4">
-                <h4 className="font-display font-semibold text-primary mb-1">
+              <div className="text-center p-3 sm:p-4">
+                <h4 className="font-display text-sm sm:text-base font-semibold text-primary mb-1">
                   {item.title}
                 </h4>
-                <p className="text-sm text-secondary-foreground/70">
+                <p className="text-xs sm:text-sm text-secondary-foreground/70">
                   {item.desc}
                 </p>
               </div>

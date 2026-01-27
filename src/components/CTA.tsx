@@ -6,22 +6,22 @@ const CTA = () => {
   return (
     <section id="contatti" className="section-padding bg-background relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-primary/5 rounded-full blur-3xl" />
       
-      <div className="container-custom relative z-10">
+      <div className="container-custom px-5 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <ScrollAnimation variant="fadeUp">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 sm:mb-6">
               Inizia Ora
             </span>
 
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               Stanchi di{" "}
               <span className="text-gradient">gestire tutto manualmente</span>?
             </h2>
 
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 px-2">
               Prenotate un appuntamento conoscitivo di 10 minuti, senza impegno. 
               Scopriamo insieme come automatizzare la vostra attività.
             </p>
@@ -29,7 +29,7 @@ const CTA = () => {
 
           {/* CTA Buttons */}
           <ScrollAnimation variant="scale" delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4 sm:px-0">
               <Button variant="hero" size="xl" className="group w-full sm:w-auto" asChild>
                 <a href="https://calendly.com/studio-stsolutions/30min" target="_blank" rel="noopener noreferrer">
                   <Calendar className="w-5 h-5 mr-2" />
@@ -48,7 +48,7 @@ const CTA = () => {
           </ScrollAnimation>
 
           {/* Trust indicators */}
-          <StaggerContainer className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground" staggerDelay={0.1}>
+          <StaggerContainer className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 text-xs sm:text-sm text-muted-foreground" staggerDelay={0.1}>
             <StaggerItem>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full" />
