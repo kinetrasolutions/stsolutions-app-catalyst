@@ -8,7 +8,7 @@ import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight
 // Custom images for Ristorazione page
 import ristorazioneHeroImage from "@/assets/ristorazione-hero-custom.webp";
 import ristorazioneWhatsappAgent from "@/assets/ristorazione-whatsapp-ok.webp";
-import ristorazioneAntiNoshow from "@/assets/ristorazione-anti-noshow.jpg";
+import ristorazioneAntiNoshow from "@/assets/ristorazione-noshow-custom.webp";
 import ristorazioneMenuDigitale from "@/assets/ristorazione-menu-digitale.jpg";
 const challenges = [{
   icon: Phone,
