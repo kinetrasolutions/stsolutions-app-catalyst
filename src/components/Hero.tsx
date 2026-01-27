@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-secondary-foreground mb-4 md:mb-6 animate-slide-up leading-tight px-2">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-secondary-foreground mb-4 md:mb-6 animate-slide-up leading-[1.1] px-2">
             <span className="text-gradient">Automatizziamo</span>
             <br />
             <span>i processi della tua</span>
