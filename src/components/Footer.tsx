@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="sm:col-span-2">
             <img
               src={logoLight}
-              alt="ST Solutions"
+              alt="Kinetra Solutions"
               className="h-8 sm:h-10 w-auto mb-4 sm:mb-6"
             />
             <p className="text-sm sm:text-base text-secondary-foreground/70 max-w-md">
