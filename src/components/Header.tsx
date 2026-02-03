@@ -70,7 +70,7 @@ const Header = () => {
           <a href="/" className="flex items-center gap-2 group">
             <img
               src={isScrolled || isLightBackgroundPage ? logoDark : logoLight}
-              alt="ST Solutions"
+              alt="Kinetra Solutions"
               className="h-8 md:h-10 w-auto transition-all duration-300 group-hover:scale-105"
             />
           </a>

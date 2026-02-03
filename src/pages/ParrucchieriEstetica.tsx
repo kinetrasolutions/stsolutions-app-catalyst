@@ -304,7 +304,7 @@ const ParrucchieriEstetica = () => {
                 I Vantaggi
               </span>
               <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-                Perché scegliere ST Solutions
+                Perché scegliere Kinetra Solutions
               </h2>
             </ScrollAnimation>
 
@@ -427,7 +427,7 @@ const ParrucchieriEstetica = () => {
                   Chi Siamo
                 </span>
                 <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  ST Solutions
+                  Kinetra Solutions
                 </h2>
                 <p className="text-sm text-muted-foreground mb-4">
                   Non vendiamo software preconfezionati. Costruiamo ecosistemi digitali proprietari che risolvono problemi reali.

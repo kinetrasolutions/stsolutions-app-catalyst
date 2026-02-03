@@ -44,7 +44,7 @@ const About = () => {
 
             <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
               <p>
-                Mi chiamo Stefano Taino e con ST Solutions aiuto le attività locali a uscire dal caos operativo.
+                Mi chiamo Stefano Taino e con Kinetra Solutions aiuto le attività locali a uscire dal caos operativo.
               </p>
               <p>
                 Non credo nei software 'copia e incolla' che vi tengono prigionieri. 
@@ -52,7 +52,7 @@ const About = () => {
                 rispondono ai clienti, gestionali che ordinano i vostri dati e automazioni che vi restituiscono il tempo che meritate.
               </p>
               <p className="font-semibold text-foreground">
-                Con ST Solutions, il software è vostro, i dati sono vostri e il risultato è garantito.
+                Con Kinetra Solutions, il software è vostro, i dati sono vostri e il risultato è garantito.
               </p>
             </div>
           </ScrollAnimation>
@@ -61,7 +61,7 @@ const About = () => {
           <ScrollAnimation variant="slideRight">
             <div className="space-y-4">
               <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
-                Perché ST Solutions è diverso
+                Perché Kinetra Solutions è diverso
               </h3>
               <p className="text-base sm:text-lg font-semibold text-primary mb-4 sm:mb-6">
                 Non vendiamo software. Costruiamo sistemi che lavorano al posto vostro.
@@ -95,7 +95,7 @@ const About = () => {
           <div className="mt-16 md:mt-20 p-6 sm:p-8 lg:p-12 rounded-3xl bg-gradient-dark text-secondary-foreground">
             <div className="max-w-4xl">
               <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-                A chi si rivolge ST Solutions?
+                A chi si rivolge Kinetra Solutions?
               </h3>
               <p className="text-base sm:text-lg text-secondary-foreground/80 mb-6 sm:mb-8">
                 Titolari e professionisti che vogliono eliminare il caos operativo.

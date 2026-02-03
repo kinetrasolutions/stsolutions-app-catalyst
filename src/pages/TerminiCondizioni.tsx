@@ -21,7 +21,7 @@ const TerminiCondizioni = () => {
             <section>
               <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">1. Premessa</h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                I presenti Termini e Condizioni regolano l'utilizzo del sito web di ST Solutions e dei servizi offerti. 
+                I presenti Termini e Condizioni regolano l'utilizzo del sito web di Kinetra Solutions e dei servizi offerti. 
                 Utilizzando il nostro sito, l'utente accetta integralmente le presenti condizioni.
               </p>
             </section>
@@ -39,7 +39,7 @@ const TerminiCondizioni = () => {
 
             <section>
               <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">3. Servizi Offerti</h2>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">ST Solutions offre:</p>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">Kinetra Solutions offre:</p>
               <ul className="text-sm sm:text-base text-muted-foreground space-y-2 list-disc list-inside">
                 <li>Automazioni AI per attività locali e professionisti</li>
                 <li>Sistemi di gestione appuntamenti e prenotazioni</li>
@@ -68,7 +68,7 @@ const TerminiCondizioni = () => {
                 I preventivi forniti hanno validità di 30 giorni dalla data di emissione, salvo diversa indicazione.
               </p>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Compilando i moduli di contatto, l'utente autorizza ST Solutions a contattarlo per rispondere 
+                Compilando i moduli di contatto, l'utente autorizza Kinetra Solutions a contattarlo per rispondere 
                 alla richiesta e, previo consenso, per finalità di marketing.
               </p>
             </section>
@@ -94,7 +94,7 @@ const TerminiCondizioni = () => {
               <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">7. Proprietà Intellettuale</h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Tutti i contenuti del sito (testi, immagini, loghi, grafica) sono di proprietà esclusiva di 
-                ST Solutions o dei rispettivi titolari e sono protetti dalle leggi sul diritto d'autore. 
+                Kinetra Solutions o dei rispettivi titolari e sono protetti dalle leggi sul diritto d'autore. 
                 È vietata la riproduzione, anche parziale, senza autorizzazione scritta.
               </p>
             </section>
@@ -102,7 +102,7 @@ const TerminiCondizioni = () => {
             <section>
               <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">8. Limitazione di Responsabilità</h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
-                ST Solutions si impegna a mantenere il sito aggiornato e funzionante, ma non garantisce 
+                Kinetra Solutions si impegna a mantenere il sito aggiornato e funzionante, ma non garantisce 
                 l'assenza di errori o interruzioni. Non siamo responsabili per:
               </p>
               <ul className="text-sm sm:text-base text-muted-foreground space-y-2 list-disc list-inside">
@@ -116,7 +116,7 @@ const TerminiCondizioni = () => {
             <section>
               <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">9. Garanzia sui Servizi</h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                I servizi offerti da ST Solutions sono coperti dalle garanzie previste dal contratto stipulato 
+                I servizi offerti da Kinetra Solutions sono coperti dalle garanzie previste dal contratto stipulato 
                 con ciascun cliente. Le condizioni specifiche di garanzia sono indicate nella documentazione 
                 fornita con ciascun servizio.
               </p>
@@ -125,7 +125,7 @@ const TerminiCondizioni = () => {
             <section>
               <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">10. Modifiche ai Termini</h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                ST Solutions si riserva il diritto di modificare i presenti Termini e Condizioni in qualsiasi momento. 
+                Kinetra Solutions si riserva il diritto di modificare i presenti Termini e Condizioni in qualsiasi momento. 
                 Le modifiche saranno efficaci dalla data di pubblicazione sul sito. L'uso continuato del sito 
                 dopo le modifiche costituisce accettazione delle stesse.
               </p>
