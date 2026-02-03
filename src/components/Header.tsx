@@ -69,7 +69,7 @@ const Header = () => {
           {/* Logo - Always links to homepage */}
           <a href="/" className="flex items-center gap-2 group">
             <img
-              src={isScrolled || isLightBackgroundPage ? logoDark : logoLight}
+              src={isScrolled || isLightBackgroundPage ? logoLight : logoDark}
               alt="Kinetra Solutions"
               className="h-8 md:h-10 w-auto transition-all duration-300 group-hover:scale-105"
             />
