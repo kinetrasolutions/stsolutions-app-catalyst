@@ -22,7 +22,7 @@ const Solutions = () => {
             Le Nostre Soluzioni
           </span>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Come ST Solutions risolve questi problemi
+            Come Kinetra Solutions risolve questi problemi
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-2">
             Non vendiamo software standard che dovete adattare alla vostra attività. 
