@@ -1,5 +1,5 @@
 import { Mail, Phone } from "lucide-react";
-import logoLight from "@/assets/logo-light.png";
+import logoDark from "@/assets/logo-dark.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="sm:col-span-2">
             <img
-              src={logoLight}
+              src={logoDark}
               alt="Kinetra Solutions"
               className="h-8 sm:h-10 w-auto mb-4 sm:mb-6"
             />
