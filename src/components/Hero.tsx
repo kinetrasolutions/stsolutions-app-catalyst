@@ -50,7 +50,7 @@ const Hero = () => {
           {/* CTA Button */}
           <div className="flex flex-col justify-center items-center animate-slide-up px-4" style={{ animationDelay: "0.2s" }}>
             <Button variant="hero" size="xl" className="group w-full sm:w-auto text-sm sm:text-base" asChild>
-              <a href="https://calendly.com/studio-stsolutions/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/kinetrasolutions-proton/30min" target="_blank" rel="noopener noreferrer">
                 Prenota una Chiamata Gratuita
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
               </a>

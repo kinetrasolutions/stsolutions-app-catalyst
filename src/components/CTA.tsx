@@ -31,7 +31,7 @@ const CTA = () => {
           <ScrollAnimation variant="scale" delay={0.2}>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4 sm:px-0">
               <Button variant="hero" size="xl" className="group w-full sm:w-auto" asChild>
-                <a href="https://calendly.com/studio-stsolutions/30min" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/kinetrasolutions-proton/30min" target="_blank" rel="noopener noreferrer">
                   <Calendar className="w-5 h-5 mr-2" />
                   Prenota una Chiamata Gratuita
                   <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
