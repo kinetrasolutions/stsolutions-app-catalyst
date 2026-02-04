@@ -39,7 +39,7 @@ const TerminiCondizioni = () => {
                 <li><strong className="text-foreground">Ragione Sociale:</strong> Stefano Taino</li>
                 <li><strong className="text-foreground">P.IVA:</strong> 01744080191</li>
                 <li><strong className="text-foreground">Sede:</strong> Italia</li>
-                <li><strong className="text-foreground">Email:</strong> studio.stsolutions@protonmail.com</li>
+                <li><strong className="text-foreground">Email:</strong> info@kinetrasolutions.com</li>
                 <li><strong className="text-foreground">Telefono:</strong> +39 345 283 8679</li>
               </ul>
             </section>
@@ -153,7 +153,7 @@ const TerminiCondizioni = () => {
                 Per qualsiasi domanda sui presenti Termini e Condizioni, contattaci a:
               </p>
               <ul className="text-sm sm:text-base text-muted-foreground space-y-2">
-                <li><strong className="text-foreground">Email:</strong> studio.stsolutions@protonmail.com</li>
+                <li><strong className="text-foreground">Email:</strong> info@kinetrasolutions.com</li>
                 <li><strong className="text-foreground">Telefono:</strong> +39 345 283 8679</li>
               </ul>
             </section>

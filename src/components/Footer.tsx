@@ -49,11 +49,11 @@ const Footer = () => {
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a
-                  href="mailto:studio.stsolutions@protonmail.com"
+                  href="mailto:info@kinetrasolutions.com"
                   className="flex items-center gap-2 text-sm sm:text-base text-secondary-foreground/70 hover:text-primary transition-colors break-all"
                 >
                   <Mail size={14} className="sm:w-4 sm:h-4 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm">studio.stsolutions@protonmail.com</span>
+                  <span className="text-xs sm:text-sm">info@kinetrasolutions.com</span>
                 </a>
               </li>
               <li>

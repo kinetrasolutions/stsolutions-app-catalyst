@@ -47,7 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Kinetra Solutions Contact <onboarding@resend.dev>",
-        to: ["studio.stsolutions@protonmail.com"],
+        to: ["info@kinetrasolutions.com"],
         reply_to: email,
         subject: `Nuova richiesta di contatto da ${name}`,
         html: `
