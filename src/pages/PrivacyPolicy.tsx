@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Il Titolare del trattamento dei dati personali è Stefano Taino (P.IVA 01744080191), 
                 con sede in Italia. Per qualsiasi informazione riguardante il trattamento dei dati personali, 
-                è possibile contattarci all'indirizzo email: <a href="mailto:studio.stsolutions@protonmail.com" className="text-primary hover:underline">studio.stsolutions@protonmail.com</a> o 
+                è possibile contattarci all'indirizzo email: <a href="mailto:info@kinetrasolutions.com" className="text-primary hover:underline">info@kinetrasolutions.com</a> o 
                 al telefono: <a href="tel:+393452838679" className="text-primary hover:underline">+39 345 283 8679</a>
               </p>
             </section>
@@ -130,7 +130,7 @@ const PrivacyPolicy = () => {
                 Per esercitare i tuoi diritti o per qualsiasi domanda sulla presente Privacy Policy, puoi contattarci a:
               </p>
               <ul className="text-sm sm:text-base text-muted-foreground space-y-2">
-                <li><strong className="text-foreground">Email:</strong> <a href="mailto:studio.stsolutions@protonmail.com" className="text-primary hover:underline break-all">studio.stsolutions@protonmail.com</a></li>
+                <li><strong className="text-foreground">Email:</strong> <a href="mailto:info@kinetrasolutions.com" className="text-primary hover:underline break-all">info@kinetrasolutions.com</a></li>
                 <li><strong className="text-foreground">Telefono:</strong> <a href="tel:+393452838679" className="text-primary hover:underline">+39 345 283 8679</a></li>
               </ul>
             </section>
