@@ -3,8 +3,7 @@ import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
-import { Phone, CalendarX, UserMinus, TrendingDown, Bot, ShieldCheck, Megaphone, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Clock, Scissors, type LucideIcon } from "lucide-react";
-
+import { Phone, CalendarX, UserMinus, TrendingDown, Bot, ShieldCheck, Megaphone, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Clock, Scissors, Quote, type LucideIcon } from "lucide-react";
 // Custom images for Parrucchieri/Estetica page
 import parrucchieriHeroImage from "@/assets/parrucchieri-hero.webp";
 import parrucchieriWhatsapp from "@/assets/parrucchieri-whatsapp.webp";
@@ -421,20 +420,139 @@ const ParrucchieriEstetica = () => {
         {/* About Section */}
         <section id="chi-siamo" className="py-12 md:py-16 px-4 sm:px-6 bg-pink-50/30">
           <div className="container-custom">
-            <ScrollAnimation variant="fadeUp">
-              <div className="max-w-2xl mx-auto text-center">
-                <span className="inline-block px-3 py-1 rounded-full bg-pink-100 text-pink-600 text-xs font-medium mb-3 border border-pink-200">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              {/* Left Column - Content */}
+              <ScrollAnimation variant="slideLeft">
+                <span className="inline-block px-3 py-1 rounded-full bg-pink-100 text-pink-600 text-xs font-medium mb-4 border border-pink-200">
                   Chi Siamo
                 </span>
+
                 <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  Kinetra Solutions
+                  Stefano Taino
+                  <span className="block text-base sm:text-lg font-normal text-muted-foreground mt-1">
+                    Founder & System Architect
+                  </span>
                 </h2>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Non vendiamo software preconfezionati. Costruiamo ecosistemi digitali proprietari che risolvono problemi reali.
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Ogni salone è unico: per questo progettiamo soluzioni su misura basate sui tuoi flussi operativi specifici.
-                </p>
+
+                {/* Quote */}
+                <div className="relative pl-4 sm:pl-5 border-l-4 border-pink-500 mb-5">
+                  <Quote className="absolute -left-2.5 -top-1 w-4 h-4 text-pink-500 bg-pink-50/30" />
+                  <p className="text-base sm:text-lg italic text-foreground">
+                    "Dietro ogni automazione c'è una visione umana."
+                  </p>
+                </div>
+
+                <div className="space-y-3 text-sm text-muted-foreground mb-5">
+                  <p>
+                    Mi chiamo Stefano Taino e con Kinetra Solutions aiuto le attività locali a uscire dal caos operativo.
+                  </p>
+                  <p>
+                    Non credo nei software 'copia e incolla' che vi tengono prigionieri. 
+                    Il mio obiettivo è costruire l'infrastruttura digitale della vostra azienda: sistemi intelligenti che 
+                    rispondono ai clienti, gestionali che ordinano i vostri dati e automazioni che vi restituiscono il tempo che meritate.
+                  </p>
+                  <p className="font-semibold text-foreground">
+                    Con Kinetra Solutions, il software è vostro, i dati sono vostri e il risultato è garantito.
+                  </p>
+                </div>
+              </ScrollAnimation>
+
+              {/* Right Column - Differentiators */}
+              <ScrollAnimation variant="slideRight">
+                <div className="space-y-3">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-3">
+                    Perché Kinetra Solutions è diverso
+                  </h3>
+                  <p className="text-sm sm:text-base font-semibold text-pink-500 mb-4">
+                    Non vendiamo software. Costruiamo sistemi che lavorano al posto vostro.
+                  </p>
+                  
+                  <StaggerContainer staggerDelay={0.15}>
+                    {[
+                      {
+                        title: "Costruito su misura, non adattato",
+                        description: "Non vi vendiamo un software standard. Studiamo come lavorate oggi, individuiamo i colli di bottiglia, costruiamo la soluzione che si integra perfettamente.",
+                      },
+                      {
+                        title: "Persone reali, non call center",
+                        description: "Quando ci contattate, parlate direttamente con noi. Noi analizziamo il problema, noi progettiamo la soluzione, noi vi seguiamo nell'implementazione.",
+                      },
+                      {
+                        title: "Focus sui risultati misurabili",
+                        description: "Non vi vendiamo 'innovazione'. Vi vendiamo ore risparmiate, costi ridotti, clienti non persi. Numeri concreti che si vedono sul conto corrente.",
+                      },
+                    ].map((item, index) => (
+                      <StaggerItem key={index}>
+                        <div className="group p-4 rounded-xl border border-border bg-card hover:border-pink-300 hover:shadow-lg transition-all duration-300 mb-3">
+                          <div className="flex gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-pink-500 flex-shrink-0 mt-0.5" />
+                            <div>
+                              <h4 className="font-display text-sm font-semibold text-foreground mb-1">
+                                {item.title}
+                              </h4>
+                              <p className="text-xs text-muted-foreground leading-relaxed">
+                                {item.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </StaggerItem>
+                    ))}
+                  </StaggerContainer>
+                </div>
+              </ScrollAnimation>
+            </div>
+
+            {/* Target Audience */}
+            <ScrollAnimation variant="fadeUp" delay={0.2}>
+              <div className="mt-12 p-5 sm:p-8 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 text-white">
+                <div className="max-w-3xl">
+                  <h3 className="font-display text-xl sm:text-2xl font-bold mb-3">
+                    A chi si rivolge Kinetra Solutions?
+                  </h3>
+                  <p className="text-sm text-white/80 mb-5">
+                    Titolari e professionisti che vogliono eliminare il caos operativo.
+                  </p>
+                  
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {[
+                      { 
+                        title: "Il lavoro gestionale vi ruba tempo", 
+                        desc: "Ore perse al telefono invece di produrre valore." 
+                      },
+                      { 
+                        title: "Perdete clienti per risposte lente", 
+                        desc: "Non riuscite a rispondere in tempo reale." 
+                      },
+                      { 
+                        title: "Pagate troppe commissioni", 
+                        desc: "Il 20-30% va alle piattaforme esterne." 
+                      },
+                      { 
+                        title: "Il software standard non basta", 
+                        desc: "Nessuna soluzione si adatta al vostro business." 
+                      },
+                    ].map((item, index) => (
+                      <div key={index} className="p-3 rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm">
+                        <div className="flex gap-3 items-start">
+                          <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
+                          <div>
+                            <h4 className="font-semibold text-sm text-white mb-0.5">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs text-white/70">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <p className="mt-5 text-base font-semibold text-white">
+                    Ti riconosci? Possiamo aiutarti.
+                  </p>
+                </div>
               </div>
             </ScrollAnimation>
           </div>
