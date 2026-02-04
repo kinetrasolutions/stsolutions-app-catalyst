@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
+import SEOHead from "@/components/SEOHead";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 
@@ -99,6 +100,12 @@ const Contatti = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Contattaci | Kinetra Solutions - Automazioni AI per Aziende"
+        description="Richiedi una consulenza gratuita per automatizzare la tua attività. Prenota una chiamata, scrivici su WhatsApp o compila il form. Risposta entro 24 ore."
+        canonical="/contatti"
+        keywords="contatti Kinetra Solutions, consulenza automazioni AI, preventivo automazioni, contatto WhatsApp business"
+      />
       <Header />
       
       <main className="pt-28 sm:pt-32 pb-16 sm:pb-20">

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
 import FoundersSection from "@/components/FoundersSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
 import { Phone, CalendarX, UserMinus, TrendingDown, Bot, ShieldCheck, Megaphone, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, Clock, Scissors, type LucideIcon } from "lucide-react";
@@ -132,6 +133,12 @@ const ParrucchieriEstetica = () => {
   
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEOHead
+        title="Automazioni AI per Parrucchieri e Centri Estetici | Kinetra Solutions"
+        description="Prenotazioni automatiche h24, recupero no-show e marketing automatico per saloni di bellezza. Agenda sempre piena, zero stress. Scopri le nostre soluzioni."
+        canonical="/parrucchieri-estetica"
+        keywords="automazioni parrucchieri, prenotazioni automatiche salone, chatbot WhatsApp estetista, gestione appuntamenti bellezza, riduzione no-show parrucchiere, marketing automatico, Kinetra Solutions"
+      />
       <Header />
       <main className="overflow-x-hidden">
         {/* Hero Section */}

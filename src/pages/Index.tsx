@@ -8,10 +8,17 @@ import About from "@/components/About";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
+import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Kinetra Solutions | Automazioni AI e Sistemi Digitali per Aziende"
+        description="Automazioni intelligenti, chatbot AI e gestionali custom per PMI e attività locali. Software su misura, dati tuoi, risultati garantiti. Scopri Kinetra Solutions."
+        canonical="/"
+        keywords="automazioni AI, intelligenza artificiale, chatbot AI, gestionali custom, PMI, attività locali, software su misura, WhatsApp business, gestione appuntamenti, riduzione no-show, automazione aziendale, Italia, Kinetra Solutions"
+      />
       <Header />
       <main>
         <Hero />
