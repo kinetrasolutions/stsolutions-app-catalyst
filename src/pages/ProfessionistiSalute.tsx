@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
 import FoundersSection from "@/components/FoundersSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
 import { Phone, Clock, CalendarX, Bot, Smartphone, FileText, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2 } from "lucide-react";
@@ -133,6 +134,12 @@ const ProfessionistiSalute = () => {
   
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEOHead
+        title="Automazioni AI per Medici e Professionisti Sanitari | Kinetra Solutions"
+        description="Segreteria AI h24, gestione pazienti automatizzata e fatturazione digitale per studi medici. Riduci no-show del 90% e libera 15 ore a settimana."
+        canonical="/professionisti-salute"
+        keywords="automazioni studi medici, segreteria AI medici, gestione pazienti automatica, chatbot WhatsApp medici, fatturazione automatica, riduzione no-show, Kinetra Solutions"
+      />
       <Header />
       <main className="overflow-x-hidden">
         {/* Hero Section */}

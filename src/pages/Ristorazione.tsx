@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
 import FoundersSection from "@/components/FoundersSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui/scroll-animation";
 import { Phone, CalendarX, CreditCard, Bot, ShieldX, UtensilsCrossed, ArrowRight, Check, X, Shield, Zap, Database, MessageSquare, CheckCircle2, ClipboardList, Clock, Package, type LucideIcon } from "lucide-react";
@@ -133,6 +134,12 @@ const Ristorazione = () => {
   
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEOHead
+        title="Automazioni AI per Ristoranti | Kinetra Solutions"
+        description="Prenotazioni automatiche, gestione ordini asporto e chatbot WhatsApp per ristoranti. Zero commissioni, clienti tuoi, margini pieni. Scopri le nostre soluzioni."
+        canonical="/ristorazione"
+        keywords="automazioni ristoranti, prenotazioni automatiche ristorante, chatbot WhatsApp ristorante, gestione ordini asporto, riduzione no-show ristorante, menu digitale, Kinetra Solutions"
+      />
       <Header />
       <main className="overflow-x-hidden">
         {/* Hero Section */}

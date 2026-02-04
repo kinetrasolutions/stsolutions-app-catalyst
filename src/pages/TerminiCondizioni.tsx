@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
+import SEOHead from "@/components/SEOHead";
 
 const TerminiCondizioni = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Termini e Condizioni | Kinetra Solutions"
+        description="Termini e condizioni d'uso del sito web e dei servizi di Kinetra Solutions."
+        canonical="/termini-condizioni"
+        noindex={true}
+      />
       <Header />
       
       <main className="pt-28 sm:pt-32 pb-16 sm:pb-20">

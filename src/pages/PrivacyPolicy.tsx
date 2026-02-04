@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
+import SEOHead from "@/components/SEOHead";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Privacy Policy | Kinetra Solutions"
+        description="Informativa sulla privacy di Kinetra Solutions. Scopri come trattiamo i tuoi dati personali in conformità al GDPR."
+        canonical="/privacy-policy"
+        noindex={true}
+      />
       <Header />
       
       <main className="pt-28 sm:pt-32 pb-16 sm:pb-20">
