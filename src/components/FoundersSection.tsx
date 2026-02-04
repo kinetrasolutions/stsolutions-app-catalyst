@@ -30,12 +30,8 @@ const targetPoints = [
     desc: "Non riuscite a rispondere in tempo reale." 
   },
   { 
-    title: "Pagate troppe commissioni", 
-    desc: "Il 20-30% va alle piattaforme esterne." 
-  },
-  { 
-    title: "Il software standard non basta", 
-    desc: "Nessuna soluzione si adatta al vostro business." 
+    title: "Volete un sistema su misura per voi", 
+    desc: "Nessun software standard si adatta al vostro business." 
   },
 ];
 
@@ -290,37 +286,35 @@ const FoundersSection = ({ accentColor = "primary" }: FoundersSectionProps) => {
 
         {/* Target Audience */}
         <ScrollAnimation variant="fadeUp" delay={0.2}>
-          <div className={`mt-12 sm:mt-16 p-5 sm:p-8 rounded-2xl bg-gradient-to-r ${colors.gradient} text-white`}>
-            <div className="max-w-3xl">
-              <h3 className="font-display text-xl sm:text-2xl font-bold mb-3">
-                A chi si rivolge Kinetra Solutions?
-              </h3>
-              <p className="text-sm text-white/80 mb-5">
-                Titolari e professionisti che vogliono eliminare il caos operativo.
-              </p>
-              
-              <div className="grid sm:grid-cols-2 gap-3">
-                {targetPoints.map((item, index) => (
-                  <div key={index} className="p-3 rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm">
-                    <div className="flex gap-3 items-start">
-                      <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="font-semibold text-sm text-white mb-0.5">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-white/70">
-                          {item.desc}
-                        </p>
-                      </div>
+          <div className={`mt-12 sm:mt-16 p-6 sm:p-10 rounded-2xl bg-gradient-to-r ${colors.gradient} text-white`}>
+            <h3 className="font-display text-2xl sm:text-3xl font-bold mb-4">
+              A chi si rivolge Kinetra Solutions?
+            </h3>
+            <p className="text-base sm:text-lg text-white/90 mb-8">
+              Titolari e professionisti che vogliono eliminare il caos operativo.
+            </p>
+            
+            <div className="grid sm:grid-cols-3 gap-4">
+              {targetPoints.map((item, index) => (
+                <div key={index} className="p-5 rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-base sm:text-lg text-white mb-2">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
-                ))}
-              </div>
-              
-              <p className="mt-6 text-lg font-semibold">
-                Ti riconosci? Possiamo aiutarti.
-              </p>
+                </div>
+              ))}
             </div>
+            
+            <p className="mt-8 text-xl sm:text-2xl font-bold">
+              Ti riconosci? Possiamo aiutarti.
+            </p>
           </div>
         </ScrollAnimation>
       </div>
