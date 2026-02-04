@@ -46,7 +46,7 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Kinetra Solutions Contact <onboarding@resend.dev>",
+        from: "Kinetra Solutions <noreply@kinetrasolutions.com>",
         to: ["info@kinetrasolutions.com"],
         reply_to: email,
         subject: `Nuova richiesta di contatto da ${name}`,
